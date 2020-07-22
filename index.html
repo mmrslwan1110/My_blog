@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content index posts-expand">
+          
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/22/my-first-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/22/my-first-blog/" class="post-title-link" itemprop="url">保研经历</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-22 21:37:56 / 修改时间：21:44:14" itemprop="dateCreated datePublished" datetime="2020-07-22T21:37:56+08:00">2020-07-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>By : 万鲲鹏三月 18, 2020<br>已经距离我成功保送研究生已经过去了6个月的时间，在五月份申请夏令营，申请中南大学、哈尔滨工业大学、大连理工大学等985高校，最终拿到中南大学、哈工大和大工的夏令营邀请。在七月份，参加中南大学、哈尔滨工业大学和本校的夏令营，成功获得中南大学等高校优秀营员，在七月二十号左右联系到复旦大学老师并取得老师的名额，八月十四号获得华中科技大学的推免录取资格，并成功与清华大学某教授成功联系并跟随参与研究，虽然老师很欣赏但是最终因为面试英语水平和本科学校不过关被淘汰，英语很重要！！！！！！。在九月参成功以专业第二的成绩获得了本校推免资格，并获得重庆大学、西北工业大学、电子科技大学、厦门大学的九月推免offer。最终放弃华中科技大学和浙江大学前往厦门大学某重点实验室读研。（本校双非不说，是因为怕人查出来本人是谁，我很喜欢并且尊重我的母校，尽管不是211、985甚至说是四非，但是毕竟生活过四年，有感情了）。<br>我讲解一下目前国内一流高校的排名：很多野鸡排名在我看来可信度没么高，但是国人很信这个。其实985高校只讲层次并不讲排名，毕竟因为排名可以考刷指标来完成同时有些学校著名的巨无霸，属于比较胖的类型（胖就是师资编制和学生很多，所以刷科研成果很容易，但是师均SCI并不高，就不一一点名），所以相对于国内各种学术排名可以不加参考。对于就业和工作地域上参考意义不大。<br>目前比较公认的是分数线排名，因为这相当于是中国老百姓一人一分投出来排名，基本上符合每个学校的地位和层次。目前国内来说应该是 TOP2：清华北大（没有理工科和文科区别现在清北都在对方学科上有长足发展，例如清华经管北大计算机等），top3 华五人（浙江大学、复旦大学、上海交通大学、中国科学技术大学、南京大学和中国人民大学），为什么top3有6所仁者见仁智者见智我不细说，这一层次学校挑专业可以参考第四轮学科评估。top10 航开济，中坚九校，山川吉，经管类学校这一层次可以加上（两财一贸），其中最接近top10的应该是北京航空航天大学、同济大学、中山大学、武汉大学和华中科技大学，然后依次是哈工大、西安交大、南开大学、天津大学、东南大学、北京理工大学、厦门大学，（央财、上财、对外经贸）、四川大学、山东大学、吉林大学。top20这一层次就有很多了其他剩余的一流大学建设A类可以归为这一类。top40，可以参考双一流B类。有人问为什么没有中科院，因为中科院良莠不齐且没有归属感，本人怕踩雷自动忽略，当然有些中科院比清北还好。<br>了解了自己报考学校的层次以后就可以选择参考2017年学科评估了，当然有部分学校打包参评，但还是可信度很高的，参考后就看导师的人品了，我当时就是和上一届学姐联系后，学姐说我选的导师人都特别好。有些导师很可怕，有些学校导师喜欢骂人（亲身经历）这样的老师如果去了以后天天被骂，很可能导致抑郁，当然这部分导师其实都很好只是恨铁不成钢，直肠子，都是未来的师生，一日为师终生为父。只要避免开爸爸老师都不会有太大问题。尽量选学硕，好导师，好实验室（因为以一个学硬件的学生来说，好的实验室就可以提供更多没见过的设施，项目资金大就表明不用一直死弄算法（掉头发））。本人就是看中的实验室去的某重点实验室。<br>总结：本人自认优先级为：学校、专业、方向、导师、实验室、地域。甚至可以参考自己心中的为此给予权重、算清楚自己应该去哪里读研。保研之前有老师就跟我说过，这个选择将会影响一生。<br>当时因为本科原因，在清华、复旦和北航招生办因为本科学校双非拒绝我后心态炸裂（很多学校不会明说，导师会收你但是双非过不了学校的关，就和招聘一样其实也是相对公平的本来高考就没别人高，但也让人知道说高考选211的重要性，早知道去偏远地区211也就不会有这些问题了），就病急乱投医参加了很多其他学校的推免。给自己耽误了很多时间和最后对自己极度不自信，总体来说C9推免学校不排斥双非的只有清华大学深圳国际研究生院（在我这一届是第一年招生日后可能会越来越难而且只招专硕），浙江大学软件学院和工程师学院某些项目也不排除。所以我比较容易的获得了浙江大学某专业的offer，这个学院很神奇是按照就业给的学位，大部分都是非全每年招200个全日制并且是双导师制度。不是很推荐如果没有中九以上层次学校offer可以选择去。<br>以上考虑不完后心里应该有称了，可以自己写出自己优先选择的学校，本人优先级为，华科、厦大、浙大、西北工业和电子科大。每个人都有不同根据实际情况出发就不会有错。<br>有个小插曲就是选择后可以向招生单位申请接触录取，但是有风险，这样也是不好的行为，本人被教训过，大家千万在思考后再走这个流程，当时因为家庭地域原因，申请该流程，但是没成功。试试可以，个人经验校方是有权拒绝的。拒绝后千万别继续尝试容易被弄死，为此我还写了检讨。<br>最后希望各位保研顺利都能去比我好的学校和专业。我虽然没有成功一步C9，但学长希望你们可以（华科真的不难进相信我，我就联系了俩华科老师就把我要了而且不用面试直接给offer），加油！！！<br>–一个菜鸡学长的保研路</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" class="post-title-link" itemprop="url">个人简历</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-22 21:37:34" itemprop="dateCreated datePublished" datetime="2020-07-22T21:37:34+08:00">2020-07-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
