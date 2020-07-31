@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c++</title>
-    <url>/2020/07/31/c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
     <title>linux嵌入式开发_1</title>
     <url>/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
+<ul>
 <li>linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。</li>
 </ul>
 <h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><ul>
-<li><p>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</p>
-<a id="more"></a>
+<li>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</li>
+</ul>
 <h2 id="linux下的环境搭建"><a href="#linux下的环境搭建" class="headerlink" title="linux下的环境搭建"></a>linux下的环境搭建</h2><h3 id="1、修改Ubuntu的一些配置"><a href="#1、修改Ubuntu的一些配置" class="headerlink" title="1、修改Ubuntu的一些配置"></a>1、修改Ubuntu的一些配置</h3><ul>
-<li>切换国内镜像源</li>
-</ul>
+<li><p>切换国内镜像源</p>
 <p>&ensp;&ensp;&ensp;&ensp;&ensp; 在使用apt命令安装包时，因为系统自带下载源在国外服务器上，所以需要切换为国内镜像源才能提升下载速度。这里有一篇博客详细说明了如何直接根据终端命令修改其配置文件，从而达到修改下载源的目的.或者，，，，你也可以直接用Ubuntu的图形界面去修改，步骤如下： 显示应用程序-&gt;软件和更新-&gt;下载自主服务器改为其他，然后选择合适的镜像源就行了，这里我选择的是阿里的镜像源。</p>
-<ul>
-<li>修改语言和设置汉语输入法</li>
-</ul>
+</li>
+<li><p>修改语言和设置汉语输入法</p>
 <p>&ensp;&ensp;&ensp;&ensp;&ensp; 懒得写，直接贴别人博客了</p>
 </li>
 </ul>
@@ -34,8 +28,42 @@
       </tags>
   </entry>
   <entry>
+    <title>English_learning</title>
+    <url>/2020/07/31/English-learning/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本处选取于考研真题进行示范性学习，共计考研英语真题100篇</p>
+</blockquote>
+<!-- > 
+<font face="黑体">我是黑体字</font>
+<font face="微软雅黑">我是微软雅黑</font>
+<font face="STCAIYUN">我是华文彩云</font>
+<font color=red>我是红色</font>
+<font color=#008000>我是绿色</font>
+<font color=Blue>我是蓝色</font>
+<font size=5>我是尺寸</font>
+<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font> -->
+
+<h1 id="第一篇"><a href="#第一篇" class="headerlink" title=" 第一篇 "></a><center> 第一篇 </center></h1><font face="黑体" color=white size=4>
+&nbsp;&nbsp;It was 3:45 in the morning when the vote was finally taken. After six months of arguing and final 16 hours of hot parliamentary debates, Australia’s Northern Territory became the first legal authority in the world to allow doctors to take the lives of <font face="黑体" color=yellow size=4>incurably ill patients who wish to die.</font> The measure passed by the convincing vote of 15 to 10. Almost immediately word flashed on the Internet and was picked up, half a world away, <font face="黑体" color=red size=4>by John Hofsess, executive director of the Right to Die Society of Canada.</font> He sent it on by way of the group’s online service, Death NET. Says Hofsess: <font face="黑体" color=green size=4>“We posted bulletins all day long, because of course this isn’t just something that happened in Australia. It’s world history.”</font>
+
+<p>直到凌晨3:45分的时候投票才最终被确定。经过四个小时的争论和最后16个小时的议会讨论，澳大利亚北方地区成为世界上第一个允许医生终结那些无法治愈疾病希望死亡人们的生命的合法当局。这个措施以一个令人信服的投票比15:10通过。几乎这个消息立刻被显示到了网上，被John Hofsess加拿大有权死亡协会执行性理事得知。他通过组织的网络服务器将这条信息发布到了死亡网上。John Hofsess说我们长时间的发布公告，因为当然这不仅仅是一些发生在澳大利亚的事情，这是世界的历史时刻。</p>
+<p>&nbsp;&nbsp; The full import may take a while to sink in. The NT Rights of the Terminally Ill Law has left physicians and citizens alike trying to deal with its moral and practical implications. Some have breathed sighs of relief, others, including churches, right-to-life groups and the Australian Medical Association, bitterly attacked the bill and the hurry of its passage. But the tide is unlikely to turn back. In Australia—where an aging population, life-extending technology and changing community attitudes have all played their part—other states are going to consider making a similar law to deal with euthanasia (安乐死). In the US and Canada, where the right-to-die movement is gathering strength, observers are waiting for the dominoes (多米诺骨牌) to start falling.</p>
+<p>&nbsp;&nbsp;Under the new Northern Territory law, an adult patient can request death — probably by a deadly injection or pill — to put an end to suffering. The patient must be diagnosed (诊断) as Terminally Ill by two doctors. After a “cooling off” period of seven days, the patient can sign a certificate of request. After 48 hours the wish for death can be met. For Lloyd Nickson, a 54-year-old Darwin resident suffering from lung cancer, the NT Rights of Terminally Ill Law means he can get on with living without the haunting fear of his suffering: a terrifying death from his breathing condition. “I’m not afraid of dying from a spiritual point of view, but what I was afraid of was how I’d go, because I’ve watched people die in the hospital fighting for oxygen and clawing at their masks,” he says.<br></font></p>
+]]></content>
+      <tags>
+        <tag>英语</tag>
+        <tag>英语阅读</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c++</title>
+    <url>/2020/07/31/c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>个人简历</title>
-    <url>/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</url>
+    <url>/2019/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
   <div class="hbe-input-container">
   <input type="password" id="hbePass" placeholder="" />
@@ -84,17 +112,18 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
-    <title>通信原理</title>
-    <url>/2020/07/31/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
     <title>深度学习_花书</title>
     <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-深度学习-DL-Deep-Learning-是机器学习-ML-Machine-Learning-领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能-AI-Artificial-Intelligence-。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-深度学习-DL-Deep-Learning-是机器学习-ML-Machine-Learning-领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能-AI-Artificial-Intelligence-。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。</h3><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。-深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。-深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。</h3><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。</h3>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
+<h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-深度学习-DL-Deep-Learning-是机器学习-ML-Machine-Learning-领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能-AI-Artificial-Intelligence-。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-深度学习-DL-Deep-Learning-是机器学习-ML-Machine-Learning-领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能-AI-Artificial-Intelligence-。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。</h3><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。-深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。-深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。</h3><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。</h3>]]></content>
       <tags>
         <tag>深度学习</tag>
         <tag>分类器</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>通信原理</title>
+    <url>/2020/07/31/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
 </search>

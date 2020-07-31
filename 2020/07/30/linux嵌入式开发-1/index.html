@@ -9,15 +9,15 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="linux基础linux是什么？ linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。  开发环境的搭建 开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这">
+  <meta name="description" content="linux基础linux是什么？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux嵌入式开发_1">
 <meta property="og:url" content="http://www.mmrsl.cn/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/index.html">
 <meta property="og:site_name" content="漫漫人生路">
-<meta property="og:description" content="linux基础linux是什么？ linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。  开发环境的搭建 开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这">
+<meta property="og:description" content="linux基础linux是什么？">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-29T16:44:36.000Z">
-<meta property="article:modified_time" content="2020-07-29T23:52:31.844Z">
+<meta property="article:modified_time" content="2020-07-31T09:22:46.877Z">
 <meta property="article:author" content="所念皆星河">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="嵌入式开发">
@@ -134,7 +134,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/%E4%B8%87%E9%B2%B2%E9%B9%8F/" style="font-size: 10px;">万鲲鹏</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862019/" style="font-size: 10px;">个人简历2019</a> <a href="/tags/%E5%88%86%E7%B1%BB%E5%99%A8/" style="font-size: 10px;">分类器</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 20px;">加密</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" style="font-size: 10px;">嵌入式开发</a> <a href="/tags/%E6%8E%A8%E5%85%8D/" style="font-size: 10px;">推免</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">深度学习</a> <a href="/tags/%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">鸟哥的私房菜学习</a>
+						<a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E4%B8%87%E9%B2%B2%E9%B9%8F/" style="font-size: 10px;">万鲲鹏</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862019/" style="font-size: 10px;">个人简历2019</a> <a href="/tags/%E5%88%86%E7%B1%BB%E5%99%A8/" style="font-size: 10px;">分类器</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 20px;">加密</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" style="font-size: 10px;">嵌入式开发</a> <a href="/tags/%E6%8E%A8%E5%85%8D/" style="font-size: 10px;">推免</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">深度学习</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/" style="font-size: 10px;">英语阅读</a> <a href="/tags/%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">鸟哥的私房菜学习</a>
 					</div>
 				</section>
 				
@@ -281,19 +281,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><ul>
+        <h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
+<ul>
 <li>linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。</li>
 </ul>
 <h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><ul>
-<li><p>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</p>
-<a id="more"></a>
+<li>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</li>
+</ul>
 <h2 id="linux下的环境搭建"><a href="#linux下的环境搭建" class="headerlink" title="linux下的环境搭建"></a>linux下的环境搭建</h2><h3 id="1、修改Ubuntu的一些配置"><a href="#1、修改Ubuntu的一些配置" class="headerlink" title="1、修改Ubuntu的一些配置"></a>1、修改Ubuntu的一些配置</h3><ul>
-<li>切换国内镜像源</li>
-</ul>
+<li><p>切换国内镜像源</p>
 <p>&ensp;&ensp;&ensp;&ensp;&ensp; 在使用apt命令安装包时，因为系统自带下载源在国外服务器上，所以需要切换为国内镜像源才能提升下载速度。这里有一篇博客详细说明了如何直接根据终端命令修改其配置文件，从而达到修改下载源的目的.或者，，，，你也可以直接用Ubuntu的图形界面去修改，步骤如下： 显示应用程序-&gt;软件和更新-&gt;下载自主服务器改为其他，然后选择合适的镜像源就行了，这里我选择的是阿里的镜像源。</p>
-<ul>
-<li>修改语言和设置汉语输入法</li>
-</ul>
+</li>
+<li><p>修改语言和设置汉语输入法</p>
 <p>&ensp;&ensp;&ensp;&ensp;&ensp; 懒得写，直接贴别人博客了</p>
 </li>
 </ul>
@@ -318,8 +317,8 @@
     </a>
   
   
-    <a href="/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">个人简历</div>
+    <a href="/2019/09/28/%E4%BF%9D%E7%A0%94%E7%BB%8F%E5%8E%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">保研经历</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
