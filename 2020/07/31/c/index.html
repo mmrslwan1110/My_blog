@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>c++ | 漫漫人生路</title>
+  <title>c++_常用语法 | 漫漫人生路</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="c++">
+  <meta name="description" content="C++常用语法2020_08_01 此文主要针对有c语言基础的人。  1. 基本语法 对象 - 对象具有状态和行为。例如：一个人的状态 — 样貌、姓名、出生地、所在地、年龄、身高等。 行为— 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。 类 - 类可以定义为描述对象行为&#x2F;状态的模板&#x2F;蓝图。类—一种描述对象行为的框架、一种状态模板、蓝图。 方法 — 方法其实可以说就是一种行为，一个类可以包含">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++_常用语法">
 <meta property="og:url" content="http://www.mmrsl.cn/2020/07/31/c/index.html">
 <meta property="og:site_name" content="漫漫人生路">
+<meta property="og:description" content="C++常用语法2020_08_01 此文主要针对有c语言基础的人。  1. 基本语法 对象 - 对象具有状态和行为。例如：一个人的状态 — 样貌、姓名、出生地、所在地、年龄、身高等。 行为— 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。 类 - 类可以定义为描述对象行为&#x2F;状态的模板&#x2F;蓝图。类—一种描述对象行为的框架、一种状态模板、蓝图。 方法 — 方法其实可以说就是一种行为，一个类可以包含">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T01:33:53.000Z">
-<meta property="article:modified_time" content="2020-07-31T01:33:53.189Z">
+<meta property="article:modified_time" content="2020-08-01T00:59:59.151Z">
 <meta property="article:author" content="所念皆星河">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="程序设计">
 <meta name="twitter:card" content="summary">
   
   
@@ -129,7 +133,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E4%B8%87%E9%B2%B2%E9%B9%8F/" style="font-size: 10px;">万鲲鹏</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862019/" style="font-size: 10px;">个人简历2019</a> <a href="/tags/%E5%88%86%E7%B1%BB%E5%99%A8/" style="font-size: 10px;">分类器</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 20px;">加密</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" style="font-size: 10px;">嵌入式开发</a> <a href="/tags/%E6%8E%A8%E5%85%8D/" style="font-size: 10px;">推免</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">深度学习</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/" style="font-size: 10px;">英语阅读</a> <a href="/tags/%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">鸟哥的私房菜学习</a>
+						<a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E4%B8%87%E9%B2%B2%E9%B9%8F/" style="font-size: 10px;">万鲲鹏</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862019/" style="font-size: 10px;">个人简历2019</a> <a href="/tags/%E5%88%86%E7%B1%BB%E5%99%A8/" style="font-size: 10px;">分类器</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 20px;">加密</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" style="font-size: 10px;">嵌入式开发</a> <a href="/tags/%E6%8E%A8%E5%85%8D/" style="font-size: 10px;">推免</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">深度学习</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">程序设计</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/" style="font-size: 10px;">英语阅读</a> <a href="/tags/%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">鸟哥的私房菜学习</a>
 					</div>
 				</section>
 				
@@ -244,7 +248,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      c++
+      c++_常用语法
       
     </h1>
   
@@ -253,13 +257,17 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="tag">程序设计</a></li></ul>
+	</div>
+
         
 
         
           
 <div class="counter-tag counter">
     <span id="/2020/07/31/c/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="c++">
+          style="font-size: 12px" data-flag-title="c++_常用语法">
          &nbsp;
         view
     </span>
@@ -272,7 +280,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
+<p>此文主要针对有c语言基础的人。</p>
+</blockquote>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><ul>
+<li><font face="黑体" color=white size=4>对象 - 对象具有状态和行为。例如：一个人的状态 — 样貌、姓名、出生地、所在地、年龄、身高等。 行为— 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
+<li><font face="黑体" color=white size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。<br>类—一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
+<li><font face="黑体" color=white size=4>方法 — 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; <a id="more"></a></li>
+<li><font face="黑体" color=white size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font></li>
+</ul>
+<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
+<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
+<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
+<p><code>typedef int feet //feet定义为int的新名子</code></p>
+<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure>
+<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
+<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
+<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
+<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
+</ul>
+<p>Lvalues &amp; Rvalues</p>
+<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
+<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
+<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>修饰符类型</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><center> 限定符</center></th>
+<th><center>含义  </center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><center> const</td>
+<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
+</tr>
+<tr>
+<td>restrict</td>
+<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
+</tr>
+<tr>
+<td>—</td>
+<td></td>
+</tr>
+</tbody></table>
+
       
     </div>
     
@@ -302,7 +363,7 @@
 </article>
 
 
-<div class="ds-share share" data-thread-key="c" data-title="c++" data-url="http://www.mmrsl.cn/2020/07/31/c/"  data-images="https://s1.ax1x.com/2020/07/23/UqUWp8.jpg" data-content="c++">
+<div class="ds-share share" data-thread-key="c" data-title="c++_常用语法" data-url="http://www.mmrsl.cn/2020/07/31/c/"  data-images="https://s1.ax1x.com/2020/07/23/UqUWp8.jpg" data-content="c++_常用语法">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
       	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
