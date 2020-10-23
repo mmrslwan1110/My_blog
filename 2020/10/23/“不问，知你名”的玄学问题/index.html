@@ -9,19 +9,19 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.前言  不知道大家有没有遇到路边有人问你，不用问你的姓就能知道你姓什么，当然我也遇到了。我怕被要钱就没有问，但后来仔细寻思挺有趣的，到底是什么原理呢，很多人都在网上给出了自己的解释，但在我看来却没有完全解决我的疑惑。近期看信息论有感，感觉是很有智慧的信息编码技术。 2.理论分析2.1 信息论  这个问题，看起来是一道玄学题，本质上其实是信息论问题。解决这个问题并不是我们的最终目的，我们应该通">
+  <meta name="description" content="不用问知道你名字的玄学问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息论一个小实例">
 <meta property="og:url" content="http://www.mmrsl.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="漫漫人生路">
-<meta property="og:description" content="1.前言  不知道大家有没有遇到路边有人问你，不用问你的姓就能知道你姓什么，当然我也遇到了。我怕被要钱就没有问，但后来仔细寻思挺有趣的，到底是什么原理呢，很多人都在网上给出了自己的解释，但在我看来却没有完全解决我的疑惑。近期看信息论有感，感觉是很有智慧的信息编码技术。 2.理论分析2.1 信息论  这个问题，看起来是一道玄学题，本质上其实是信息论问题。解决这个问题并不是我们的最终目的，我们应该通">
+<meta property="og:description" content="不用问知道你名字的玄学问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201023215340588.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201023215522191.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201023215814953.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-10-23T14:19:29.000Z">
-<meta property="article:modified_time" content="2020-10-23T14:27:31.472Z">
+<meta property="article:modified_time" content="2020-10-23T14:39:16.694Z">
 <meta property="article:author" content="所念皆星河">
 <meta property="article:tag" content="信息论">
 <meta property="article:tag" content="matlab">
@@ -285,7 +285,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <h1 id="不用问知道你名字的玄学问题"><a href="#不用问知道你名字的玄学问题" class="headerlink" title="不用问知道你名字的玄学问题"></a><center>不用问知道你名字的玄学问题</center></h1><a id="more"></a>
 <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>  不知道大家有没有遇到路边有人问你，不用问你的姓就能知道你姓什么，当然我也遇到了。我怕被要钱就没有问，但后来仔细寻思挺有趣的，到底是什么原理呢，很多人都在网上给出了自己的解释，但在我看来却没有完全解决我的疑惑。近期看信息论有感，感觉是很有智慧的信息编码技术。</p>
 <h2 id="2-理论分析"><a href="#2-理论分析" class="headerlink" title="2.理论分析"></a>2.理论分析</h2><h3 id="2-1-信息论"><a href="#2-1-信息论" class="headerlink" title="2.1 信息论"></a>2.1 信息论</h3><p>  这个问题，看起来是一道玄学题，本质上其实是信息论问题。解决这个问题并不是我们的最终目的，我们应该通过这个简单的问题了解信息论的本质，以小见大，一通百通。<br>  信息论可以很好的给一个问题快速找到他的一个边界，每个信息所包含的信息量。最让人吃惊的是信息论的作者在上世纪中叶就给所有人类可以接触的所有信息问题设置了边界。人类遇到的全部都是经典问题，为这种问题设置了一个绝对的边界，无论你怎么设置也不能逾越的一个最大边界。任何人想要压缩数据、用一个事件发生去必然寻找另一个小概率事件所需要的数量等都已经被信息论所决定。<br>  当别人还在寻找问题的解决方案的时候，信息论可以让你迅速从理论角度找到答案，降维打击。让我们知道这个问题的极限在哪里，不需要做很多没意义的工作。<br>  所以我首先给大家介绍一下信息熵。</p>
 <h3 id="2-2-信息熵"><a href="#2-2-信息熵" class="headerlink" title="2.2 信息熵"></a>2.2 信息熵</h3><blockquote>
