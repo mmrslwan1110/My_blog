@@ -3,19 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>漫漫人生路</title>
+  <title>信息论一个小实例 | 漫漫人生路</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="漫漫人生路">
-<meta property="og:url" content="http://www.mmrsl.cn/index.html">
+  <meta name="description" content="1.前言  不知道大家有没有遇到路边有人问你，不用问你的姓就能知道你姓什么，当然我也遇到了。我怕被要钱就没有问，但后来仔细寻思挺有趣的，到底是什么原理呢，很多人都在网上给出了自己的解释，但在我看来却没有完全解决我的疑惑。近期看信息论有感，感觉是很有智慧的信息编码技术。 2.理论分析2.1 信息论  这个问题，看起来是一道玄学题，本质上其实是信息论问题。解决这个问题并不是我们的最终目的，我们应该通过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息论一个小实例">
+<meta property="og:url" content="http://www.mmrsl.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="漫漫人生路">
+<meta property="og:description" content="1.前言  不知道大家有没有遇到路边有人问你，不用问你的姓就能知道你姓什么，当然我也遇到了。我怕被要钱就没有问，但后来仔细寻思挺有趣的，到底是什么原理呢，很多人都在网上给出了自己的解释，但在我看来却没有完全解决我的疑惑。近期看信息论有感，感觉是很有智慧的信息编码技术。 2.理论分析2.1 信息论  这个问题，看起来是一道玄学题，本质上其实是信息论问题。解决这个问题并不是我们的最终目的，我们应该通过">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201023215340588.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201023215522191.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201023215814953.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-10-23T14:19:29.000Z">
+<meta property="article:modified_time" content="2020-10-23T14:20:02.458Z">
 <meta property="article:author" content="所念皆星河">
+<meta property="article:tag" content="信息论">
+<meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
   
   
     <link rel="icon" href="https://s1.ax1x.com/2020/07/23/UqUWp8.jpg">
@@ -225,9 +236,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-“不问，知你名”的玄学问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-“不问，知你名”的玄学问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/" class="article-date">
@@ -243,15 +252,35 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/">
-        信息论一个小实例
-        
-      </a>
+    <h1 class="article-title" itemprop="name">
+      信息论一个小实例
+      
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab/" rel="tag">matlab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" rel="tag">信息论</a></li></ul>
+	</div>
+
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="信息论一个小实例">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -320,676 +349,42 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab/" rel="tag">matlab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" rel="tag">信息论</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="信息论一个小实例">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/31/English-learning/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">English_learning</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-English-learning" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/31/English-learning/" class="article-date">
-  	<time datetime="2020-07-31T09:20:21.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
+<div class="ds-share share" data-thread-key="“不问，知你名”的玄学问题" data-title="信息论一个小实例" data-url="http://www.mmrsl.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/"  data-images="https://s1.ax1x.com/2020/07/23/UqUWp8.jpg" data-content="信息论一个小实例">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/English-learning/">
-        English_learning
-        
-      </a>
-    </h1>
-  
+ </div>
+ 
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>本处选取于考研真题及专业八级英语真题进行学习，每日进行翻译一篇<br>  其中特殊句式采用不同颜色进行了标记</p>
-</blockquote>
-<!-- > 
-<font face="黑体">我是黑体字</font>
-<font face="微软雅黑">我是微软雅黑</font>
-<font face="STCAIYUN">我是华文彩云</font>
-<font color=red>我是红色</font>
-<font color=#008000>我是绿色</font>
-<font color=Blue>我是蓝色</font>
-<font size=5>我是尺寸</font>
-<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font> -->
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/" rel="tag">英语阅读</a></li></ul>
-	</div>
 
-      
 
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/31/English-learning/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="English_learning">
-         &nbsp;
-        view
-    </span>
-</div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2020/07/31/English-learning/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
 
-
-
-
-
-
-
-  
-    <article id="post-c" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/31/c/" class="article-date">
-  	<time datetime="2020-07-31T01:33:53.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/c/">
-        c++_常用语法
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
-<p>此文主要针对有c语言基础的人。</p>
-</blockquote>
-<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="tag">程序设计</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/31/c/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="c++_常用语法">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2020/07/31/c/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-数字信号处理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/31/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="article-date">
-  	<time datetime="2020-07-31T01:32:20.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">
-        数字信号处理
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/31/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="数字信号处理">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-信号与系统" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/31/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/" class="article-date">
-  	<time datetime="2020-07-31T01:32:09.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
-        信号与系统
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/31/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="信号与系统">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-通信原理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/31/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/" class="article-date">
-  	<time datetime="2020-07-31T01:31:49.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/">
-        通信原理
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/31/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="通信原理">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-信息论" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/31/%E4%BF%A1%E6%81%AF%E8%AE%BA/" class="article-date">
-  	<time datetime="2020-07-31T01:31:34.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/%E4%BF%A1%E6%81%AF%E8%AE%BA/">
-        信息论
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/31/%E4%BF%A1%E6%81%AF%E8%AE%BA/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="信息论">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-深度学习-花书" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/" class="article-date">
-  	<time datetime="2020-07-30T14:15:06.000Z" itemprop="datePublished">2020-07-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/">
-        深度学习_花书
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E7%B1%BB%E5%99%A8/" rel="tag">分类器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="深度学习_花书">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-linux嵌入式开发-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/" class="article-date">
-  	<time datetime="2020-07-29T16:44:36.000Z" itemprop="datePublished">2020-07-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/">
-        linux嵌入式开发_1
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" rel="tag">嵌入式开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C%E5%AD%A6%E4%B9%A0/" rel="tag">鸟哥的私房菜学习</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="linux嵌入式开发_1">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-个人简历" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" class="article-date">
-  	<time datetime="2020-07-22T13:37:34.000Z" itemprop="datePublished">2020-07-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
-        个人简历
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        2016-2020简历...
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%87%E9%B2%B2%E9%B9%8F/" rel="tag">万鲲鹏</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862019/" rel="tag">个人简历2019</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A0%E5%AF%86/" rel="tag">加密</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="个人简历">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -1015,8 +410,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
