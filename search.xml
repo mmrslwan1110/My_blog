@@ -1,77 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c++_常用语法</title>
-    <url>/2020/07/31/c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
-<p>此文主要针对有c语言基础的人。</p>
-</blockquote>
-<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
-<ul>
-<li><font face="黑体" color=white size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
-<li><font face="黑体" color=white size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
-类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
-<li><font face="黑体" color=white size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
-<li><font face="黑体" color=white size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
-
-
-</li>
-</ul>
-<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
-<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
-<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
-<p><code>typedef int feet //feet定义为int的新名子</code></p>
-<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
-<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
-<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
-<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
-<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
-</ul>
-<p>Lvalues &amp; Rvalues</p>
-<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
-<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
-<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>修饰符类型</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><center> 限定符</center></th>
-<th><center>含义  </center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><center> const</td>
-<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
-</tr>
-<tr>
-<td>volatile</td>
-<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
-</tr>
-<tr>
-<td>restrict</td>
-<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>English_learning</title>
     <url>/2020/07/31/English-learning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -185,6 +114,77 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
+    <title>c++_常用语法</title>
+    <url>/2020/07/31/c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
+<p>此文主要针对有c语言基础的人。</p>
+</blockquote>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
+<ul>
+<li><font face="黑体" color=white size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
+<li><font face="黑体" color=white size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
+类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
+<li><font face="黑体" color=white size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
+<li><font face="黑体" color=white size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
+
+
+</li>
+</ul>
+<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
+<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
+<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
+<p><code>typedef int feet //feet定义为int的新名子</code></p>
+<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
+<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
+<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
+<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
+<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
+</ul>
+<p>Lvalues &amp; Rvalues</p>
+<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
+<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
+<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>修饰符类型</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><center> 限定符</center></th>
+<th><center>含义  </center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> const</td>
+<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
+</tr>
+<tr>
+<td>restrict</td>
+<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux嵌入式开发_1</title>
     <url>/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
@@ -286,7 +286,7 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
   <entry>
     <title>强化学习</title>
     <url>/2020/11/20/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Q-learning入门例程及Python实现"><a href="#Q-learning入门例程及Python实现" class="headerlink" title="**Q-learning入门例程及Python实现**"></a><center>**Q-learning入门例程及Python实现**</center></h1><p><strong>摘要：Q-learning算法是一种以马尔科夫决策作为理论基础与模型无关的强化学习算法。本文中会描述一个入门级强化学习例程，即房间连通性问题：根据房间的连通性与否及房间出口构建回报矩阵R。并通过python语言利用强化学习算法获得该场景下的评估矩阵Q，最后利用Q矩阵寻找最优路径。</strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Q-learning入门例程及Python实现"><a href="#Q-learning入门例程及Python实现" class="headerlink" title="Q-learning入门例程及Python实现"></a><center>Q-learning入门例程及Python实现</center></h1><p><strong>摘要：Q-learning算法是一种以马尔科夫决策作为理论基础与模型无关的强化学习算法。本文中会描述一个入门级强化学习例程，即房间连通性问题：根据房间的连通性与否及房间出口构建回报矩阵R。并通过python语言利用强化学习算法获得该场景下的评估矩阵Q，最后利用Q矩阵寻找最优路径。</strong><br><a id="more"></a></p>
 <p>关键词：Q-learning；R矩阵；Q矩阵；最优路径决策</p>
 <h2 id="一、从马尔科夫过程到Q学习"><a href="#一、从马尔科夫过程到Q学习" class="headerlink" title="一、从马尔科夫过程到Q学习"></a>一、从马尔科夫过程到Q学习</h2><p>标准的马尔科夫决策过程可以用一个五元组\<S,A,P,R,γ\> 表示，其中：</p>
 <ul>
@@ -407,20 +407,6 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
       <tags>
         <tag>信息论</tag>
         <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习_花书</title>
-    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
-<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>分类器</tag>
       </tags>
   </entry>
   <entry>
@@ -570,6 +556,172 @@ b.8FSK不同信道下误码性能对比</center>
         <tag>matlab</tag>
         <tag>水声通信</tag>
         <tag>研究生课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习_花书</title>
+    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
+<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>分类器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>程序语法</title>
+    <url>/2020/11/20/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="编程语言语法"><a href="#编程语言语法" class="headerlink" title="编程语言语法"></a><center>编程语言语法</center></h1><a id="more"></a>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>程序  类型  语法</th>
+<th>python</th>
+<th>C++/C</th>
+<th>java</th>
+<th>matlab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>或</td>
+<td>or</td>
+<td>\</td>
+<td>\</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>与</td>
+<td>and</td>
+<td>&amp;&amp;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>非</td>
+<td>not</td>
+<td>!</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>条件语句</td>
+<td>if 条件 :  制表符 elseif 或elif:  制表符 else :  制表符</td>
+<td>if (条件){   } else if() {  } else {  }</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>循环语句</td>
+<td>1.for for x in [1,2,3,…] :  制表符 2.while while 循环条件:  制表符</td>
+<td>1.for for(int i=0;i\&lt;10;i++){} 2.while while(条件){}  do{ }while(条件)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>语句之间</td>
+<td>制表符</td>
+<td>{}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dict表</td>
+<td>d = {‘Michael’: 95, ‘Bob’: 75, ‘Tracy’: 85}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>set</td>
+<td>s1 = set([1, 2, 3]) s2 = set([2, 3, 4]) print(s1 &amp; s2) print(s1 \</td>
+<td>s2) s1.add(4) s1.remove(1)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>平方</td>
+<td>import math math.sqrt(2)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>函数定义</td>
+<td>def wan_find(list, col, list2):  col_max = 0  col_y = 0  col=col  # a = np.linspace(0, 5, 5);   for i in [0, 1, 2, 3, 4, 5]:  if col_max \&lt; list[i, col] and (i not in list2):  col_y = i  col_max = list[i, col]   return col_y, col_max</td>
+<td>int wan_find(float list[][], int col,int list2){         }</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>默认参数</td>
+<td>def product(x, y=1, z=1, k=1):  return x * y * z * k</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>递归函数</td>
+<td>def fact(n):  return fact_iter(n, 1)  def fact_iter(num, product):  if num == 1:  return product  return fact_iter(num - 1, num * product)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>map</td>
+<td>r =map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9]) list(r)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>reduce(f, [x1, x2, x3, x4]) =  f(f(f(x1, x2), x3), x4)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>filter</td>
+<td>def is_odd(n):  return n % 2 == 1 r=filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]) print(list(r))</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>sorted([36, 5, -12, 9, -21], key=abs) key=abs按照绝对值排序</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>面向对象</td>
+<td>class Student(object):   def _<em>init_</em>(self, name, score):  self.name = name  self.score = score   def print_score(self):  print(‘%s: %s’ % (self.name, self.score))   def get_grade(self):  if self.score >= 90:  return ‘A’  elif self.score >= 60:  return ‘B’  else:  return ‘C’</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>程序设计</tag>
+        <tag>matlab</tag>
+        <tag>python</tag>
+        <tag>c</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
