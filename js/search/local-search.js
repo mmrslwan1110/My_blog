@@ -57,7 +57,7 @@ const localSearch = (path, searchId, contentId) => {
               .toLowerCase();
             // absolute path
             // let data_url = CONFIG.root + data.url;
-            let data_url =CONFIG.root+"https://www.codekp.cn/";
+            let data_url ="https://www.codekp.cn/"+data.url;
             let index_title = -1;
             let index_content = -1;
             let first_occur = -1;
