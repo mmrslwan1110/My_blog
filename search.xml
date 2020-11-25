@@ -129,6 +129,40 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
+    <title>hexo插入bilibili视频代码块</title>
+    <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
+<li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
+<li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
+<li>复制代码块处代码</li>
+</ol>
+<center>
+<img src="https://www.codekp.cn/download/img/bilibili/分享.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;40891962&amp;bvid&#x3D;BV17t411p7gx&amp;cid&#x3D;71826908&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>直接将其放在你的markdown文件中，即可显示b站视频，但是会发现视频比较小，如下所示：</p>
+<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="2-代码块前后修饰"><a href="#2-代码块前后修饰" class="headerlink" title="2.代码块前后修饰"></a>2.代码块前后修饰</h2><p>在改代码的前后基础上加上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:relative; padding-bottom:75%; width:100%; height:0&quot;&gt;</span><br><span class="line"></span><br><span class="line"> style&#x3D;&quot;position:absolute; height: 100%; width: 100%;&quot;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>
+
+
+<p>即可将你的视频直接贴在你的文章上。</p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a></p>
+]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>B站</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>c++_常用语法</title>
     <url>/2020/07/31/c/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
@@ -197,40 +231,6 @@ If you are talking to a group of managers, you may refer to the disorganized met
       <tags>
         <tag>C++</tag>
         <tag>程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo插入bilibili视频代码块</title>
-    <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
-<li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
-<li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
-<li>复制代码块处代码</li>
-</ol>
-<center>
-<img src="https://www.codekp.cn/download/img/bilibili/分享.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;40891962&amp;bvid&#x3D;BV17t411p7gx&amp;cid&#x3D;71826908&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>直接将其放在你的markdown文件中，即可显示b站视频，但是会发现视频比较小，如下所示：</p>
-<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2 id="2-代码块前后修饰"><a href="#2-代码块前后修饰" class="headerlink" title="2.代码块前后修饰"></a>2.代码块前后修饰</h2><p>在改代码的前后基础上加上</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:relative; padding-bottom:75%; width:100%; height:0&quot;&gt;</span><br><span class="line"></span><br><span class="line"> style&#x3D;&quot;position:absolute; height: 100%; width: 100%;&quot;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>
-
-
-<p>即可将你的视频直接贴在你的文章上。</p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a></p>
-]]></content>
-      <categories>
-        <category>辅助技术</category>
-      </categories>
-      <tags>
-        <tag>B站</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -374,27 +374,129 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>矩阵分析引论</title>
-    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
-
-<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+    <title>强化学习</title>
+    <url>/2020/11/20/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Q-learning入门例程及Python实现"><a href="#Q-learning入门例程及Python实现" class="headerlink" title="Q-learning入门例程及Python实现"></a><center>Q-learning入门例程及Python实现</center></h1><p><strong>摘要：Q-learning算法是一种以马尔科夫决策作为理论基础与模型无关的强化学习算法。本文中会描述一个入门级强化学习例程，即房间连通性问题：根据房间的连通性与否及房间出口构建回报矩阵R。并通过python语言利用强化学习算法获得该场景下的评估矩阵Q，最后利用Q矩阵寻找最优路径。</strong><br><a id="more"></a></p>
+<p>关键词：Q-learning；R矩阵；Q矩阵；最优路径决策</p>
+<h2 id="一、从马尔科夫过程到Q学习"><a href="#一、从马尔科夫过程到Q学习" class="headerlink" title="一、从马尔科夫过程到Q学习"></a>一、从马尔科夫过程到Q学习</h2><p>标准的马尔科夫决策过程可以用一个五元组\<S,A,P,R,γ\> 表示，其中：</p>
+<ul>
+<li><p>S是一个离散有界的状态空间；</p>
+</li>
+<li><p>A是一个离散的动作空间；</p>
+</li>
+<li><p>P为状态转移概率函数，表示agent在状态s下选取动作a后转移到a’的概率；</p>
+</li>
+<li><p>R为回报函数，用于计算agent由当前状态 选取动作 后转移到下一状态<br>得到的立即回报值，由当前状态和选取的动作决定，体现了马尔科夫性的特点；</p>
+</li>
+<li><p>γ是折扣因子，用于确定延迟回报与立即回报的相对比例，<br>越大表明延迟回报的重要程度越高。</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/2019092420285149.png" width = "200" height = "40" alt="图片名称" align=center / loading="lazy"></p>
+<p>马尔科夫决策问题的目标是找到一个策略<br>，使其回报函数的长期累积值的数学期望最大。其中，策略π只和状态相关，与时间无关（静态的）。<img src="https://img-blog.csdnimg.cn/20190924203953879.png" width = "15" height = "15" alt="图片名称" align=center / loading="lazy">是t时刻的环境状态，<img src="https://img-blog.csdnimg.cn/20190924204015148.png" width = "15" height = "15" alt="图片名称" align=center / loading="lazy">是t时刻选择的动作。根据Bellman最优准则，得到最优策略 对应的最优指标为：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924203036514.png" width = "200" height = "40" alt="图片名称" align=center / loading="lazy"></p>
+<p>其中，R(s,a)为r(st,at)的数学期望，<img src="https://img-blog.csdnimg.cn/20190924203122905.png" width = "45" height = "20" alt="图片名称" align=center / loading="lazy">为在状态s下选取动作a后转移到下一状态状态s’的概率。由于某些环境中状态之间的转移概率P不容易获得，直接学习<img src="https://img-blog.csdnimg.cn/20190924203205467.png" width = "60" height = "20" alt="图片名称" align=center / loading="lazy">是很困难的，而Q学习不需要获取转移概率P，因而可用来解决此类具有马尔科夫性的问题。</p>
+<p>Q学习是一种与环境无关的算法，是一种基于数值迭代的动态规划方法。定义一个Q函数作为评估函数：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924203315691.png" width = "200" height = "30" alt="图片名称" align=center / loading="lazy"></p>
+<p>评估函数Q(s,a)的函数值是从状态s开始选择第一个动作a执行后获得的最大累积回报的折算值，通俗地说，Q值等于立即回报值r(s,a)<br>加上遵循最优策略的折算值，此时的最优策略可改写为：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924203357997.png" width = "200" height = "30" alt="图片名称" align=center / loading="lazy"></p>
+<p>该策略表达式的意义在于：如果agent用Q函数代替<img src="https://img-blog.csdnimg.cn/20190924204358289.png" width = "15" height = "15" alt="图片名称" align=center / loading="lazy">函数，就可以不考虑转移概率P，只考虑当前状态s的所有可供选择的动作a，并从中选出使Q(s,a)最大的动作，即agent对当前状态的部分Q值做出多次反应，便可以选出动作序列，使全局最优化。</p>
+<p>在Q学习中，agent由初始状态转移到目标状态的过程称为“Episode”，即“场景”。Q函数可以表示为以下的迭代形式进行Q矩阵的更新：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924203447849.png" width = "300" height = "30" alt="图片名称" align=center / loading="lazy"></p>
+<p>在每一步的迭代中，上式又可写为：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924203502753.png" width = "300" height = "30" alt="图片名称" align=center / loading="lazy"></p>
+<p>即Q矩阵(st,at)位置元素的值等于回报函数R的相应值加上折扣因子γ乘以转换到下一个状态后最大的Q值。</p>
+<p>上述的Q学习算法可以看出，当划分的状态有限时，每一场景开始时随机选择的初始状态s在算法的指导下探索环境，最终一定可以到达目标状态s*，回报函数R(s,a)是有界的，并且动作的选择能够使每个状态映射到动作对的访问是无限频率，则整个学习过程就能够训练出来。</p>
+<p>Q学习通过对环境的不断探索，积累历史经验，agent通过不断试错来强化自身，最终可以达到自主选择最优动作的目标，即不论出于何种状态，都可给出到达目标状态的最优选择路径，该算法中环境和动作相互影响，动作的选择影响环境状态，环境也可以通过强化回报函数<br>来反馈动作的优劣性，影响动作的选择。</p>
+<h2 id="二、由一个广为流传的小例子了解Q学习的算法逻辑"><a href="#二、由一个广为流传的小例子了解Q学习的算法逻辑" class="headerlink" title="二、由一个广为流传的小例子了解Q学习的算法逻辑"></a>二、由一个广为流传的小例子了解Q学习的算法逻辑</h2><p>一个由门连接的建筑物中有五个房间，如下图所示，分别用0-4号标识，将外界看作一个大房间，同样标识为5。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924205406684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsbV9weQ==,size_16,color_FFFFFF,t_70" width = "400" height = "200" alt="图片名称" align=center / loading="lazy"></p>
+<p>每个房间代表一个节点，门代表连线，可以将上图抽象为下面这样：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924205532752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsbV9weQ==,size_16,color_FFFFFF,t_70" width = "400" height = "200" alt="图片名称" align=center / loading="lazy"><br>agent会被随机放置在任意一个房间里，然后从那个房间出发，一直走到建筑外（即5号房间为目标房间）。门是双向的，所以相邻节点间是双向箭头连接。通过门可以立即得到奖励值100，通过其他门奖励值为0。将所有箭头标注奖励值如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190925124638361.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsbV9weQ==,size_16,color_FFFFFF,t_70" width = "400" height = "200" alt="图片名称" align=center / loading="lazy"></p>
+<p>在Q学习中，目标是达到奖励最高的状态，所以如果agent到达目标，它将永远在那里。这种类型的目标被称为“吸收目标”。</p>
+<p>想象一下，我们的agent是一个想象的虚拟机器人，可以通过经验学习。<br>agent可以从一个房间转移到另一个房间，但它没有上帝视角，也不知道哪一扇门通向外面。</p>
+<p>按照第一部分Q学习的理论，我们把每个房间抽象为一个状态，选择进入哪号房间作为动作，把状态图和即时奖励值放到下面的奖励值表“回报矩阵R”中：-1表示不可选择的动作，两个状态间没有连接）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">R &#x3D; np.matrix([[-1, -1, -1, -1, 0, -1],  </span><br><span class="line">[-1, -1, -1, 0, -1, 100],  </span><br><span class="line">[-1, -1, -1, 0, -1, -1],  </span><br><span class="line">[-1, 0, 0, -1, 0, -1],  </span><br><span class="line">[ 0, -1, -1, 0, -1, 100],  </span><br><span class="line">[-1, 0, -1, -1, 0, 100]])</span><br></pre></td></tr></table></figure>
+<p>现在我们将添加一个类似的矩阵“Q”给我们agent的大脑，代表了通过经验学到的东西的记忆。<br>矩阵Q的行表示agent的当前状态，列表示导致下一个状态的可能动作（节点之间的连线）。</p>
+<p>agent开始什么都不知道，矩阵Q被初始化为零。<br>在这个例子中，为了解释简单，我们假设状态的数目是已知的（六个，0-5）。<br>如果我们不知道涉及多少个状态，矩阵Q可能从只有一个元素开始。<br>如果找到新的状态，则在矩阵Q中添加更多的列和行是一项简单的任务。</p>
+<p>Q学习的更新规则如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190924203502753.png" width = "200" height = "30" alt="图片名称" align=center / loading="lazy"></p>
+<p>根据这个公式，分配给矩阵Q的特定元素的值等于矩阵R中相应值加上学习参数γ乘以下一状态下所有可能动作的Q的最大值。</p>
+<p>基于算法思想，训练Q矩阵的具体流程如下：</p>
+<ul>
+<li><p>步骤1.初始化仓库环境和算法参数（最大训练周期数，每一场景即为一个周期，折扣因子γ，即时回报函数R和评估矩阵Q。）。</p>
+</li>
+<li><p>步骤2.随机选择一个初始状态s，若s=s*，则结束此场景，重新选择初始状态。</p>
+</li>
+<li><p>步骤3.在当前状态s的所有可能动作中随机选择一个动作a，选择每一动作的概率相等。</p>
+</li>
+<li><p>步骤4.当前状态s选取动作a后到达状态s’。</p>
+</li>
+<li><p>步骤5.使用公式对Q矩阵进行更新。</p>
+</li>
+<li><p>步骤6.设置下一状态为当前状态，s=s‘。若s未达到目标状态，则转步骤3。</p>
+</li>
+<li><p>步骤7.如果算法未达到最大训练周期数，转步骤2进入下一场景。否则结束训练，此时得到训练完毕的收敛Q矩阵。</p>
+</li>
+</ul>
+<p>上面的流程是给agent用来学习经验的。 每一场景都相当于一个培训课程。<br>在每个培训课程中, agent将探索环境 (由矩阵R表示), 接收奖励 (如果有),<br>直到达到目标状态。训练的目的是提高我们的agent的 “大脑”（矩阵 Q）。<br>场景越多，Q矩阵越优化。 在这种情况下, 如果矩阵 Q<br>得到了增强,四处探索时并不会在同一个房间进进出出,<br>agent将找到最快的路线到达目标状态。</p>
+<p>参数γ的范围为0到1（0 \&lt;= γ\&lt; 1）。<br>如果γ接近零，agent将倾向于只考虑立即得到奖励值。<br>如果γ更接近1，那么agent将会考虑更多的权重，愿意延迟得到奖励。</p>
+<p>一旦矩阵Q足够接近收敛状态，我们知道我们的agent已经学习了任意状态到达目标状态的最佳路径。</p>
+<p>例如：</p>
+<ul>
+<li><p>从初始状态2开始，agent可以使用矩阵Q作为指导,从状态2开始，最大Q值表示选择进入状态3的动作。</p>
+</li>
+<li><p>从状态3开始，最大Q值表示有两种并列最优选择：进入状态1或4。假设我们任意选择去1。</p>
+</li>
+<li><p>从状态1开始，最大Q值表示选择进入状态5的动作。</p>
+</li>
+<li><p>因此，最优策略是2 - 3 - 1 - 5。</p>
+</li>
+</ul>
+<p>我们使用Python为训练agent编写代码：<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">import numpy as np  </span><br><span class="line">import random  </span><br><span class="line">  </span><br><span class="line">\# 初始化矩阵  </span><br><span class="line">Q = np.<span class="built_in">zeros</span>((<span class="number">6</span>, <span class="number">6</span>))  </span><br><span class="line">Q = np.matrix(Q)  </span><br><span class="line">  </span><br><span class="line">def wan_find(list, col, list2):  </span><br><span class="line">col_max = <span class="number">0</span>  </span><br><span class="line">col_y = <span class="number">0</span>  </span><br><span class="line">col=col  </span><br><span class="line">\# a = np.linspace(0, 5, 5);  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> in [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]:  </span><br><span class="line"><span class="keyword">if</span> col_max \&lt; list[<span class="built_in">i</span>, col] and (<span class="built_in">i</span> not in list2):  </span><br><span class="line">col_y = <span class="built_in">i</span>  </span><br><span class="line">col_max = list[<span class="built_in">i</span>, col]  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> col_y, col_max  </span><br><span class="line">  </span><br><span class="line">\# 回报矩阵R  </span><br><span class="line">R = np.matrix([[<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">100</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">-1</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>],  </span><br><span class="line">[ <span class="number">0</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">100</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">100</span>]])  </span><br><span class="line">  </span><br><span class="line">\# 设立学习参数  </span><br><span class="line">γ = <span class="number">0.8</span>  </span><br><span class="line">  </span><br><span class="line">\# 训练  </span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> in range(<span class="number">2000</span>):  </span><br><span class="line">\# 对每一个训练,随机选择一种状态  </span><br><span class="line">state = random.randint(<span class="number">0</span>, <span class="number">5</span>)  </span><br><span class="line"><span class="keyword">while</span> True:  </span><br><span class="line">\# 选择当前状态下的所有可能动作  </span><br><span class="line">r_pos_action = []  </span><br><span class="line"><span class="keyword">for</span> action in range(<span class="number">6</span>):  </span><br><span class="line"><span class="keyword">if</span> R[state, action] \&gt;= <span class="number">0</span>:  </span><br><span class="line">r_pos_action.append(action)  </span><br><span class="line">  </span><br><span class="line">next_state = r_pos_action[random.randint(<span class="number">0</span>, len(r_pos_action) - <span class="number">1</span>)]  </span><br><span class="line">Q[state, next_state] = R[state, next_state] + γ \* (Q[next_state]).max() \# 更新  </span><br><span class="line">state = next_state  </span><br><span class="line">\# 状态4位最优库存状态  </span><br><span class="line"><span class="keyword">if</span> state == <span class="number">5</span>:  </span><br><span class="line"><span class="keyword">break</span>  </span><br><span class="line">  </span><br><span class="line">Q1=np.<span class="built_in">zeros</span>((<span class="number">6</span>, <span class="number">6</span>))  </span><br><span class="line">Q1=Q/Q.<span class="built_in">max</span>();  </span><br><span class="line">print(Q1)  </span><br><span class="line">\#frist_place = input("请输入在那个地方:")  </span><br><span class="line">\#while frist_place!=5 :  </span><br><span class="line">  </span><br><span class="line">next_place = int(input(<span class="string">'初始房间号'</span>))  </span><br><span class="line">list2 = [next_place]  </span><br><span class="line"><span class="keyword">while</span> next_place != <span class="number">5</span>:  </span><br><span class="line">next_place, value = wan_find(Q1, next_place, list2)  </span><br><span class="line">list2.append(next_place)  </span><br><span class="line">print(list2)</span><br><span class="line"></span><br><span class="line">运行结果为：</span><br><span class="line"></span><br><span class="line">[[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.64</span> <span class="number">0.</span> <span class="number">1.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.64</span> <span class="number">0.</span> <span class="number">0.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.512</span> <span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.64</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.64</span> <span class="number">0.</span> <span class="number">1.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.8</span> <span class="number">1.</span> ]]</span><br><span class="line"></span><br><span class="line">初始房间号<span class="number">2</span></span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+        <tag>强化学习</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习</title>
+    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
+<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
+<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
+</ol>
+<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
+<center>
+图6.1存在划分超平面将两个训练样本分开
 </center>
 
-<a id="more"></a>
-<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
-<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。</li>
+
+<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
+<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
+<script type="math/tex; mode=display">
+r = \frac{|w^Tx+b|}{||w||}</script><ol>
+<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<script type="math/tex; mode=display">w^Tx_i+b\geq+1,  y_i=+1\\
+w^Tx_i+b\leq-1,  y_i=+1</script></li>
+<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
+<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
 </ol>
-<p>参考视频教程：</p>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>]]></content>
+<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
+<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
+<li>更有效求解参数w和b的方法:拉格朗日乘子法<br>对svm基本型式子</li>
+</ol>
+]]></content>
       <categories>
         <category>研究生课程</category>
       </categories>
       <tags>
-        <tag>研究生课程</tag>
-        <tag>矩阵论</tag>
+        <tag>信息论</tag>
+        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -544,134 +646,8 @@ b.8FSK不同信道下误码性能对比</center>
       </categories>
       <tags>
         <tag>matlab</tag>
-        <tag>研究生课程</tag>
         <tag>水声通信</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习</title>
-    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
-<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
-<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
-</ol>
-<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
-<center>
-图6.1存在划分超平面将两个训练样本分开
-</center>
-
-
-<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
-<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
-<script type="math/tex; mode=display">
-r = \frac{|w^Tx+b|}{||w||}</script><ol>
-<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<script type="math/tex; mode=display">w^Tx_i+b\geq+1,  y_i=+1\\
-w^Tx_i+b\leq-1,  y_i=+1</script></li>
-<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
-<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-</ol>
-<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
-<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
-<li>更有效求解参数w和b的方法:拉格朗日乘子法<br>对svm基本型式子</li>
-</ol>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>信息论</tag>
-        <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>强化学习</title>
-    <url>/2020/11/20/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Q-learning入门例程及Python实现"><a href="#Q-learning入门例程及Python实现" class="headerlink" title="Q-learning入门例程及Python实现"></a><center>Q-learning入门例程及Python实现</center></h1><p><strong>摘要：Q-learning算法是一种以马尔科夫决策作为理论基础与模型无关的强化学习算法。本文中会描述一个入门级强化学习例程，即房间连通性问题：根据房间的连通性与否及房间出口构建回报矩阵R。并通过python语言利用强化学习算法获得该场景下的评估矩阵Q，最后利用Q矩阵寻找最优路径。</strong><br><a id="more"></a></p>
-<p>关键词：Q-learning；R矩阵；Q矩阵；最优路径决策</p>
-<h2 id="一、从马尔科夫过程到Q学习"><a href="#一、从马尔科夫过程到Q学习" class="headerlink" title="一、从马尔科夫过程到Q学习"></a>一、从马尔科夫过程到Q学习</h2><p>标准的马尔科夫决策过程可以用一个五元组\<S,A,P,R,γ\> 表示，其中：</p>
-<ul>
-<li><p>S是一个离散有界的状态空间；</p>
-</li>
-<li><p>A是一个离散的动作空间；</p>
-</li>
-<li><p>P为状态转移概率函数，表示agent在状态s下选取动作a后转移到a’的概率；</p>
-</li>
-<li><p>R为回报函数，用于计算agent由当前状态 选取动作 后转移到下一状态<br>得到的立即回报值，由当前状态和选取的动作决定，体现了马尔科夫性的特点；</p>
-</li>
-<li><p>γ是折扣因子，用于确定延迟回报与立即回报的相对比例，<br>越大表明延迟回报的重要程度越高。</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/2019092420285149.png" width = "200" height = "40" alt="图片名称" align=center / loading="lazy"></p>
-<p>马尔科夫决策问题的目标是找到一个策略<br>，使其回报函数的长期累积值的数学期望最大。其中，策略π只和状态相关，与时间无关（静态的）。<img src="https://img-blog.csdnimg.cn/20190924203953879.png" width = "15" height = "15" alt="图片名称" align=center / loading="lazy">是t时刻的环境状态，<img src="https://img-blog.csdnimg.cn/20190924204015148.png" width = "15" height = "15" alt="图片名称" align=center / loading="lazy">是t时刻选择的动作。根据Bellman最优准则，得到最优策略 对应的最优指标为：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924203036514.png" width = "200" height = "40" alt="图片名称" align=center / loading="lazy"></p>
-<p>其中，R(s,a)为r(st,at)的数学期望，<img src="https://img-blog.csdnimg.cn/20190924203122905.png" width = "45" height = "20" alt="图片名称" align=center / loading="lazy">为在状态s下选取动作a后转移到下一状态状态s’的概率。由于某些环境中状态之间的转移概率P不容易获得，直接学习<img src="https://img-blog.csdnimg.cn/20190924203205467.png" width = "60" height = "20" alt="图片名称" align=center / loading="lazy">是很困难的，而Q学习不需要获取转移概率P，因而可用来解决此类具有马尔科夫性的问题。</p>
-<p>Q学习是一种与环境无关的算法，是一种基于数值迭代的动态规划方法。定义一个Q函数作为评估函数：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924203315691.png" width = "200" height = "30" alt="图片名称" align=center / loading="lazy"></p>
-<p>评估函数Q(s,a)的函数值是从状态s开始选择第一个动作a执行后获得的最大累积回报的折算值，通俗地说，Q值等于立即回报值r(s,a)<br>加上遵循最优策略的折算值，此时的最优策略可改写为：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924203357997.png" width = "200" height = "30" alt="图片名称" align=center / loading="lazy"></p>
-<p>该策略表达式的意义在于：如果agent用Q函数代替<img src="https://img-blog.csdnimg.cn/20190924204358289.png" width = "15" height = "15" alt="图片名称" align=center / loading="lazy">函数，就可以不考虑转移概率P，只考虑当前状态s的所有可供选择的动作a，并从中选出使Q(s,a)最大的动作，即agent对当前状态的部分Q值做出多次反应，便可以选出动作序列，使全局最优化。</p>
-<p>在Q学习中，agent由初始状态转移到目标状态的过程称为“Episode”，即“场景”。Q函数可以表示为以下的迭代形式进行Q矩阵的更新：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924203447849.png" width = "300" height = "30" alt="图片名称" align=center / loading="lazy"></p>
-<p>在每一步的迭代中，上式又可写为：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924203502753.png" width = "300" height = "30" alt="图片名称" align=center / loading="lazy"></p>
-<p>即Q矩阵(st,at)位置元素的值等于回报函数R的相应值加上折扣因子γ乘以转换到下一个状态后最大的Q值。</p>
-<p>上述的Q学习算法可以看出，当划分的状态有限时，每一场景开始时随机选择的初始状态s在算法的指导下探索环境，最终一定可以到达目标状态s*，回报函数R(s,a)是有界的，并且动作的选择能够使每个状态映射到动作对的访问是无限频率，则整个学习过程就能够训练出来。</p>
-<p>Q学习通过对环境的不断探索，积累历史经验，agent通过不断试错来强化自身，最终可以达到自主选择最优动作的目标，即不论出于何种状态，都可给出到达目标状态的最优选择路径，该算法中环境和动作相互影响，动作的选择影响环境状态，环境也可以通过强化回报函数<br>来反馈动作的优劣性，影响动作的选择。</p>
-<h2 id="二、由一个广为流传的小例子了解Q学习的算法逻辑"><a href="#二、由一个广为流传的小例子了解Q学习的算法逻辑" class="headerlink" title="二、由一个广为流传的小例子了解Q学习的算法逻辑"></a>二、由一个广为流传的小例子了解Q学习的算法逻辑</h2><p>一个由门连接的建筑物中有五个房间，如下图所示，分别用0-4号标识，将外界看作一个大房间，同样标识为5。</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924205406684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsbV9weQ==,size_16,color_FFFFFF,t_70" width = "400" height = "200" alt="图片名称" align=center / loading="lazy"></p>
-<p>每个房间代表一个节点，门代表连线，可以将上图抽象为下面这样：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924205532752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsbV9weQ==,size_16,color_FFFFFF,t_70" width = "400" height = "200" alt="图片名称" align=center / loading="lazy"><br>agent会被随机放置在任意一个房间里，然后从那个房间出发，一直走到建筑外（即5号房间为目标房间）。门是双向的，所以相邻节点间是双向箭头连接。通过门可以立即得到奖励值100，通过其他门奖励值为0。将所有箭头标注奖励值如下图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190925124638361.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsbV9weQ==,size_16,color_FFFFFF,t_70" width = "400" height = "200" alt="图片名称" align=center / loading="lazy"></p>
-<p>在Q学习中，目标是达到奖励最高的状态，所以如果agent到达目标，它将永远在那里。这种类型的目标被称为“吸收目标”。</p>
-<p>想象一下，我们的agent是一个想象的虚拟机器人，可以通过经验学习。<br>agent可以从一个房间转移到另一个房间，但它没有上帝视角，也不知道哪一扇门通向外面。</p>
-<p>按照第一部分Q学习的理论，我们把每个房间抽象为一个状态，选择进入哪号房间作为动作，把状态图和即时奖励值放到下面的奖励值表“回报矩阵R”中：-1表示不可选择的动作，两个状态间没有连接）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">R &#x3D; np.matrix([[-1, -1, -1, -1, 0, -1],  </span><br><span class="line">[-1, -1, -1, 0, -1, 100],  </span><br><span class="line">[-1, -1, -1, 0, -1, -1],  </span><br><span class="line">[-1, 0, 0, -1, 0, -1],  </span><br><span class="line">[ 0, -1, -1, 0, -1, 100],  </span><br><span class="line">[-1, 0, -1, -1, 0, 100]])</span><br></pre></td></tr></table></figure>
-<p>现在我们将添加一个类似的矩阵“Q”给我们agent的大脑，代表了通过经验学到的东西的记忆。<br>矩阵Q的行表示agent的当前状态，列表示导致下一个状态的可能动作（节点之间的连线）。</p>
-<p>agent开始什么都不知道，矩阵Q被初始化为零。<br>在这个例子中，为了解释简单，我们假设状态的数目是已知的（六个，0-5）。<br>如果我们不知道涉及多少个状态，矩阵Q可能从只有一个元素开始。<br>如果找到新的状态，则在矩阵Q中添加更多的列和行是一项简单的任务。</p>
-<p>Q学习的更新规则如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20190924203502753.png" width = "200" height = "30" alt="图片名称" align=center / loading="lazy"></p>
-<p>根据这个公式，分配给矩阵Q的特定元素的值等于矩阵R中相应值加上学习参数γ乘以下一状态下所有可能动作的Q的最大值。</p>
-<p>基于算法思想，训练Q矩阵的具体流程如下：</p>
-<ul>
-<li><p>步骤1.初始化仓库环境和算法参数（最大训练周期数，每一场景即为一个周期，折扣因子γ，即时回报函数R和评估矩阵Q。）。</p>
-</li>
-<li><p>步骤2.随机选择一个初始状态s，若s=s*，则结束此场景，重新选择初始状态。</p>
-</li>
-<li><p>步骤3.在当前状态s的所有可能动作中随机选择一个动作a，选择每一动作的概率相等。</p>
-</li>
-<li><p>步骤4.当前状态s选取动作a后到达状态s’。</p>
-</li>
-<li><p>步骤5.使用公式对Q矩阵进行更新。</p>
-</li>
-<li><p>步骤6.设置下一状态为当前状态，s=s‘。若s未达到目标状态，则转步骤3。</p>
-</li>
-<li><p>步骤7.如果算法未达到最大训练周期数，转步骤2进入下一场景。否则结束训练，此时得到训练完毕的收敛Q矩阵。</p>
-</li>
-</ul>
-<p>上面的流程是给agent用来学习经验的。 每一场景都相当于一个培训课程。<br>在每个培训课程中, agent将探索环境 (由矩阵R表示), 接收奖励 (如果有),<br>直到达到目标状态。训练的目的是提高我们的agent的 “大脑”（矩阵 Q）。<br>场景越多，Q矩阵越优化。 在这种情况下, 如果矩阵 Q<br>得到了增强,四处探索时并不会在同一个房间进进出出,<br>agent将找到最快的路线到达目标状态。</p>
-<p>参数γ的范围为0到1（0 \&lt;= γ\&lt; 1）。<br>如果γ接近零，agent将倾向于只考虑立即得到奖励值。<br>如果γ更接近1，那么agent将会考虑更多的权重，愿意延迟得到奖励。</p>
-<p>一旦矩阵Q足够接近收敛状态，我们知道我们的agent已经学习了任意状态到达目标状态的最佳路径。</p>
-<p>例如：</p>
-<ul>
-<li><p>从初始状态2开始，agent可以使用矩阵Q作为指导,从状态2开始，最大Q值表示选择进入状态3的动作。</p>
-</li>
-<li><p>从状态3开始，最大Q值表示有两种并列最优选择：进入状态1或4。假设我们任意选择去1。</p>
-</li>
-<li><p>从状态1开始，最大Q值表示选择进入状态5的动作。</p>
-</li>
-<li><p>因此，最优策略是2 - 3 - 1 - 5。</p>
-</li>
-</ul>
-<p>我们使用Python为训练agent编写代码：<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">import numpy as np  </span><br><span class="line">import random  </span><br><span class="line">  </span><br><span class="line">\# 初始化矩阵  </span><br><span class="line">Q = np.<span class="built_in">zeros</span>((<span class="number">6</span>, <span class="number">6</span>))  </span><br><span class="line">Q = np.matrix(Q)  </span><br><span class="line">  </span><br><span class="line">def wan_find(list, col, list2):  </span><br><span class="line">col_max = <span class="number">0</span>  </span><br><span class="line">col_y = <span class="number">0</span>  </span><br><span class="line">col=col  </span><br><span class="line">\# a = np.linspace(0, 5, 5);  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> in [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]:  </span><br><span class="line"><span class="keyword">if</span> col_max \&lt; list[<span class="built_in">i</span>, col] and (<span class="built_in">i</span> not in list2):  </span><br><span class="line">col_y = <span class="built_in">i</span>  </span><br><span class="line">col_max = list[<span class="built_in">i</span>, col]  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> col_y, col_max  </span><br><span class="line">  </span><br><span class="line">\# 回报矩阵R  </span><br><span class="line">R = np.matrix([[<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">100</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">-1</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>],  </span><br><span class="line">[ <span class="number">0</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">100</span>],  </span><br><span class="line">[<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">100</span>]])  </span><br><span class="line">  </span><br><span class="line">\# 设立学习参数  </span><br><span class="line">γ = <span class="number">0.8</span>  </span><br><span class="line">  </span><br><span class="line">\# 训练  </span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> in range(<span class="number">2000</span>):  </span><br><span class="line">\# 对每一个训练,随机选择一种状态  </span><br><span class="line">state = random.randint(<span class="number">0</span>, <span class="number">5</span>)  </span><br><span class="line"><span class="keyword">while</span> True:  </span><br><span class="line">\# 选择当前状态下的所有可能动作  </span><br><span class="line">r_pos_action = []  </span><br><span class="line"><span class="keyword">for</span> action in range(<span class="number">6</span>):  </span><br><span class="line"><span class="keyword">if</span> R[state, action] \&gt;= <span class="number">0</span>:  </span><br><span class="line">r_pos_action.append(action)  </span><br><span class="line">  </span><br><span class="line">next_state = r_pos_action[random.randint(<span class="number">0</span>, len(r_pos_action) - <span class="number">1</span>)]  </span><br><span class="line">Q[state, next_state] = R[state, next_state] + γ \* (Q[next_state]).max() \# 更新  </span><br><span class="line">state = next_state  </span><br><span class="line">\# 状态4位最优库存状态  </span><br><span class="line"><span class="keyword">if</span> state == <span class="number">5</span>:  </span><br><span class="line"><span class="keyword">break</span>  </span><br><span class="line">  </span><br><span class="line">Q1=np.<span class="built_in">zeros</span>((<span class="number">6</span>, <span class="number">6</span>))  </span><br><span class="line">Q1=Q/Q.<span class="built_in">max</span>();  </span><br><span class="line">print(Q1)  </span><br><span class="line">\#frist_place = input("请输入在那个地方:")  </span><br><span class="line">\#while frist_place!=5 :  </span><br><span class="line">  </span><br><span class="line">next_place = int(input(<span class="string">'初始房间号'</span>))  </span><br><span class="line">list2 = [next_place]  </span><br><span class="line"><span class="keyword">while</span> next_place != <span class="number">5</span>:  </span><br><span class="line">next_place, value = wan_find(Q1, next_place, list2)  </span><br><span class="line">list2.append(next_place)  </span><br><span class="line">print(list2)</span><br><span class="line"></span><br><span class="line">运行结果为：</span><br><span class="line"></span><br><span class="line">[[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.64</span> <span class="number">0.</span> <span class="number">1.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.64</span> <span class="number">0.</span> <span class="number">0.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.512</span> <span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.64</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.64</span> <span class="number">0.</span> <span class="number">1.</span> ]</span><br><span class="line"></span><br><span class="line">[<span class="number">0.</span> <span class="number">0.8</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.8</span> <span class="number">1.</span> ]]</span><br><span class="line"></span><br><span class="line">初始房间号<span class="number">2</span></span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
-        <tag>强化学习</tag>
-        <tag>python</tag>
+        <tag>研究生课程</tag>
       </tags>
   </entry>
   <entry>
@@ -689,54 +665,27 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
       </tags>
   </entry>
   <entry>
-    <title>网站视频下载及按帧将视频转为jpg</title>
-    <url>/2020/10/15/%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8F%8A%E6%8C%89%E5%B8%A7%E8%BD%AC%E4%B8%BAjpg/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="网站视频下载及按帧转为jpg"><a href="#网站视频下载及按帧转为jpg" class="headerlink" title="网站视频下载及按帧转为jpg"></a>网站视频下载及按帧转为jpg</h1><h2 id="1、准备切割视频"><a href="#1、准备切割视频" class="headerlink" title="1、准备切割视频"></a>1、准备切割视频</h2><p>视频切割算法:<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;</span><br><span class="line">clear;</span><br><span class="line"><span class="comment">%读取视频</span></span><br><span class="line">video_file=<span class="string">'D:\1.mp4'</span>;</span><br><span class="line">obj=VideoReader(video_file);</span><br><span class="line">frame_num=obj.NumberOfFrames;<span class="comment">%一共有多少帧</span></span><br><span class="line"><span class="comment">% 分离图片</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">15</span><span class="comment">%读取前15帧</span></span><br><span class="line">    img=strcat(<span class="string">'D:\picture\',num2str(i));</span></span><br><span class="line"><span class="string">    img=strcat(img,'</span>.jpg');</span><br><span class="line">    I=read(obj,<span class="built_in">i</span>);<span class="comment">%读出第15帧图片</span></span><br><span class="line">    imwrite(I,strcat(<span class="string">'D:\picture\',num2str(i),'</span>.jpg'),<span class="string">'jpg'</span>);<span class="comment">% 保存帧</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="2、问题"><a href="#2、问题" class="headerlink" title="2、问题"></a>2、问题</h2><h4 id="考虑使用-you-get下载视频"><a href="#考虑使用-you-get下载视频" class="headerlink" title="考虑使用 you-get下载视频"></a>考虑使用 you-get下载视频</h4><ol>
-<li>首先安装<br><kbd>pip install you-get</kbd></li>
-<li>下载<br><kbd>you-get -i [URL]</kbd><br>-i:查看可以下载的详细信息<br><kbd>you-get —format=dash-flv  [URL]</kbd></li>
+    <title>矩阵分析引论</title>
+    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
+
+<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<a id="more"></a>
+<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
+<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。</li>
 </ol>
-<p>以此方法可以直接下载大部分网站上的视频。</p>
-<h4 id="例子：以小鲤鱼历险记为例bilibili"><a href="#例子：以小鲤鱼历险记为例bilibili" class="headerlink" title="例子：以小鲤鱼历险记为例bilibili"></a>例子：以小鲤鱼历险记为例<a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">bilibili</a></h4><ol>
-<li>直接通过you-get进行下载<br>下载到的文件一般是flv需要解码，不能直接读取。<br><kbd>you-get <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20201120164038867.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<ol>
-<li><p>通过you-get -i 获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。<br><kbd>you-get -i <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd><br><img src="https://img-blog.csdnimg.cn/20201120164038873.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-</li>
-<li><p>通过you-get —format=dash-flv  获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。 </p>
-</li>
-</ol>
-<p><kbd>you-get —format=dash-720  <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></p>
-<p><img src="https://img-blog.csdnimg.cn/20201120164038865.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<ol>
-<li>下载下来的文件地址为终端所在地址：<br>本文中为<kbd>E:\Users\root\【720p】小鲤鱼历险记【2006】【完结】【无水印高清】 (P1. 小鲤鱼历险记 01)[00].mp4</kbd></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20201120164038861.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<h4 id="hevc未安装"><a href="#hevc未安装" class="headerlink" title="hevc未安装"></a>hevc未安装</h4><p>导致matlab无法读取下载的软件</p>
-<h2 id="3、方法"><a href="#3、方法" class="headerlink" title="3、方法"></a>3、方法</h2><p>1、安装codec，网上有很多hevc但是目前免费办法中国区无法下载，于是参考很多文章后选择下载codec。</p>
-<p>参考：</p>
-<ul>
-<li><ol>
-<li><a href="http://www.codecguide.com/download_k-lite_codec_pack_basic.htm" target="_blank" rel="noopener">http://www.codecguide.com/download_k-lite_codec_pack_basic.htm</a></li>
-</ol>
-</li>
-<li><ol>
-<li><a href="https://www.jianshu.com/p/dd7f04c27a79" target="_blank" rel="noopener">https://www.jianshu.com/p/dd7f04c27a79</a></li>
-</ol>
-</li>
-<li><ol>
-<li><a href="https://mmrslwan1110.github.io" target="_blank" rel="noopener">https://mmrslwan1110.github.io</a></li>
-</ol>
-</li>
-</ul>
-]]></content>
+<p>参考视频教程：</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>]]></content>
       <categories>
-        <category>辅助技术</category>
+        <category>研究生课程</category>
       </categories>
       <tags>
-        <tag>matlab</tag>
-        <tag>视频</tag>
+        <tag>研究生课程</tag>
+        <tag>矩阵论</tag>
       </tags>
   </entry>
   <entry>
@@ -889,6 +838,57 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
         <tag>python</tag>
         <tag>c</tag>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站视频下载及按帧将视频转为jpg</title>
+    <url>/2020/10/15/%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8F%8A%E6%8C%89%E5%B8%A7%E8%BD%AC%E4%B8%BAjpg/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="网站视频下载及按帧转为jpg"><a href="#网站视频下载及按帧转为jpg" class="headerlink" title="网站视频下载及按帧转为jpg"></a>网站视频下载及按帧转为jpg</h1><h2 id="1、准备切割视频"><a href="#1、准备切割视频" class="headerlink" title="1、准备切割视频"></a>1、准备切割视频</h2><p>视频切割算法:<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;</span><br><span class="line">clear;</span><br><span class="line"><span class="comment">%读取视频</span></span><br><span class="line">video_file=<span class="string">'D:\1.mp4'</span>;</span><br><span class="line">obj=VideoReader(video_file);</span><br><span class="line">frame_num=obj.NumberOfFrames;<span class="comment">%一共有多少帧</span></span><br><span class="line"><span class="comment">% 分离图片</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">15</span><span class="comment">%读取前15帧</span></span><br><span class="line">    img=strcat(<span class="string">'D:\picture\',num2str(i));</span></span><br><span class="line"><span class="string">    img=strcat(img,'</span>.jpg');</span><br><span class="line">    I=read(obj,<span class="built_in">i</span>);<span class="comment">%读出第15帧图片</span></span><br><span class="line">    imwrite(I,strcat(<span class="string">'D:\picture\',num2str(i),'</span>.jpg'),<span class="string">'jpg'</span>);<span class="comment">% 保存帧</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2、问题"><a href="#2、问题" class="headerlink" title="2、问题"></a>2、问题</h2><h4 id="考虑使用-you-get下载视频"><a href="#考虑使用-you-get下载视频" class="headerlink" title="考虑使用 you-get下载视频"></a>考虑使用 you-get下载视频</h4><ol>
+<li>首先安装<br><kbd>pip install you-get</kbd></li>
+<li>下载<br><kbd>you-get -i [URL]</kbd><br>-i:查看可以下载的详细信息<br><kbd>you-get —format=dash-flv  [URL]</kbd></li>
+</ol>
+<p>以此方法可以直接下载大部分网站上的视频。</p>
+<h4 id="例子：以小鲤鱼历险记为例bilibili"><a href="#例子：以小鲤鱼历险记为例bilibili" class="headerlink" title="例子：以小鲤鱼历险记为例bilibili"></a>例子：以小鲤鱼历险记为例<a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">bilibili</a></h4><ol>
+<li>直接通过you-get进行下载<br>下载到的文件一般是flv需要解码，不能直接读取。<br><kbd>you-get <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201120164038867.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<ol>
+<li><p>通过you-get -i 获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。<br><kbd>you-get -i <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd><br><img src="https://img-blog.csdnimg.cn/20201120164038873.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+</li>
+<li><p>通过you-get —format=dash-flv  获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。 </p>
+</li>
+</ol>
+<p><kbd>you-get —format=dash-720  <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></p>
+<p><img src="https://img-blog.csdnimg.cn/20201120164038865.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<ol>
+<li>下载下来的文件地址为终端所在地址：<br>本文中为<kbd>E:\Users\root\【720p】小鲤鱼历险记【2006】【完结】【无水印高清】 (P1. 小鲤鱼历险记 01)[00].mp4</kbd></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201120164038861.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<h4 id="hevc未安装"><a href="#hevc未安装" class="headerlink" title="hevc未安装"></a>hevc未安装</h4><p>导致matlab无法读取下载的软件</p>
+<h2 id="3、方法"><a href="#3、方法" class="headerlink" title="3、方法"></a>3、方法</h2><p>1、安装codec，网上有很多hevc但是目前免费办法中国区无法下载，于是参考很多文章后选择下载codec。</p>
+<p>参考：</p>
+<ul>
+<li><ol>
+<li><a href="http://www.codecguide.com/download_k-lite_codec_pack_basic.htm" target="_blank" rel="noopener">http://www.codecguide.com/download_k-lite_codec_pack_basic.htm</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://www.jianshu.com/p/dd7f04c27a79" target="_blank" rel="noopener">https://www.jianshu.com/p/dd7f04c27a79</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://mmrslwan1110.github.io" target="_blank" rel="noopener">https://mmrslwan1110.github.io</a></li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+        <tag>视频</tag>
       </tags>
   </entry>
 </search>
