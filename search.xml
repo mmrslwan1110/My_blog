@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>b站视频分享</title>
+    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div><br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>b站视频</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>English_learning</title>
     <url>/2020/07/31/English-learning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -114,21 +129,6 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
-    <title>b站视频分享</title>
-    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div><br><a id="more"></a></p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>b站视频</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c++_常用语法</title>
     <url>/2020/07/31/c/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
@@ -200,9 +200,33 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
-    <title>hexo插入bilibili视频代码块</title>
+    <title>hexo插入视频代码块及音频</title>
     <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插件安装插入视频代码块及音频"><a href="#hexo插件安装插入视频代码块及音频" class="headerlink" title="hexo插件安装插入视频代码块及音频"></a><center>hexo插件安装插入视频代码块及音频</center></h1><h2 id="1-hexo插件安装"><a href="#1-hexo插件安装" class="headerlink" title="1.hexo插件安装"></a>1.hexo插件安装</h2><p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
+<p>**hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</p>
+<p>**hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></p>
+<h3 id="1-1-播放音乐的aplayer"><a href="#1-1-播放音乐的aplayer" class="headerlink" title="1.1 播放音乐的aplayer"></a>1.1 播放音乐的aplayer</h3><p>  在cmd页面内，使用npm安装：</p>
+<blockquote>
+<p>npm install hexo-tag-aplayer</p>
+<h3 id="1-2-播放视频的dplayer"><a href="#1-2-播放视频的dplayer" class="headerlink" title="1.2 播放视频的dplayer"></a>1.2 播放视频的dplayer</h3><p>  在cmd页面内，使用npm安装：<br>npm install hexo-tag-dplayer</p>
+</blockquote>
+<h1 id="hexo插入网易云音乐"><a href="#hexo插入网易云音乐" class="headerlink" title="hexo插入网易云音乐"></a><center>hexo插入网易云音乐</center></h1><h2 id="1-提取音乐的代码块"><a href="#1-提取音乐的代码块" class="headerlink" title="1.提取音乐的代码块"></a>1.提取音乐的代码块</h2><ol>
+<li>进入<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
+<li>检索后进入<a href="https://music.163.com/#/outchain/2/368764/" target="_blank" rel="noopener">下雨天</a>页面，点击分享。</li>
+<li>复制该处代码</li>
+</ol>
+<center>
+<img src="https://www.codekp.cn/download/img/bilibili/网易云音乐.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;530 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;368764&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>直接将其放在你的markdown文件中，即可显示音乐，如下所示：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=368764&auto=1&height=66"></iframe>
+
+
+
+
+<h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
 <li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
 <li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
 <li>复制代码块处代码</li>
@@ -223,7 +247,7 @@ If you are talking to a group of managers, you may refer to the disorganized met
 
 
 <p>即可将你的视频直接贴在你的文章上。</p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a></p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a><br><a href="https://www.jianshu.com/p/26a7fc7cc185" target="_blank" rel="noopener">Hexo博客中插入音乐/视频/</a></p>
 ]]></content>
       <categories>
         <category>辅助技术</category>
@@ -374,42 +398,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>机器学习</title>
-    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
-<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
-<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
-</ol>
-<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
-<center>
-图6.1存在划分超平面将两个训练样本分开
-</center>
-
-
-<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
-<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
-<script type="math/tex; mode=display">
-r = \frac{|w^Tx+b|}{||w||}</script><ol>
-<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<script type="math/tex; mode=display">w^Tx_i+b\geq+1,  y_i=+1\\
-w^Tx_i+b\leq-1,  y_i=+1</script></li>
-<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
-<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-</ol>
-<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
-<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
-<li>更有效求解参数w和b的方法:拉格朗日乘子法<br>对svm基本型式子</li>
-</ol>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>信息论</tag>
-        <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>强化学习</title>
     <url>/2020/11/20/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Q-learning入门例程及Python实现"><a href="#Q-learning入门例程及Python实现" class="headerlink" title="Q-learning入门例程及Python实现"></a><center>Q-learning入门例程及Python实现</center></h1><p><strong>摘要：Q-learning算法是一种以马尔科夫决策作为理论基础与模型无关的强化学习算法。本文中会描述一个入门级强化学习例程，即房间连通性问题：根据房间的连通性与否及房间出口构建回报矩阵R。并通过python语言利用强化学习算法获得该场景下的评估矩阵Q，最后利用Q矩阵寻找最优路径。</strong><br><a id="more"></a></p>
@@ -497,6 +485,56 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
         <tag>matlab</tag>
         <tag>强化学习</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习</title>
+    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
+<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
+<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
+</ol>
+<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
+<center>
+图6.1存在划分超平面将两个训练样本分开
+</center>
+
+
+<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
+<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
+<script type="math/tex; mode=display">
+r = \frac{|w^Tx+b|}{||w||}</script><ol>
+<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<script type="math/tex; mode=display">w^Tx_i+b\geq+1,  y_i=+1\\
+w^Tx_i+b\leq-1,  y_i=+1</script></li>
+<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
+<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+</ol>
+<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
+<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
+<li>更有效求解参数w和b的方法:拉格朗日乘子法<br>对svm基本型式子</li>
+</ol>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>信息论</tag>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习_花书</title>
+    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
+<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>分类器</tag>
       </tags>
   </entry>
   <entry>
@@ -648,20 +686,6 @@ b.8FSK不同信道下误码性能对比</center>
         <tag>matlab</tag>
         <tag>水声通信</tag>
         <tag>研究生课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习_花书</title>
-    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
-<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>分类器</tag>
       </tags>
   </entry>
   <entry>
