@@ -114,21 +114,6 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
-    <title>b站视频分享</title>
-    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div><br><a id="more"></a></p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>b站视频</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c++_常用语法</title>
     <url>/2020/07/31/c/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
@@ -197,6 +182,79 @@ If you are talking to a group of managers, you may refer to the disorganized met
       <tags>
         <tag>C++</tag>
         <tag>程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>b站视频分享</title>
+    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div><br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>b站视频</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo插入视频代码块及音频</title>
+    <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插件安装插入视频代码块及音频"><a href="#hexo插件安装插入视频代码块及音频" class="headerlink" title="hexo插件安装插入视频代码块及音频"></a><center>hexo插件安装插入视频代码块及音频</center></h1><h2 id="1-hexo插件安装"><a href="#1-hexo插件安装" class="headerlink" title="1.hexo插件安装"></a>1.hexo插件安装</h2><p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
+<p>**hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</p>
+<p>**hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></p>
+<h3 id="1-1-播放音乐的aplayer"><a href="#1-1-播放音乐的aplayer" class="headerlink" title="1.1 播放音乐的aplayer"></a>1.1 播放音乐的aplayer</h3><p>  在cmd页面内，使用npm安装：</p>
+<blockquote>
+<p>npm install hexo-tag-aplayer</p>
+<h3 id="1-2-播放视频的dplayer"><a href="#1-2-播放视频的dplayer" class="headerlink" title="1.2 播放视频的dplayer"></a>1.2 播放视频的dplayer</h3><p>  在cmd页面内，使用npm安装：<br>npm install hexo-tag-dplayer</p>
+</blockquote>
+<h1 id="hexo插入网易云音乐"><a href="#hexo插入网易云音乐" class="headerlink" title="hexo插入网易云音乐"></a><center>hexo插入网易云音乐</center></h1><h2 id="1-提取音乐的代码块"><a href="#1-提取音乐的代码块" class="headerlink" title="1.提取音乐的代码块"></a>1.提取音乐的代码块</h2><ol>
+<li>进入<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>搜索你想要的音乐。（以“下雨天”为例）。</li>
+<li>检索后进入<a href="https://music.163.com/#/outchain/2/368764/" target="_blank" rel="noopener">下雨天</a>页面，点击分享。</li>
+<li>复制该处代码</li>
+</ol>
+<center>
+<img src="https://www.codekp.cn/download/img/bilibili/网易云音乐.JPG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;530 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;368764&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>直接将其放在你的markdown文件中，即可显示音乐，如下所示：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=368764&auto=1&height=66"></iframe>
+
+
+
+
+<h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
+<li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
+<li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
+<li>复制代码块处代码</li>
+</ol>
+<center>
+<img src="https://www.codekp.cn/download/img/bilibili/分享.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;40891962&amp;bvid&#x3D;BV17t411p7gx&amp;cid&#x3D;71826908&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>直接将其放在你的markdown文件中，即可显示b站视频，但是会发现视频比较小，如下所示：</p>
+<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="2-代码块前后修饰"><a href="#2-代码块前后修饰" class="headerlink" title="2.代码块前后修饰"></a>2.代码块前后修饰</h2><p>在改代码的前后基础上加上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:relative; padding-bottom:75%; width:100%; height:0&quot;&gt;</span><br><span class="line"></span><br><span class="line"> style&#x3D;&quot;position:absolute; height: 100%; width: 100%;&quot;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>
+
+
+<p>即可将你的视频直接贴在你的文章上。</p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a><br><a href="https://www.jianshu.com/p/26a7fc7cc185" target="_blank" rel="noopener">Hexo博客中插入音乐/视频/</a></p>
+]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>B站</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -299,64 +357,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>hexo插入视频代码块及音频</title>
-    <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插件安装插入视频代码块及音频"><a href="#hexo插件安装插入视频代码块及音频" class="headerlink" title="hexo插件安装插入视频代码块及音频"></a><center>hexo插件安装插入视频代码块及音频</center></h1><h2 id="1-hexo插件安装"><a href="#1-hexo插件安装" class="headerlink" title="1.hexo插件安装"></a>1.hexo插件安装</h2><p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
-<p>**hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</p>
-<p>**hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></p>
-<h3 id="1-1-播放音乐的aplayer"><a href="#1-1-播放音乐的aplayer" class="headerlink" title="1.1 播放音乐的aplayer"></a>1.1 播放音乐的aplayer</h3><p>  在cmd页面内，使用npm安装：</p>
-<blockquote>
-<p>npm install hexo-tag-aplayer</p>
-<h3 id="1-2-播放视频的dplayer"><a href="#1-2-播放视频的dplayer" class="headerlink" title="1.2 播放视频的dplayer"></a>1.2 播放视频的dplayer</h3><p>  在cmd页面内，使用npm安装：<br>npm install hexo-tag-dplayer</p>
-</blockquote>
-<h1 id="hexo插入网易云音乐"><a href="#hexo插入网易云音乐" class="headerlink" title="hexo插入网易云音乐"></a><center>hexo插入网易云音乐</center></h1><h2 id="1-提取音乐的代码块"><a href="#1-提取音乐的代码块" class="headerlink" title="1.提取音乐的代码块"></a>1.提取音乐的代码块</h2><ol>
-<li>进入<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>搜索你想要的音乐。（以“下雨天”为例）。</li>
-<li>检索后进入<a href="https://music.163.com/#/outchain/2/368764/" target="_blank" rel="noopener">下雨天</a>页面，点击分享。</li>
-<li>复制该处代码</li>
-</ol>
-<center>
-<img src="https://www.codekp.cn/download/img/bilibili/网易云音乐.JPG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;530 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;368764&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>直接将其放在你的markdown文件中，即可显示音乐，如下所示：</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=368764&auto=1&height=66"></iframe>
-
-
-
-
-<h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
-<li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
-<li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
-<li>复制代码块处代码</li>
-</ol>
-<center>
-<img src="https://www.codekp.cn/download/img/bilibili/分享.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;40891962&amp;bvid&#x3D;BV17t411p7gx&amp;cid&#x3D;71826908&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>直接将其放在你的markdown文件中，即可显示b站视频，但是会发现视频比较小，如下所示：</p>
-<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2 id="2-代码块前后修饰"><a href="#2-代码块前后修饰" class="headerlink" title="2.代码块前后修饰"></a>2.代码块前后修饰</h2><p>在改代码的前后基础上加上</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:relative; padding-bottom:75%; width:100%; height:0&quot;&gt;</span><br><span class="line"></span><br><span class="line"> style&#x3D;&quot;position:absolute; height: 100%; width: 100%;&quot;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>
-
-
-<p>即可将你的视频直接贴在你的文章上。</p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a><br><a href="https://www.jianshu.com/p/26a7fc7cc185" target="_blank" rel="noopener">Hexo博客中插入音乐/视频/</a></p>
-]]></content>
-      <categories>
-        <category>辅助技术</category>
-      </categories>
-      <tags>
-        <tag>B站</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>保研经历</title>
     <url>/2019/09/28/%E4%BF%9D%E7%A0%94%E7%BB%8F%E5%8E%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -395,62 +395,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
         <tag>加密</tag>
         <tag>万鲲鹏</tag>
         <tag>个人简历2019</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo、markdown图片并行显示</title>
-    <url>/2020/11/28/%E5%9B%BE%E7%89%87%E5%B9%B6%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo、markdown图片并行显示"><a href="#hexo、markdown图片并行显示" class="headerlink" title="hexo、markdown图片并行显示"></a><center>hexo、markdown图片并行显示</center></h1><h2 id="1-markdown图片显示方法"><a href="#1-markdown图片显示方法" class="headerlink" title="1.markdown图片显示方法"></a>1.markdown图片显示方法</h2><h3 id="1-1-Alt-text"><a href="#1-1-Alt-text" class="headerlink" title="1.1 Alt text"></a>1.1 <a href="">Alt text</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
-<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="Alt text" title="optional title" loading="lazy"></p>
-<p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。”optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
-<h3 id="1-2-插入本地图片-avatar"><a href="#1-2-插入本地图片-avatar" class="headerlink" title="1.2 插入本地图片 ![avatar]"></a>1.2 插入本地图片 ![avatar]</h3><p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![avatar](&#x2F;home&#x2F;picture&#x2F;1.png)</span><br></pre></td></tr></table></figure></p>
-<p>不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。</p>
-<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。</p>
-<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="avatar" loading="lazy"></p>
-<h3 id="1-3-控制图片大小的插入网络图片"><a href="#1-3-控制图片大小的插入网络图片" class="headerlink" title="1.3 控制图片大小的插入网络图片"></a>1.3 控制图片大小的插入网络图片</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width &#x3D; &quot;400&quot; height &#x3D; &quot;302&quot; alt&#x3D;&quot;图片名称&quot; align&#x3D;center &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<center>
-<img src="https://img-blog.csdnimg.cn/20190811133756709.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<h2 id="2-markdown图片并行显示"><a href="#2-markdown图片并行显示" class="headerlink" title="2.markdown图片并行显示"></a>2.markdown图片并行显示</h2><p>以上两种方法无法将图片并行显示：<br>于是尝试如下方法：但均无法满足需求</p>
-<h3 id="2-1-方法1"><a href="#2-1-方法1" class="headerlink" title="2.1 方法1"></a>2.1 方法1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt; &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152032532?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152100203?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<p><center class="half">
-    <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy"> <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">  <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">
-</center></p>
-<p><center class="half">
-    <img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy"><img src="https://img-blog.csdn.net/20180612152032532?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy"><img src="https://img-blog.csdn.net/20180612152100203?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy">
-</center><br>该方法在markdown中显示为并行但是hexo页面中却不能满足需求。</p>
-<h3 id="2-2-方法2"><a href="#2-2-方法2" class="headerlink" title="2.2 方法2"></a>2.2 方法2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;figure&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;figure&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<p><center></p>
-<p><figure>
-<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
-<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
-</figure><br>&lt;/center&gt;<br>该方法也不满足要求</p>
-<h3 id="2-2-方法3"><a href="#2-2-方法3" class="headerlink" title="2.2 方法3"></a>2.2 方法3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
-
-<div style="float:none;clear:both;">
-
-</div>
-该方法满足需求
-但是没有空行，需要在最后加入一行
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:none;clear:both;&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="float:none;clear:both;">
-
-</div>]]></content>
-      <categories>
-        <category>辅助技术</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -580,6 +524,62 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
       </tags>
   </entry>
   <entry>
+    <title>hexo、markdown图片并行显示</title>
+    <url>/2020/11/28/%E5%9B%BE%E7%89%87%E5%B9%B6%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo、markdown图片并行显示"><a href="#hexo、markdown图片并行显示" class="headerlink" title="hexo、markdown图片并行显示"></a><center>hexo、markdown图片并行显示</center></h1><h2 id="1-markdown图片显示方法"><a href="#1-markdown图片显示方法" class="headerlink" title="1.markdown图片显示方法"></a>1.markdown图片显示方法</h2><h3 id="1-1-Alt-text"><a href="#1-1-Alt-text" class="headerlink" title="1.1 Alt text"></a>1.1 <a href="">Alt text</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="Alt text" title="optional title" loading="lazy"></p>
+<p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。”optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
+<h3 id="1-2-插入本地图片-avatar"><a href="#1-2-插入本地图片-avatar" class="headerlink" title="1.2 插入本地图片 ![avatar]"></a>1.2 插入本地图片 ![avatar]</h3><p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![avatar](&#x2F;home&#x2F;picture&#x2F;1.png)</span><br></pre></td></tr></table></figure></p>
+<p>不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。</p>
+<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。</p>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="avatar" loading="lazy"></p>
+<h3 id="1-3-控制图片大小的插入网络图片"><a href="#1-3-控制图片大小的插入网络图片" class="headerlink" title="1.3 控制图片大小的插入网络图片"></a>1.3 控制图片大小的插入网络图片</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width &#x3D; &quot;400&quot; height &#x3D; &quot;302&quot; alt&#x3D;&quot;图片名称&quot; align&#x3D;center &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<center>
+<img src="https://img-blog.csdnimg.cn/20190811133756709.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<h2 id="2-markdown图片并行显示"><a href="#2-markdown图片并行显示" class="headerlink" title="2.markdown图片并行显示"></a>2.markdown图片并行显示</h2><p>以上两种方法无法将图片并行显示：<br>于是尝试如下方法：但均无法满足需求</p>
+<h3 id="2-1-方法1"><a href="#2-1-方法1" class="headerlink" title="2.1 方法1"></a>2.1 方法1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt; &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152032532?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152100203?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><center class="half">
+    <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy"> <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">  <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">
+</center></p>
+<p><center class="half">
+    <img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy">
+</center><br>该方法在markdown中显示为并行但是hexo页面中却不能满足需求。</p>
+<h3 id="2-2-方法2"><a href="#2-2-方法2" class="headerlink" title="2.2 方法2"></a>2.2 方法2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;figure&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;figure&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><center></p>
+<p><figure>
+<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
+<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
+</figure><br>&lt;/center&gt;<br>该方法也不满足要求</p>
+<h3 id="2-2-方法3"><a href="#2-2-方法3" class="headerlink" title="2.2 方法3"></a>2.2 方法3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
+
+<div style="float:none;clear:both;">
+
+</div>
+该方法满足需求
+但是没有空行，需要在最后加入一行
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:none;clear:both;&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="float:none;clear:both;">
+
+</div>]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>水声通信实验课程作业</title>
     <url>/2020/11/17/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -612,6 +612,57 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
       <tags>
         <tag>深度学习</tag>
         <tag>分类器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站视频下载及按帧将视频转为jpg</title>
+    <url>/2020/10/15/%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8F%8A%E6%8C%89%E5%B8%A7%E8%BD%AC%E4%B8%BAjpg/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="网站视频下载及按帧转为jpg"><a href="#网站视频下载及按帧转为jpg" class="headerlink" title="网站视频下载及按帧转为jpg"></a>网站视频下载及按帧转为jpg</h1><h2 id="1、准备切割视频"><a href="#1、准备切割视频" class="headerlink" title="1、准备切割视频"></a>1、准备切割视频</h2><p>视频切割算法:<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;</span><br><span class="line">clear;</span><br><span class="line"><span class="comment">%读取视频</span></span><br><span class="line">video_file=<span class="string">'D:\1.mp4'</span>;</span><br><span class="line">obj=VideoReader(video_file);</span><br><span class="line">frame_num=obj.NumberOfFrames;<span class="comment">%一共有多少帧</span></span><br><span class="line"><span class="comment">% 分离图片</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">15</span><span class="comment">%读取前15帧</span></span><br><span class="line">    img=strcat(<span class="string">'D:\picture\',num2str(i));</span></span><br><span class="line"><span class="string">    img=strcat(img,'</span>.jpg');</span><br><span class="line">    I=read(obj,<span class="built_in">i</span>);<span class="comment">%读出第15帧图片</span></span><br><span class="line">    imwrite(I,strcat(<span class="string">'D:\picture\',num2str(i),'</span>.jpg'),<span class="string">'jpg'</span>);<span class="comment">% 保存帧</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2、问题"><a href="#2、问题" class="headerlink" title="2、问题"></a>2、问题</h2><h4 id="考虑使用-you-get下载视频"><a href="#考虑使用-you-get下载视频" class="headerlink" title="考虑使用 you-get下载视频"></a>考虑使用 you-get下载视频</h4><ol>
+<li>首先安装<br><kbd>pip install you-get</kbd></li>
+<li>下载<br><kbd>you-get -i [URL]</kbd><br>-i:查看可以下载的详细信息<br><kbd>you-get —format=dash-flv  [URL]</kbd></li>
+</ol>
+<p>以此方法可以直接下载大部分网站上的视频。</p>
+<h4 id="例子：以小鲤鱼历险记为例bilibili"><a href="#例子：以小鲤鱼历险记为例bilibili" class="headerlink" title="例子：以小鲤鱼历险记为例bilibili"></a>例子：以小鲤鱼历险记为例<a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">bilibili</a></h4><ol>
+<li>直接通过you-get进行下载<br>下载到的文件一般是flv需要解码，不能直接读取。<br><kbd>you-get <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201120164038867.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<ol>
+<li><p>通过you-get -i 获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。<br><kbd>you-get -i <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd><br><img src="https://img-blog.csdnimg.cn/20201120164038873.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+</li>
+<li><p>通过you-get —format=dash-flv  获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。 </p>
+</li>
+</ol>
+<p><kbd>you-get —format=dash-720  <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></p>
+<p><img src="https://img-blog.csdnimg.cn/20201120164038865.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<ol>
+<li>下载下来的文件地址为终端所在地址：<br>本文中为<kbd>E:\Users\root\【720p】小鲤鱼历险记【2006】【完结】【无水印高清】 (P1. 小鲤鱼历险记 01)[00].mp4</kbd></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201120164038861.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<h4 id="hevc未安装"><a href="#hevc未安装" class="headerlink" title="hevc未安装"></a>hevc未安装</h4><p>导致matlab无法读取下载的软件</p>
+<h2 id="3、方法"><a href="#3、方法" class="headerlink" title="3、方法"></a>3、方法</h2><p>1、安装codec，网上有很多hevc但是目前免费办法中国区无法下载，于是参考很多文章后选择下载codec。</p>
+<p>参考：</p>
+<ul>
+<li><ol>
+<li><a href="http://www.codecguide.com/download_k-lite_codec_pack_basic.htm" target="_blank" rel="noopener">http://www.codecguide.com/download_k-lite_codec_pack_basic.htm</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://www.jianshu.com/p/dd7f04c27a79" target="_blank" rel="noopener">https://www.jianshu.com/p/dd7f04c27a79</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://mmrslwan1110.github.io" target="_blank" rel="noopener">https://mmrslwan1110.github.io</a></li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+        <tag>视频</tag>
       </tags>
   </entry>
   <entry>
@@ -788,57 +839,6 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
         <tag>python</tag>
         <tag>c</tag>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网站视频下载及按帧将视频转为jpg</title>
-    <url>/2020/10/15/%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8F%8A%E6%8C%89%E5%B8%A7%E8%BD%AC%E4%B8%BAjpg/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="网站视频下载及按帧转为jpg"><a href="#网站视频下载及按帧转为jpg" class="headerlink" title="网站视频下载及按帧转为jpg"></a>网站视频下载及按帧转为jpg</h1><h2 id="1、准备切割视频"><a href="#1、准备切割视频" class="headerlink" title="1、准备切割视频"></a>1、准备切割视频</h2><p>视频切割算法:<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;</span><br><span class="line">clear;</span><br><span class="line"><span class="comment">%读取视频</span></span><br><span class="line">video_file=<span class="string">'D:\1.mp4'</span>;</span><br><span class="line">obj=VideoReader(video_file);</span><br><span class="line">frame_num=obj.NumberOfFrames;<span class="comment">%一共有多少帧</span></span><br><span class="line"><span class="comment">% 分离图片</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">15</span><span class="comment">%读取前15帧</span></span><br><span class="line">    img=strcat(<span class="string">'D:\picture\',num2str(i));</span></span><br><span class="line"><span class="string">    img=strcat(img,'</span>.jpg');</span><br><span class="line">    I=read(obj,<span class="built_in">i</span>);<span class="comment">%读出第15帧图片</span></span><br><span class="line">    imwrite(I,strcat(<span class="string">'D:\picture\',num2str(i),'</span>.jpg'),<span class="string">'jpg'</span>);<span class="comment">% 保存帧</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="2、问题"><a href="#2、问题" class="headerlink" title="2、问题"></a>2、问题</h2><h4 id="考虑使用-you-get下载视频"><a href="#考虑使用-you-get下载视频" class="headerlink" title="考虑使用 you-get下载视频"></a>考虑使用 you-get下载视频</h4><ol>
-<li>首先安装<br><kbd>pip install you-get</kbd></li>
-<li>下载<br><kbd>you-get -i [URL]</kbd><br>-i:查看可以下载的详细信息<br><kbd>you-get —format=dash-flv  [URL]</kbd></li>
-</ol>
-<p>以此方法可以直接下载大部分网站上的视频。</p>
-<h4 id="例子：以小鲤鱼历险记为例bilibili"><a href="#例子：以小鲤鱼历险记为例bilibili" class="headerlink" title="例子：以小鲤鱼历险记为例bilibili"></a>例子：以小鲤鱼历险记为例<a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">bilibili</a></h4><ol>
-<li>直接通过you-get进行下载<br>下载到的文件一般是flv需要解码，不能直接读取。<br><kbd>you-get <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20201120164038867.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<ol>
-<li><p>通过you-get -i 获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。<br><kbd>you-get -i <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd><br><img src="https://img-blog.csdnimg.cn/20201120164038873.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-</li>
-<li><p>通过you-get —format=dash-flv  获取视频信息<br>找到需求的部分，本例使用小鲤鱼历险记mp4、720p为例。 </p>
-</li>
-</ol>
-<p><kbd>you-get —format=dash-720  <a href="https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ns411r7cX?from=search&amp;seid=2589828094683508837</a></kbd></p>
-<p><img src="https://img-blog.csdnimg.cn/20201120164038865.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<ol>
-<li>下载下来的文件地址为终端所在地址：<br>本文中为<kbd>E:\Users\root\【720p】小鲤鱼历险记【2006】【完结】【无水印高清】 (P1. 小鲤鱼历险记 01)[00].mp4</kbd></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20201120164038861.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<h4 id="hevc未安装"><a href="#hevc未安装" class="headerlink" title="hevc未安装"></a>hevc未安装</h4><p>导致matlab无法读取下载的软件</p>
-<h2 id="3、方法"><a href="#3、方法" class="headerlink" title="3、方法"></a>3、方法</h2><p>1、安装codec，网上有很多hevc但是目前免费办法中国区无法下载，于是参考很多文章后选择下载codec。</p>
-<p>参考：</p>
-<ul>
-<li><ol>
-<li><a href="http://www.codecguide.com/download_k-lite_codec_pack_basic.htm" target="_blank" rel="noopener">http://www.codecguide.com/download_k-lite_codec_pack_basic.htm</a></li>
-</ol>
-</li>
-<li><ol>
-<li><a href="https://www.jianshu.com/p/dd7f04c27a79" target="_blank" rel="noopener">https://www.jianshu.com/p/dd7f04c27a79</a></li>
-</ol>
-</li>
-<li><ol>
-<li><a href="https://mmrslwan1110.github.io" target="_blank" rel="noopener">https://mmrslwan1110.github.io</a></li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>辅助技术</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
-        <tag>视频</tag>
       </tags>
   </entry>
 </search>
