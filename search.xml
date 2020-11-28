@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>b站视频分享</title>
-    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div><br><a id="more"></a></p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>b站视频</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>English_learning</title>
     <url>/2020/07/31/English-learning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -126,6 +111,21 @@ If you are talking to a group of managers, you may refer to the disorganized met
         <tag>英语</tag>
         <tag>英语阅读</tag>
         <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>b站视频分享</title>
+    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div><br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>b站视频</tag>
+        <tag>分享</tag>
       </tags>
   </entry>
   <entry>
@@ -398,6 +398,62 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
+    <title>hexo、markdown图片并行显示</title>
+    <url>/2020/11/28/%E5%9B%BE%E7%89%87%E5%B9%B6%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo、markdown图片并行显示"><a href="#hexo、markdown图片并行显示" class="headerlink" title="hexo、markdown图片并行显示"></a><center>hexo、markdown图片并行显示</center></h1><h2 id="1-markdown图片显示方法"><a href="#1-markdown图片显示方法" class="headerlink" title="1.markdown图片显示方法"></a>1.markdown图片显示方法</h2><h3 id="1-1-Alt-text"><a href="#1-1-Alt-text" class="headerlink" title="1.1 Alt text"></a>1.1 <a href="">Alt text</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="Alt text" title="optional title" loading="lazy"></p>
+<p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。”optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
+<h3 id="1-2-插入本地图片-avatar"><a href="#1-2-插入本地图片-avatar" class="headerlink" title="1.2 插入本地图片 ![avatar]"></a>1.2 插入本地图片 ![avatar]</h3><p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![avatar](&#x2F;home&#x2F;picture&#x2F;1.png)</span><br></pre></td></tr></table></figure></p>
+<p>不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。</p>
+<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。</p>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="avatar" loading="lazy"></p>
+<h3 id="1-3-控制图片大小的插入网络图片"><a href="#1-3-控制图片大小的插入网络图片" class="headerlink" title="1.3 控制图片大小的插入网络图片"></a>1.3 控制图片大小的插入网络图片</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width &#x3D; &quot;400&quot; height &#x3D; &quot;302&quot; alt&#x3D;&quot;图片名称&quot; align&#x3D;center &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<center>
+<img src="https://img-blog.csdnimg.cn/20190811133756709.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<h2 id="2-markdown图片并行显示"><a href="#2-markdown图片并行显示" class="headerlink" title="2.markdown图片并行显示"></a>2.markdown图片并行显示</h2><p>以上两种方法无法将图片并行显示：<br>于是尝试如下方法：但均无法满足需求</p>
+<h3 id="2-1-方法1"><a href="#2-1-方法1" class="headerlink" title="2.1 方法1"></a>2.1 方法1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt; &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152032532?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152100203?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><center class="half">
+    <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy"> <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">  <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">
+</center></p>
+<p><center class="half">
+    <img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy"><img src="https://img-blog.csdn.net/20180612152032532?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy"><img src="https://img-blog.csdn.net/20180612152100203?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy">
+</center><br>该方法在markdown中显示为并行但是hexo页面中却不能满足需求。</p>
+<h3 id="2-2-方法2"><a href="#2-2-方法2" class="headerlink" title="2.2 方法2"></a>2.2 方法2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;figure&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;figure&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><center></p>
+<p><figure>
+<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
+<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
+</figure><br>&lt;/center&gt;<br>该方法也不满足要求</p>
+<h3 id="2-2-方法3"><a href="#2-2-方法3" class="headerlink" title="2.2 方法3"></a>2.2 方法3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
+
+<div style="float:none;clear:both;">
+
+</div>
+该方法满足需求
+但是没有空行，需要在最后加入一行
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:none;clear:both;&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="float:none;clear:both;">
+
+</div>]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>强化学习</title>
     <url>/2020/11/20/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Q-learning入门例程及Python实现"><a href="#Q-learning入门例程及Python实现" class="headerlink" title="Q-learning入门例程及Python实现"></a><center>Q-learning入门例程及Python实现</center></h1><p><strong>摘要：Q-learning算法是一种以马尔科夫决策作为理论基础与模型无关的强化学习算法。本文中会描述一个入门级强化学习例程，即房间连通性问题：根据房间的连通性与否及房间出口构建回报矩阵R。并通过python语言利用强化学习算法获得该场景下的评估矩阵Q，最后利用Q矩阵寻找最优路径。</strong><br><a id="more"></a></p>
@@ -488,68 +544,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>hexo、markdown图片并行显示</title>
-    <url>/2020/11/28/%E5%9B%BE%E7%89%87%E5%B9%B6%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo、markdown图片并行显示"><a href="#hexo、markdown图片并行显示" class="headerlink" title="hexo、markdown图片并行显示"></a><center>hexo、markdown图片并行显示</center></h1><h2 id="1-markdown图片显示方法"><a href="#1-markdown图片显示方法" class="headerlink" title="1.markdown图片显示方法"></a>1.markdown图片显示方法</h2><h3 id="1-1-Alt-text"><a href="#1-1-Alt-text" class="headerlink" title="1.1 Alt text"></a>1.1 <a href="">Alt text</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
-<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="Alt text" title="optional title" loading="lazy"></p>
-<p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。”optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
-<h3 id="1-2-插入本地图片-avatar"><a href="#1-2-插入本地图片-avatar" class="headerlink" title="1.2 插入本地图片 ![avatar]"></a>1.2 插入本地图片 ![avatar]</h3><p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![avatar](&#x2F;home&#x2F;picture&#x2F;1.png)</span><br></pre></td></tr></table></figure></p>
-<p>不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。</p>
-<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。</p>
-<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="avatar" loading="lazy"></p>
-<h3 id="1-3-控制图片大小的插入网络图片"><a href="#1-3-控制图片大小的插入网络图片" class="headerlink" title="1.3 控制图片大小的插入网络图片"></a>1.3 控制图片大小的插入网络图片</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width &#x3D; &quot;400&quot; height &#x3D; &quot;302&quot; alt&#x3D;&quot;图片名称&quot; align&#x3D;center &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<center>
-<img src="https://img-blog.csdnimg.cn/20190811133756709.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<h2 id="2-markdown图片并行显示"><a href="#2-markdown图片并行显示" class="headerlink" title="2.markdown图片并行显示"></a>2.markdown图片并行显示</h2><p>以上两种方法无法将图片并行显示：<br>于是尝试如下方法：但均无法满足需求</p>
-<h3 id="2-1-方法1"><a href="#2-1-方法1" class="headerlink" title="2.1 方法1"></a>2.1 方法1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt; &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152032532?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152100203?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<center class="half">
-    <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy"> <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">  <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">
-</center>
-<center class="half">
-    <img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy"><img src="https://img-blog.csdn.net/20180612152032532?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy"><img src="https://img-blog.csdn.net/20180612152100203?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200"/ loading="lazy">
-</center>
-该方法在markdown中显示为并行但是hexo页面中却不能满足需求。
-
-### 2.2 方法2
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;center&gt;</span><br><span class="line">&lt;figure&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; &#x2F;&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;figure&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-效果：
-
-<center>
-<figure>
-<img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" / loading="lazy">
-<img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" / loading="lazy">
-</figure>
-</center>
-
-<p>该方法也不满足要求</p>
-<h3 id="2-2-方法3"><a href="#2-2-方法3" class="headerlink" title="2.2 方法3"></a>2.2 方法3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"  width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"  width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img-blog.csdn.net/2018061215200776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="200" height="200"  loading="lazy"></div>
-
-<div style="float:none;clear:both;">
-
-</div>
-该方法满足需求
-但是没有空行，需要在最后加入一行
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:none;clear:both;&quot;&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="float:none;clear:both;">
-
-</div>]]></content>
-      <categories>
-        <category>辅助技术</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习</title>
     <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
@@ -586,20 +580,6 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
       </tags>
   </entry>
   <entry>
-    <title>深度学习_花书</title>
-    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
-<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>分类器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>水声通信实验课程作业</title>
     <url>/2020/11/17/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -618,6 +598,20 @@ w^Tx_i+b\leq-1,  y_i=+1</script></li>
         <tag>matlab</tag>
         <tag>水声通信</tag>
         <tag>研究生课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习_花书</title>
+    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
+<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>分类器</tag>
       </tags>
   </entry>
   <entry>
