@@ -16,6 +16,77 @@
       </tags>
   </entry>
   <entry>
+    <title>c++_常用语法</title>
+    <url>/2020/07/31/c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
+<p>此文主要针对有c语言基础的人。</p>
+</blockquote>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
+<ul>
+<li><font face="黑体" color=black size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
+<li><font face="黑体" color=black size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
+类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
+<li><font face="黑体" color=black size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
+<li><font face="黑体" color=black size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
+
+
+</li>
+</ul>
+<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
+<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
+<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
+<p><code>typedef int feet //feet定义为int的新名子</code></p>
+<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
+<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
+<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
+<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
+<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
+</ul>
+<p>Lvalues &amp; Rvalues</p>
+<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
+<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
+<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>修饰符类型</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><center> 限定符</center></th>
+<th><center>含义  </center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> const</td>
+<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
+</tr>
+<tr>
+<td>restrict</td>
+<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>English_learning</title>
     <url>/2020/07/31/English-learning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -187,107 +258,6 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
-    <title>c++_常用语法</title>
-    <url>/2020/07/31/c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
-<p>此文主要针对有c语言基础的人。</p>
-</blockquote>
-<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
-<ul>
-<li><font face="黑体" color=black size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
-<li><font face="黑体" color=black size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
-类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
-<li><font face="黑体" color=black size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
-<li><font face="黑体" color=black size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
-
-
-</li>
-</ul>
-<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
-<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
-<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
-<p><code>typedef int feet //feet定义为int的新名子</code></p>
-<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
-<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
-<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
-<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
-<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
-</ul>
-<p>Lvalues &amp; Rvalues</p>
-<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
-<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
-<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>修饰符类型</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><center> 限定符</center></th>
-<th><center>含义  </center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><center> const</td>
-<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
-</tr>
-<tr>
-<td>volatile</td>
-<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
-</tr>
-<tr>
-<td>restrict</td>
-<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux嵌入式开发_1</title>
-    <url>/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
-<ul>
-<li>linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。</li>
-</ul>
-<h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><ul>
-<li>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</li>
-</ul>
-<h2 id="linux下的环境搭建"><a href="#linux下的环境搭建" class="headerlink" title="linux下的环境搭建"></a>linux下的环境搭建</h2><h3 id="1、修改Ubuntu的一些配置"><a href="#1、修改Ubuntu的一些配置" class="headerlink" title="1、修改Ubuntu的一些配置"></a>1、修改Ubuntu的一些配置</h3><ul>
-<li><p>切换国内镜像源</p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp; 在使用apt命令安装包时，因为系统自带下载源在国外服务器上，所以需要切换为国内镜像源才能提升下载速度。这里有一篇博客详细说明了如何直接根据终端命令修改其配置文件，从而达到修改下载源的目的.或者，，，，你也可以直接用Ubuntu的图形界面去修改，步骤如下： 显示应用程序-&gt;软件和更新-&gt;下载自主服务器改为其他，然后选择合适的镜像源就行了，这里我选择的是阿里的镜像源。</p>
-</li>
-<li><p>修改语言和设置汉语输入法</p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp; 懒得写，直接贴别人博客了</p>
-</li>
-</ul>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/langshi_2011/article/details/78993781" target="_blank" rel="noopener">Linux Ubuntu系统设置成中文语言</a></p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/sparkstrike/article/details/81487271" target="_blank" rel="noopener">Linux.Ubuntu.中文输入法设置</a></p>
-]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>嵌入式开发</tag>
-        <tag>鸟哥的私房菜学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>信息论一个小实例</title>
     <url>/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="不用问知道你名字的玄学问题"><a href="#不用问知道你名字的玄学问题" class="headerlink" title="不用问知道你名字的玄学问题"></a><center>不用问知道你名字的玄学问题</center></h1><a id="more"></a>
@@ -357,6 +327,36 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
+    <title>linux嵌入式开发_1</title>
+    <url>/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
+<ul>
+<li>linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。</li>
+</ul>
+<h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><ul>
+<li>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</li>
+</ul>
+<h2 id="linux下的环境搭建"><a href="#linux下的环境搭建" class="headerlink" title="linux下的环境搭建"></a>linux下的环境搭建</h2><h3 id="1、修改Ubuntu的一些配置"><a href="#1、修改Ubuntu的一些配置" class="headerlink" title="1、修改Ubuntu的一些配置"></a>1、修改Ubuntu的一些配置</h3><ul>
+<li><p>切换国内镜像源</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; 在使用apt命令安装包时，因为系统自带下载源在国外服务器上，所以需要切换为国内镜像源才能提升下载速度。这里有一篇博客详细说明了如何直接根据终端命令修改其配置文件，从而达到修改下载源的目的.或者，，，，你也可以直接用Ubuntu的图形界面去修改，步骤如下： 显示应用程序-&gt;软件和更新-&gt;下载自主服务器改为其他，然后选择合适的镜像源就行了，这里我选择的是阿里的镜像源。</p>
+</li>
+<li><p>修改语言和设置汉语输入法</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; 懒得写，直接贴别人博客了</p>
+</li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/langshi_2011/article/details/78993781" target="_blank" rel="noopener">Linux Ubuntu系统设置成中文语言</a></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/sparkstrike/article/details/81487271" target="_blank" rel="noopener">Linux.Ubuntu.中文输入法设置</a></p>
+]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>嵌入式开发</tag>
+        <tag>鸟哥的私房菜学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人简历</title>
     <url>/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -395,62 +395,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       <tags>
         <tag>加密</tag>
         <tag>推免</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo、markdown图片并行显示</title>
-    <url>/2020/11/28/%E5%9B%BE%E7%89%87%E5%B9%B6%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo、markdown图片并行显示"><a href="#hexo、markdown图片并行显示" class="headerlink" title="hexo、markdown图片并行显示"></a><center>hexo、markdown图片并行显示</center></h1><h2 id="1-markdown图片显示方法"><a href="#1-markdown图片显示方法" class="headerlink" title="1.markdown图片显示方法"></a>1.markdown图片显示方法</h2><h3 id="1-1-Alt-text"><a href="#1-1-Alt-text" class="headerlink" title="1.1 Alt text"></a>1.1 <a href="">Alt text</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
-<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="Alt text" title="optional title" loading="lazy"></p>
-<p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。”optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
-<h3 id="1-2-插入本地图片-avatar"><a href="#1-2-插入本地图片-avatar" class="headerlink" title="1.2 插入本地图片 ![avatar]"></a>1.2 插入本地图片 ![avatar]</h3><p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![avatar](&#x2F;home&#x2F;picture&#x2F;1.png)</span><br></pre></td></tr></table></figure></p>
-<p>不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。</p>
-<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。</p>
-<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="avatar" loading="lazy"></p>
-<h3 id="1-3-控制图片大小的插入网络图片"><a href="#1-3-控制图片大小的插入网络图片" class="headerlink" title="1.3 控制图片大小的插入网络图片"></a>1.3 控制图片大小的插入网络图片</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width &#x3D; &quot;400&quot; height &#x3D; &quot;302&quot; alt&#x3D;&quot;图片名称&quot; align&#x3D;center &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<center>
-<img src="https://img-blog.csdnimg.cn/20190811133756709.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<h2 id="2-markdown图片并行显示"><a href="#2-markdown图片并行显示" class="headerlink" title="2.markdown图片并行显示"></a>2.markdown图片并行显示</h2><p>以上两种方法无法将图片并行显示：<br>于是尝试如下方法：但均无法满足需求</p>
-<h3 id="2-1-方法1"><a href="#2-1-方法1" class="headerlink" title="2.1 方法1"></a>2.1 方法1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt; &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152032532?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152100203?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<p><center class="half">
-    <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy"> <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">  <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">
-</center></p>
-<p><center class="half">
-    <img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy">
-</center><br>该方法在markdown中显示为并行但是hexo页面中却不能满足需求。</p>
-<h3 id="2-2-方法2"><a href="#2-2-方法2" class="headerlink" title="2.2 方法2"></a>2.2 方法2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;figure&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;figure&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<p><center></p>
-<p><figure>
-<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
-<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
-</figure><br>&lt;/center&gt;<br>该方法也不满足要求</p>
-<h3 id="2-2-方法3"><a href="#2-2-方法3" class="headerlink" title="2.2 方法3"></a>2.2 方法3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
-
-<div style="float:none;clear:both;">
-
-</div>
-该方法满足需求
-但是没有空行，需要在最后加入一行
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:none;clear:both;&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="float:none;clear:both;">
-
-</div>]]></content>
-      <categories>
-        <category>辅助技术</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -541,6 +485,62 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
         <tag>matlab</tag>
         <tag>强化学习</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo、markdown图片并行显示</title>
+    <url>/2020/11/28/%E5%9B%BE%E7%89%87%E5%B9%B6%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo、markdown图片并行显示"><a href="#hexo、markdown图片并行显示" class="headerlink" title="hexo、markdown图片并行显示"></a><center>hexo、markdown图片并行显示</center></h1><h2 id="1-markdown图片显示方法"><a href="#1-markdown图片显示方法" class="headerlink" title="1.markdown图片显示方法"></a>1.markdown图片显示方法</h2><h3 id="1-1-Alt-text"><a href="#1-1-Alt-text" class="headerlink" title="1.1 Alt text"></a>1.1 <a href="">Alt text</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="Alt text" title="optional title" loading="lazy"></p>
+<p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。”optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
+<h3 id="1-2-插入本地图片-avatar"><a href="#1-2-插入本地图片-avatar" class="headerlink" title="1.2 插入本地图片 ![avatar]"></a>1.2 插入本地图片 ![avatar]</h3><p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![avatar](&#x2F;home&#x2F;picture&#x2F;1.png)</span><br></pre></td></tr></table></figure></p>
+<p>不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。</p>
+<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。</p>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20190811133756709.png" alt="avatar" loading="lazy"></p>
+<h3 id="1-3-控制图片大小的插入网络图片"><a href="#1-3-控制图片大小的插入网络图片" class="headerlink" title="1.3 控制图片大小的插入网络图片"></a>1.3 控制图片大小的插入网络图片</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width &#x3D; &quot;400&quot; height &#x3D; &quot;302&quot; alt&#x3D;&quot;图片名称&quot; align&#x3D;center &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<center>
+<img src="https://img-blog.csdnimg.cn/20190811133756709.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<h2 id="2-markdown图片并行显示"><a href="#2-markdown图片并行显示" class="headerlink" title="2.markdown图片并行显示"></a>2.markdown图片并行显示</h2><p>以上两种方法无法将图片并行显示：<br>于是尝试如下方法：但均无法满足需求</p>
+<h3 id="2-1-方法1"><a href="#2-1-方法1" class="headerlink" title="2.1 方法1"></a>2.1 方法1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt; &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190811133756709.png&quot; width&#x3D;&quot;100&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br><span class="line">&lt;center class&#x3D;&quot;half&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;2018061215200776?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152032532?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180612152100203?watermark&#x2F;2&#x2F;text&#x2F;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxODA4OTYx&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70&quot; width&#x3D;&quot;200&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><center class="half">
+    <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy"> <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">  <img src="https://img-blog.csdnimg.cn/20190811133756709.png" width="100"/ loading="lazy">
+</center></p>
+<p><center class="half">
+    <img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200"/ loading="lazy">
+</center><br>该方法在markdown中显示为并行但是hexo页面中却不能满足需求。</p>
+<h3 id="2-2-方法2"><a href="#2-2-方法2" class="headerlink" title="2.2 方法2"></a>2.2 方法2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;figure&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;figure&gt;</span><br><span class="line">&lt;&#x2F;center&gt;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><center></p>
+<p><figure>
+<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
+<img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" / loading="lazy">
+</figure><br>&lt;/center&gt;<br>该方法也不满足要求</p>
+<h3 id="2-2-方法3"><a href="#2-2-方法3" class="headerlink" title="2.2 方法3"></a>2.2 方法3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot;  width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;float:left;border:solid 1px 000;margin:2px;&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;img2018.cnblogs.com&#x2F;blog&#x2F;1735896&#x2F;202001&#x2F;1735896-20200116162140471-237299356.png&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;200&quot; &gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png"  width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://img2018.cnblogs.com/blog/1735896/202001/1735896-20200116162140471-237299356.png" width="200" height="200"  loading="lazy"></div>
+
+<div style="float:none;clear:both;">
+
+</div>
+该方法满足需求
+但是没有空行，需要在最后加入一行
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;float:none;clear:both;&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="float:none;clear:both;">
+
+</div>]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -635,35 +635,6 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
         <tag>matlab</tag>
         <tag>水声通信</tag>
         <tag>研究生课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>矩阵分析引论</title>
-    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
-
-<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<a id="more"></a>
-<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
-<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。<br>$Q\subset R\subset C$<br>如果一个非空集合在某数域上，以下八条<center>
-<img src="https://www.codekp.cn/download/img/矩阵论/1.PNG" width = "1147" height = "950" alt="图片名称" align=center / loading="lazy">
-</center>
-
-
-</li>
-</ol>
-<p>参考视频教程：</p>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>研究生课程</tag>
-        <tag>矩阵论</tag>
       </tags>
   </entry>
   <entry>
@@ -830,6 +801,35 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
         <tag>python</tag>
         <tag>c</tag>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵分析引论</title>
+    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
+
+<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<a id="more"></a>
+<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
+<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。<br>$Q\subset R\subset C$<br>如果一个非空集合在某数域上，以下八条<center>
+<img src="https://www.codekp.cn/download/img/矩阵论/1.PNG" width = "1147" height = "950" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
+</li>
+</ol>
+<p>参考视频教程：</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>研究生课程</tag>
+        <tag>矩阵论</tag>
       </tags>
   </entry>
   <entry>
