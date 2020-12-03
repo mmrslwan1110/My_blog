@@ -378,6 +378,79 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
+    <title>机器学习</title>
+    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
+<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
+<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
+</ol>
+<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
+<center>
+图6.1存在划分超平面将两个训练样本分开
+</center>
+
+
+<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
+<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
+<script type="math/tex; mode=display">
+r = \frac{|w^Tx+b|}{||w||}</script><ol>
+<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<br>$ w^Tx_i+b\geq+1,  y_i=+1 $<br>$w^Tx_i+b\leq-1,  y_i=+1$</li>
+<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
+<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+</ol>
+<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
+<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
+<li>更有效求解参数w和b的方法:拉格朗日乘子法</li>
+</ol>
+<ul>
+<li>对svm基本型式子的每个约束添加大于等于零的拉格朗日乘子，得到该问题的拉格朗日函数。<br>$ L(w,b,a)=\frac{1}{2}||w||^2+ \sum_{i=1}^ma_i(1-y_i(w^Tx_i+b)) $<ul>
+<li>令L(w,b,a)对w和b求偏导为零。<br>$ w = \sum<em>{i=1}^{m}a_iy_ix_i$<br>$ 0=\sum</em>{i=1}^{m}a_iy_i$</li>
+<li>将L(w,b,a)中的w和b消去，得到svm基本式子的对偶问题<br>${max}<em>{a}a_i-\frac{1}{2}\sum</em>{i=1}^m\sum<em>{j=1}^ma_ia_jy_iy_jx_i^Tx_j$<br>$s.t. \sum</em>{i=1}{m}a_iy_i=0,a_i\geq0,i=1,2,…,m$</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>KKT条件<script type="math/tex; mode=display">f= \begin{cases} a_i\geq0;\\ y_if(x_i)-1\geq0\\ a_i(y_if(x_i)-1)=0 \end{cases}</script></li>
+<li>如何求解对偶问题中的a？<ul>
+<li>当二次规划问题求解<br>算法：二次规划算法<br>缺点：问题规模正比例于训练样本数，这样会在实际任务中造成很大开销。<br>算法：SMO算法<br>选取一对所需更新的变量$a_i和a_j$<br>固定$a_j和a_i$ 以外的参数，求解对偶问题获取新的$a_i和a_j$<br>不断执行上述两个步骤直到收敛</li>
+</ul>
+<ol>
+<li>如何确定偏移项b？</li>
+</ol>
+<ul>
+<li>使用支持向量机求解平均值<br>$b=\frac{1}{|s|}\sum<em>{s\in S}(y_s-a_iy_ix_i^Tx_s)$<br>$y_s(\sum</em>{i\in S}a_iy_ix_i^Tx_s+b)=1$<br>$\lbrace S={i=a_i&gt;0,i=1,2…,m}\rbrace$为所有向量机下标集<h4 id="6-2-2-支持向量机的一个重要性质"><a href="#6-2-2-支持向量机的一个重要性质" class="headerlink" title="6.2.2 支持向量机的一个重要性质"></a>6.2.2 支持向量机的一个重要性质</h4>训练结束后，大部分训练样本都不需要保留，最终模型与支持向量有关。<h3 id="6-3-核函数"><a href="#6-3-核函数" class="headerlink" title="6.3 核函数"></a>6.3 核函数</h3>对线性可分问题，可以将原始空间映射到一个更高维的特征空间，使得样本在这个特征空间内线性可分。<h4 id="6-3-1-令y表示x映射后的特征向量"><a href="#6-3-1-令y表示x映射后的特征向量" class="headerlink" title="6.3.1 令y表示x映射后的特征向量"></a>6.3.1 令y表示x映射后的特征向量</h4>对偶问题<h4 id="6-3-2-支持向量展示"><a href="#6-3-2-支持向量展示" class="headerlink" title="6.3.2 支持向量展示"></a>6.3.2 支持向量展示</h4>模型训练最优解可通过训练样本核函数展开。<h4 id="6-3-3-常用核函数"><a href="#6-3-3-常用核函数" class="headerlink" title="6.3.3 常用核函数"></a>6.3.3 常用核函数</h4></li>
+<li>线性核函数</li>
+<li>多项式核函数</li>
+<li>高斯核函数</li>
+<li>拉普拉斯核函数</li>
+<li>sigmoid核函数<h4 id="6-3-4-核函数定理"><a href="#6-3-4-核函数定理" class="headerlink" title="6.3.4 核函数定理"></a>6.3.4 核函数定理</h4></li>
+<li>核矩阵总是半正定的</li>
+<li>只要一个堆成函数的核函数半正定，就可以被用于核函数</li>
+<li>半正定矩阵必然有对应的映射</li>
+<li>任何一个核函数都定义了一个希尔伯特空间<blockquote>
+<p>注意：特征空间的好坏对支持向量机至关重要<br>“核函数选择”成为支持向量机最大变数</p>
+<h3 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h3><h4 id="6-4-1-硬间隔"><a href="#6-4-1-硬间隔" class="headerlink" title="6.4.1 硬间隔"></a>6.4.1 硬间隔</h4><p>要求所有样本均满足约束，所有样本必须划分正确。</p>
+<h4 id="6-4-2-软间隔"><a href="#6-4-2-软间隔" class="headerlink" title="6.4.2 软间隔"></a>6.4.2 软间隔</h4></blockquote>
+</li>
+</ul>
+<ol>
+<li>解决现实任务：很难确定合适的核函数使得训练到的样本在特征空间中线性可分，或者是否过拟合。</li>
+<li>解决方法：允许部分样本可以出错。允许某些样本不满足约束<br>$y_i(w^Tx_i+b)\geq1$<br>不满足样本尽可能少。</li>
+<li>新的目标函数<h4 id="6-4-3-正则化"><a href="#6-4-3-正则化" class="headerlink" title="6.4.3 正则化"></a>6.4.3 正则化</h4></li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>信息论</tag>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>保研经历</title>
     <url>/2019/09/28/%E4%BF%9D%E7%A0%94%E7%BB%8F%E5%8E%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -562,79 +635,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
         <tag>matlab</tag>
         <tag>水声通信</tag>
         <tag>研究生课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习</title>
-    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
-<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
-<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
-</ol>
-<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
-<center>
-图6.1存在划分超平面将两个训练样本分开
-</center>
-
-
-<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
-<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
-<script type="math/tex; mode=display">
-r = \frac{|w^Tx+b|}{||w||}</script><ol>
-<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<br>$ w^Tx_i+b\geq+1,  y_i=+1 $<br>$w^Tx_i+b\leq-1,  y_i=+1$</li>
-<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
-<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-</ol>
-<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
-<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
-<li>更有效求解参数w和b的方法:拉格朗日乘子法</li>
-</ol>
-<ul>
-<li>对svm基本型式子的每个约束添加大于等于零的拉格朗日乘子，得到该问题的拉格朗日函数。<br>$ L(w,b,a)=\frac{1}{2}||w||^2+ \sum_{i=1}^ma_i(1-y_i(w^Tx_i+b)) $<ul>
-<li>令L(w,b,a)对w和b求偏导为零。<br>$ w = \sum<em>{i=1}^{m}a_iy_ix_i$<br>$ 0=\sum</em>{i=1}^{m}a_iy_i$</li>
-<li>将L(w,b,a)中的w和b消去，得到svm基本式子的对偶问题<br>${max}<em>{a}a_i-\frac{1}{2}\sum</em>{i=1}^m\sum<em>{j=1}^ma_ia_jy_iy_jx_i^Tx_j$<br>$s.t. \sum</em>{i=1}{m}a_iy_i=0,a_i\geq0,i=1,2,…,m$</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>KKT条件<script type="math/tex; mode=display">f= \begin{cases} a_i\geq0;\\ y_if(x_i)-1\geq0\\ a_i(y_if(x_i)-1)=0 \end{cases}</script></li>
-<li>如何求解对偶问题中的a？<ul>
-<li>当二次规划问题求解<br>算法：二次规划算法<br>缺点：问题规模正比例于训练样本数，这样会在实际任务中造成很大开销。<br>算法：SMO算法<br>选取一对所需更新的变量$a_i和a_j$<br>固定$a_j和a_i$ 以外的参数，求解对偶问题获取新的$a_i和a_j$<br>不断执行上述两个步骤直到收敛</li>
-</ul>
-<ol>
-<li>如何确定偏移项b？</li>
-</ol>
-<ul>
-<li>使用支持向量机求解平均值<br>$b=\frac{1}{|s|}\sum<em>{s\in S}(y_s-a_iy_ix_i^Tx_s)$<br>$y_s(\sum</em>{i\in S}a_iy_ix_i^Tx_s+b)=1$<br>$\lbrace S={i=a_i&gt;0,i=1,2…,m}\rbrace$为所有向量机下标集<h4 id="6-2-2-支持向量机的一个重要性质"><a href="#6-2-2-支持向量机的一个重要性质" class="headerlink" title="6.2.2 支持向量机的一个重要性质"></a>6.2.2 支持向量机的一个重要性质</h4>训练结束后，大部分训练样本都不需要保留，最终模型与支持向量有关。<h3 id="6-3-核函数"><a href="#6-3-核函数" class="headerlink" title="6.3 核函数"></a>6.3 核函数</h3>对线性可分问题，可以将原始空间映射到一个更高维的特征空间，使得样本在这个特征空间内线性可分。<h4 id="6-3-1-令y表示x映射后的特征向量"><a href="#6-3-1-令y表示x映射后的特征向量" class="headerlink" title="6.3.1 令y表示x映射后的特征向量"></a>6.3.1 令y表示x映射后的特征向量</h4>对偶问题<h4 id="6-3-2-支持向量展示"><a href="#6-3-2-支持向量展示" class="headerlink" title="6.3.2 支持向量展示"></a>6.3.2 支持向量展示</h4>模型训练最优解可通过训练样本核函数展开。<h4 id="6-3-3-常用核函数"><a href="#6-3-3-常用核函数" class="headerlink" title="6.3.3 常用核函数"></a>6.3.3 常用核函数</h4></li>
-<li>线性核函数</li>
-<li>多项式核函数</li>
-<li>高斯核函数</li>
-<li>拉普拉斯核函数</li>
-<li>sigmoid核函数<h4 id="6-3-4-核函数定理"><a href="#6-3-4-核函数定理" class="headerlink" title="6.3.4 核函数定理"></a>6.3.4 核函数定理</h4></li>
-<li>核矩阵总是半正定的</li>
-<li>只要一个堆成函数的核函数半正定，就可以被用于核函数</li>
-<li>半正定矩阵必然有对应的映射</li>
-<li>任何一个核函数都定义了一个希尔伯特空间<blockquote>
-<p>注意：特征空间的好坏对支持向量机至关重要<br>“核函数选择”成为支持向量机最大变数</p>
-<h3 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h3><h4 id="6-4-1-硬间隔"><a href="#6-4-1-硬间隔" class="headerlink" title="6.4.1 硬间隔"></a>6.4.1 硬间隔</h4><p>要求所有样本均满足约束，所有样本必须划分正确。</p>
-<h4 id="6-4-2-软间隔"><a href="#6-4-2-软间隔" class="headerlink" title="6.4.2 软间隔"></a>6.4.2 软间隔</h4></blockquote>
-</li>
-</ul>
-<ol>
-<li>解决现实任务：很难确定合适的核函数使得训练到的样本在特征空间中线性可分，或者是否过拟合。</li>
-<li>解决方法：允许部分样本可以出错。允许某些样本不满足约束<br>$y_i(w^Tx_i+b)\geq1$<br>不满足样本尽可能少。</li>
-<li>新的目标函数<h4 id="6-4-3-正则化"><a href="#6-4-3-正则化" class="headerlink" title="6.4.3 正则化"></a>6.4.3 正则化</h4></li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>信息论</tag>
-        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
