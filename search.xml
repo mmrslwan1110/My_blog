@@ -1,162 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c++_常用语法</title>
-    <url>/2020/07/31/c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
-<p>此文主要针对有c语言基础的人。</p>
-</blockquote>
-<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
-<ul>
-<li><font face="黑体" color=black size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
-<li><font face="黑体" color=black size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
-类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
-<li><font face="黑体" color=black size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
-<li><font face="黑体" color=black size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
-
-
-</li>
-</ul>
-<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
-<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
-<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
-<p><code>typedef int feet //feet定义为int的新名子</code></p>
-<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
-<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
-<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
-<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
-<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
-</ul>
-<p>Lvalues &amp; Rvalues</p>
-<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
-<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
-<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>修饰符类型</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><center> 限定符</center></th>
-<th><center>含义  </center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><center> const</td>
-<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
-</tr>
-<tr>
-<td>volatile</td>
-<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
-</tr>
-<tr>
-<td>restrict</td>
-<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo插入视频代码块及音频</title>
-    <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插件安装插入视频代码块及音频"><a href="#hexo插件安装插入视频代码块及音频" class="headerlink" title="hexo插件安装插入视频代码块及音频"></a><center>hexo插件安装插入视频代码块及音频</center></h1><h2 id="1-hexo插件安装"><a href="#1-hexo插件安装" class="headerlink" title="1.hexo插件安装"></a>1.hexo插件安装</h2><p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
-<p>**hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</p>
-<p>**hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></p>
-<h3 id="1-1-播放音乐的aplayer"><a href="#1-1-播放音乐的aplayer" class="headerlink" title="1.1 播放音乐的aplayer"></a>1.1 播放音乐的aplayer</h3><p>  在cmd页面内，使用npm安装：</p>
-<blockquote>
-<p>npm install hexo-tag-aplayer</p>
-<h3 id="1-2-播放视频的dplayer"><a href="#1-2-播放视频的dplayer" class="headerlink" title="1.2 播放视频的dplayer"></a>1.2 播放视频的dplayer</h3><p>  在cmd页面内，使用npm安装：<br>npm install hexo-tag-dplayer</p>
-</blockquote>
-<h1 id="hexo插入网易云音乐"><a href="#hexo插入网易云音乐" class="headerlink" title="hexo插入网易云音乐"></a><center>hexo插入网易云音乐</center></h1><h2 id="1-提取音乐的代码块"><a href="#1-提取音乐的代码块" class="headerlink" title="1.提取音乐的代码块"></a>1.提取音乐的代码块</h2><ol>
-<li>进入<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>搜索你想要的音乐。（以“下雨天”为例）。</li>
-<li>检索后进入<a href="https://music.163.com/#/outchain/2/368764/" target="_blank" rel="noopener">下雨天</a>页面，点击分享。</li>
-<li>复制该处代码</li>
-</ol>
-<center>
-<img src="https://www.codekp.cn/download/img/bilibili/网易云音乐.JPG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;530 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;368764&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>直接将其放在你的markdown文件中，即可显示音乐，如下所示：</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=368764&auto=1&height=66"></iframe>
-
-
-
-
-<h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
-<li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
-<li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
-<li>复制代码块处代码</li>
-</ol>
-<center>
-<img src="https://www.codekp.cn/download/img/bilibili/分享.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;40891962&amp;bvid&#x3D;BV17t411p7gx&amp;cid&#x3D;71826908&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>直接将其放在你的markdown文件中，即可显示b站视频，但是会发现视频比较小，如下所示：</p>
-<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2 id="2-代码块前后修饰"><a href="#2-代码块前后修饰" class="headerlink" title="2.代码块前后修饰"></a>2.代码块前后修饰</h2><p>在改代码的前后基础上加上</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:relative; padding-bottom:75%; width:100%; height:0&quot;&gt;</span><br><span class="line"></span><br><span class="line"> style&#x3D;&quot;position:absolute; height: 100%; width: 100%;&quot;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>
-
-
-<p>即可将你的视频直接贴在你的文章上。</p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a><br><a href="https://www.jianshu.com/p/26a7fc7cc185" target="_blank" rel="noopener">Hexo博客中插入音乐/视频/</a></p>
+    <title>b站视频分享</title>
+    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div><br><a id="more"></a></p>
 ]]></content>
       <categories>
-        <category>辅助技术</category>
+        <category>分享</category>
       </categories>
       <tags>
-        <tag>B站</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux嵌入式开发_1</title>
-    <url>/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
-<ul>
-<li>linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。</li>
-</ul>
-<h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><ul>
-<li>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</li>
-</ul>
-<h2 id="linux下的环境搭建"><a href="#linux下的环境搭建" class="headerlink" title="linux下的环境搭建"></a>linux下的环境搭建</h2><h3 id="1、修改Ubuntu的一些配置"><a href="#1、修改Ubuntu的一些配置" class="headerlink" title="1、修改Ubuntu的一些配置"></a>1、修改Ubuntu的一些配置</h3><ul>
-<li><p>切换国内镜像源</p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp; 在使用apt命令安装包时，因为系统自带下载源在国外服务器上，所以需要切换为国内镜像源才能提升下载速度。这里有一篇博客详细说明了如何直接根据终端命令修改其配置文件，从而达到修改下载源的目的.或者，，，，你也可以直接用Ubuntu的图形界面去修改，步骤如下： 显示应用程序-&gt;软件和更新-&gt;下载自主服务器改为其他，然后选择合适的镜像源就行了，这里我选择的是阿里的镜像源。</p>
-</li>
-<li><p>修改语言和设置汉语输入法</p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp; 懒得写，直接贴别人博客了</p>
-</li>
-</ul>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/langshi_2011/article/details/78993781" target="_blank" rel="noopener">Linux Ubuntu系统设置成中文语言</a></p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/sparkstrike/article/details/81487271" target="_blank" rel="noopener">Linux.Ubuntu.中文输入法设置</a></p>
-]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>嵌入式开发</tag>
-        <tag>鸟哥的私房菜学习</tag>
+        <tag>b站视频</tag>
+        <tag>分享</tag>
       </tags>
   </entry>
   <entry>
@@ -273,6 +129,94 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
+    <title>hexo插入视频代码块及音频</title>
+    <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插件安装插入视频代码块及音频"><a href="#hexo插件安装插入视频代码块及音频" class="headerlink" title="hexo插件安装插入视频代码块及音频"></a><center>hexo插件安装插入视频代码块及音频</center></h1><h2 id="1-hexo插件安装"><a href="#1-hexo插件安装" class="headerlink" title="1.hexo插件安装"></a>1.hexo插件安装</h2><p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
+<p>**hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</p>
+<p>**hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></p>
+<h3 id="1-1-播放音乐的aplayer"><a href="#1-1-播放音乐的aplayer" class="headerlink" title="1.1 播放音乐的aplayer"></a>1.1 播放音乐的aplayer</h3><p>  在cmd页面内，使用npm安装：</p>
+<blockquote>
+<p>npm install hexo-tag-aplayer</p>
+<h3 id="1-2-播放视频的dplayer"><a href="#1-2-播放视频的dplayer" class="headerlink" title="1.2 播放视频的dplayer"></a>1.2 播放视频的dplayer</h3><p>  在cmd页面内，使用npm安装：<br>npm install hexo-tag-dplayer</p>
+</blockquote>
+<h1 id="hexo插入网易云音乐"><a href="#hexo插入网易云音乐" class="headerlink" title="hexo插入网易云音乐"></a><center>hexo插入网易云音乐</center></h1><h2 id="1-提取音乐的代码块"><a href="#1-提取音乐的代码块" class="headerlink" title="1.提取音乐的代码块"></a>1.提取音乐的代码块</h2><ol>
+<li>进入<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>搜索你想要的音乐。（以“下雨天”为例）。</li>
+<li>检索后进入<a href="https://music.163.com/#/outchain/2/368764/" target="_blank" rel="noopener">下雨天</a>页面，点击分享。</li>
+<li>复制该处代码</li>
+</ol>
+<center>
+<img src="https://www.codekp.cn/download/img/bilibili/网易云音乐.JPG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;530 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;368764&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>直接将其放在你的markdown文件中，即可显示音乐，如下所示：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=368764&auto=1&height=66"></iframe>
+
+
+
+
+<h1 id="hexo插入bilibili视频代码块"><a href="#hexo插入bilibili视频代码块" class="headerlink" title="hexo插入bilibili视频代码块"></a><center>hexo插入bilibili视频代码块</center></h1><h2 id="1-提取视频的代码块"><a href="#1-提取视频的代码块" class="headerlink" title="1.提取视频的代码块"></a>1.提取视频的代码块</h2><ol>
+<li>进入<a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili</a>搜索你想要的视频。（以“回形针PaperClip你的 App 为什么知道你想买什么？”为例）。</li>
+<li>检索后进入<a href="https://www.bilibili.com/video/BV17t411p7gx?from=search&amp;seid=11485789333728231707" target="_blank" rel="noopener">回形针PaperClip你的 App 为什么知道你想买什么</a>页面，点击分享。</li>
+<li>复制代码块处代码</li>
+</ol>
+<center>
+<img src="https://www.codekp.cn/download/img/bilibili/分享.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;40891962&amp;bvid&#x3D;BV17t411p7gx&amp;cid&#x3D;71826908&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>直接将其放在你的markdown文件中，即可显示b站视频，但是会发现视频比较小，如下所示：</p>
+<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="2-代码块前后修饰"><a href="#2-代码块前后修饰" class="headerlink" title="2.代码块前后修饰"></a>2.代码块前后修饰</h2><p>在改代码的前后基础上加上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:relative; padding-bottom:75%; width:100%; height:0&quot;&gt;</span><br><span class="line"></span><br><span class="line"> style&#x3D;&quot;position:absolute; height: 100%; width: 100%;&quot;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+<iframe src="//player.bilibili.com/player.html?aid=40891962&bvid=BV17t411p7gx&cid=71826908&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>
+
+
+<p>即可将你的视频直接贴在你的文章上。</p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://blog.csdn.net/weixin_41216356/article/details/106911233" target="_blank" rel="noopener">如何在Hugo/Hexo博客中插入响应式Bilibili视频代码块</a><br><a href="https://www.jianshu.com/p/26a7fc7cc185" target="_blank" rel="noopener">Hexo博客中插入音乐/视频/</a></p>
+]]></content>
+      <categories>
+        <category>辅助技术</category>
+      </categories>
+      <tags>
+        <tag>B站</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux嵌入式开发_1</title>
+    <url>/2020/07/30/linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91-1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a><strong>linux基础</strong></h1><h2 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h2><a id="more"></a>
+<ul>
+<li>linux是一款开源操作系统，开放了整组的调用接口给程序猿进行开发和使用。linux操作系统包含内核和系统调用，并不包含应用程序。由于linux的架构继承了unix良好传统，因此越来越多的开发者选择使用linux并为之设计了许多应用级软件。</li>
+</ul>
+<h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><ul>
+<li>开发环境需要用到交叉开发模式，这一点书上有很详细的介绍，包括硬件环境和软件环境的构建都写的十分清楚，所以这篇文章主要是写一下我在中间遇到的一些问题以及解决方法。虚拟机的话我用的是Ubuntu18.04版本，安装虚拟机啥的网上资源很多，直接百度就行。</li>
+</ul>
+<h2 id="linux下的环境搭建"><a href="#linux下的环境搭建" class="headerlink" title="linux下的环境搭建"></a>linux下的环境搭建</h2><h3 id="1、修改Ubuntu的一些配置"><a href="#1、修改Ubuntu的一些配置" class="headerlink" title="1、修改Ubuntu的一些配置"></a>1、修改Ubuntu的一些配置</h3><ul>
+<li><p>切换国内镜像源</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; 在使用apt命令安装包时，因为系统自带下载源在国外服务器上，所以需要切换为国内镜像源才能提升下载速度。这里有一篇博客详细说明了如何直接根据终端命令修改其配置文件，从而达到修改下载源的目的.或者，，，，你也可以直接用Ubuntu的图形界面去修改，步骤如下： 显示应用程序-&gt;软件和更新-&gt;下载自主服务器改为其他，然后选择合适的镜像源就行了，这里我选择的是阿里的镜像源。</p>
+</li>
+<li><p>修改语言和设置汉语输入法</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; 懒得写，直接贴别人博客了</p>
+</li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/langshi_2011/article/details/78993781" target="_blank" rel="noopener">Linux Ubuntu系统设置成中文语言</a></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://blog.csdn.net/sparkstrike/article/details/81487271" target="_blank" rel="noopener">Linux.Ubuntu.中文输入法设置</a></p>
+]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>嵌入式开发</tag>
+        <tag>鸟哥的私房菜学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>信息论一个小实例</title>
     <url>/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="不用问知道你名字的玄学问题"><a href="#不用问知道你名字的玄学问题" class="headerlink" title="不用问知道你名字的玄学问题"></a><center>不用问知道你名字的玄学问题</center></h1><a id="more"></a>
@@ -342,6 +286,77 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
+    <title>c++_常用语法</title>
+    <url>/2020/07/31/c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
+<p>此文主要针对有c语言基础的人。</p>
+</blockquote>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
+<ul>
+<li><font face="黑体" color=black size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
+<li><font face="黑体" color=black size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
+类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
+<li><font face="黑体" color=black size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
+<li><font face="黑体" color=black size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
+
+
+</li>
+</ul>
+<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
+<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
+<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
+<p><code>typedef int feet //feet定义为int的新名子</code></p>
+<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
+<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
+<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
+<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
+<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
+</ul>
+<p>Lvalues &amp; Rvalues</p>
+<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
+<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
+<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>修饰符类型</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><center> 限定符</center></th>
+<th><center>含义  </center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> const</td>
+<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
+</tr>
+<tr>
+<td>restrict</td>
+<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人简历</title>
     <url>/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -364,16 +379,45 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
   </entry>
   <entry>
     <title>xmu健康打卡ios快捷指令</title>
-    <url>/2020/11/17/%E5%A4%A7%E5%AD%A6ios%E7%B3%BB%E7%BB%9F%E6%89%93%E5%8D%A1%E6%8D%B7%E5%BE%84/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">您好, 请输入密码查看更多.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="87a98245518bc5a96e067ce6b658561fcde3e8b8edeafe6a4beab93fac72cb96">6d2a434e5df4e9b3bd9474828405505beb9a6280244b73c99bbcd84f86024e86a316a7987633e345a0e027b85a68a668ba9a062d6775fcd5b986de7c6b609b86e48bf5902a3df4dbcfe5234c09adbdb0aab3f70f81966b6dbbbb4dcc2c77aefddeb2db967695d7d0c5941fb8b20fff32b34b101045e219e4410596dda66ec3cef2d36faf3d50c7fc173aa0658c76ebb9eeb6f31c453f22fc0bbfff8e5f5ff873f679906ca168877d761bdfc263e1af8a4d3e28da5d7fac710bfbff7f9b7c1972de9366fdc68c2f945ce7df8904cfdcf5c5a223edbcfd39c8a0dd8053d7c2f5fbc882554959c05c90d9de80049cd9c8e0a9c2eb448aefd73e8806f661ece2458834deec252274622bb9a991325ec670d3d5d9df2880c51e13d81b3282a4b22b01c582915fd21e83fb7ed7d74316bedfde0cba0fd60822ef9c7d9b3a4dd9ed66fb2a75ca9926cf4ff51ca8aaef3321b5bbbae9ebd8922c1d4fa55d0fabbf6b48de5ff5f2bcae5ee29d9baff28a6c9a956f14a3cfc49318cfe49e7c6eace9a92974d1d4dec403c18496494c403dbe5c8bf848dde3ebb16c08b391cfa68b39a24ae86021d5cb2fc77eae46141f68176c1d4d3fc9394720ec98a36ee5ff2abc4393144bf0c675155da0f28f8db00ad206c584a08b80eeda0522ed31e4c51b41a4bb23a690e85408faa720ede63429ee43964689e7e3c829c848dd6d6bfd9b27602da89e6e6ba9df002edfa1b8d449caec40de1a730538d81d5447dbdfefa74f9532069e36987301e58e9ff0e8fbd17bd4cc081f1a327001720c746d4dae43074046d3b3d142063659603e92fb5487cbdd841a3cda428f2fe6a23299ac699d853d622c02088d397105c03395bb2394723f6892c669e5de2dc3f8cde7204fb1a178da5e03e4455afcaecc3c11133754edfcae1bfb07f7fe24abdbaba9646b3f3590482696b5d98061961c7e4883ffedb03971eaa2d6290103721db86ba29a912642ff07f4f445f11f70efec95eccea5c2c39009134335e8a02db311d6a0d5afbc04821c30e5b92ed20e6faa2c0c6829639dfed2c80b3aa9c443b14950ce9491d4b7e0e4ded7b7e4e49c9f34af0cb9beae3e461b68f862d41d44e51c69fe63fa38809db5165fe25a087be14f271cb0182adb691f0dec74a2685bbe8ce42537758eaa337733b2cf8491877c8bcb1db954ccef730c2da42a508dba4f0293ed142943a79bea4bd36d37f553c14fc9bcdcd6805b459c94554cb79460fa312660cd9765822eebc04bb3268744663d5a914d67258fc7b0e32fb36592415053aedc39385e3f6289b9cad8bb8689214495b70643ab77fe260f16f5c56dd6b7cf0b716093beee98a88a002782b94a833e52cb97920a9c12115bf27bc4470ffa9c6c80db232f0b88413fd899d32058f27e4ab565fb2f78ad15dc8aefb33e83c0009d86fcd527d9e049fea7524b1eea2124a57d0cf4e45fc266516fa2ef84ede35bbb68ca0a9df3879eab911f1621fccc08d292643ea9dbe62e6b8cb40864a12ff0941e9105f283e7b18299c61f8398006dc551b7b4da179ce5ec3194d6b223f3e1d289bed2d0c2dd2ad76aa04916677c49c35800bd3b15a76fa16e4d78650018e538055da03eca140d002d8f84ac14940e359e4dbfb07d900f700170887140fc13137bac6bf5fc752d98f7eb82b9b9ca0cc9cb5743ccac060c0f09ca36015148863273adf68eec329a29207e86f2066d89abce6cd1268e16c574e3c96d54c3d6f83ec85a029d7b7cf02c7e99e4c1074f8a591ada10c8c444098ebea7c1de5df5270faacdb6ecdce05f74e1c5a5f0f1ee20a51f005560a38ab0a993cd4ef9cd5ed77e49b3ac7c4b8daf803853201ccd28102fcff1ec5a2900ffb0dff7d9376beafab2d3b4a4a9966918def0f658dcbf5beec27ba61870f18624021d9216ab388d25fe7156f36b5fd838a57dc842a813889607a18be9448c15c6ec5450e78004e5de0a896f4744cc404dd901193ea52e4b8b2f1633ce49af1b76b08a04188232cb6d88047266f6f9ca04bc3ac87ba76cfade614f55dedf39e6ef30f3e02427802e0a2ba5e60746a1cd017938a51b419e4efb11f8f8321921b7e623e40f388b198975d61fc5c23de3b43fe57282918131e801c478dfe3d26dd1cc67b47508d48103cd91ffd5aa27c768ed3afc48e43543b75cbe8cc5bcad08a7958744f91acaad2971187dc2c106d8d468990ed7ffb9ae046375bd98ced50eb43bfc9ed3fcf2c8d1da8597972bc6ec08164e6c60e0cefe951424188ff11c6818ee226b2d25446501fefcdf32e363b22d6f6567955872db2a62d8d76c5f92f99b95d43499de33ac510c1aba7ef0139450a6ce5ad89ee1a2809e86452362f6229fd97d8f37ba5bb10ae3e04576cb85032ee836d3bb109ea5756e59de90345372808238c3c8e263ffdd957712c47349482552599faa48a3d6d29362168e6d8f577ff29d0b1f24cd141eb8cd21795e6bbde023eaa90f38c82d3a2c3b32c6e48728670da161b91709f5d2ad3a96ee1bb431b58031aaa1f12a393e59a24ae58a9c4eebbe103a1f7a5c13d3229da922b9ca57477828eb971c3a41da6be602bf60b5e0300f3442eef8bae17c9fbe6454ebbad7998c395f2de7e06f0913738c8154ffc710bff96971bc75e8939485ac1dbafd65a609c0f48c6290181c5b3e88da1aa5e366a7c7e650b2105b9344ff0df101dd941cd7e19373a78c9e966700bfa52981624482836e3b1eb3dfb23c853340f1a2615ef66a00f7341f8a668f41d885148e01d05be8523201b5b10b6a7127a644fec601a638592e034d7a605ede78b7bcd27b906d0151080572d79ec73c1a14d06e520eab772beb5bf1c35ca56d341a4e0b45899946a1071d2843ff369e97b6feda3663de5aa836962deec270bfd867833c53a1d4d4d46633928415c304ee69f00f3cc2b3d8d4223cb23148baeaedf81c34f51c1b6fd49b9e0cde82e9afbfc3b91164a8de1c079cce1e435c0f53ab0790472721318ee08b525e20837982ca6bff88a560e3c130f7cdda88c14842da3751cdd08c5d5da831ef8380b09149d60676f6b5f2dc1ab9a062822d89348222a53ace8b30fd2759967524a566b4b25a086a32bbb3cd9537a3f4a4bc54f0f5ee740c78543098e79051c6f92d0492de4c07fbfb8cab90eef48be99a9fac54ba646001c4c7bdc1edd51a58870182d2c1ab9d12956404e2dbbf69450a511e9520d1ec47d3457ec08b997dfdf9689457b8dde8a72a3e8c5b7fd86c1e6228dd50c48da5a55f77f98578ccd9e79bec4b9e19f418b13550b1c8988a2d2dd5925f5300beb8b25c9b23a31a7f158d2af99146e0ea11dee7201b90b0ab45c07f0828390f26b133b6a2306e</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <url>/2020/12/06/%E5%A4%A7%E5%AD%A6ios%E7%B3%BB%E7%BB%9F%E6%89%93%E5%8D%A1%E6%8D%B7%E5%BE%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="XMU健康打卡ios快捷指令"><a href="#XMU健康打卡ios快捷指令" class="headerlink" title="XMU健康打卡ios快捷指令"></a><center>XMU健康打卡ios快捷指令</center></h1><h2 id="XMU-Health-Report-Base-On-Iphone"><a href="#XMU-Health-Report-Base-On-Iphone" class="headerlink" title=" XMU Health Report Base On Iphone "></a><center> XMU Health Report Base On Iphone </center></h2><a id="more"></a>
+<h2 id="1-工具"><a href="#1-工具" class="headerlink" title="1.工具"></a>1.工具</h2><ul>
+<li>浏览器</li>
+<li>由于各个网页不同，可能会有不一样的结果，因此这个过程仅供参考。</li>
+<li>下面说一下大概的思路，先用浏览器打开我们打卡的链接，接着打开浏览器，按F12进入开发者模式。</li>
+<li>接着，选择network<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/F12.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center></li>
+<li><p>找到POST，不要寻找GET</p>
+<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/get.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+</li>
+<li><p>如下：<br><center>
+<img src="https://www.codekp.cn/download/img/xmu_r/post.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center><br>将里面的连接保存下来<br><a href="https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu" target="_blank" rel="noopener">https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu</a></p>
+</li>
+</ul>
+<p>即找到了我们需要的登录网址。</p>
+<p>接下来记录 username和userpassword，依次填入ios。</p>
+<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/report.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
+
+<ul>
+<li>将得到的数据填入一下列表<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/report_ios.JPG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
+</li>
+</ul>
+<blockquote>
+<p>仅只写到这里有兴趣的自己继续探索。</p>
+</blockquote>
+]]></content>
       <categories>
         <category>厦门大学</category>
       </categories>
@@ -454,8 +498,81 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
         <category>辅助技术</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>markdown</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习</title>
+    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
+<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
+<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
+</ol>
+<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
+<center>
+图6.1存在划分超平面将两个训练样本分开
+</center>
+
+
+<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
+<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
+<script type="math/tex; mode=display">
+r = \frac{|w^Tx+b|}{||w||}</script><ol>
+<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<br>$ w^Tx_i+b\geq+1,  y_i=+1 $<br>$w^Tx_i+b\leq-1,  y_i=+1$</li>
+<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
+<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+</ol>
+<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
+<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
+<li>更有效求解参数w和b的方法:拉格朗日乘子法</li>
+</ol>
+<ul>
+<li>对svm基本型式子的每个约束添加大于等于零的拉格朗日乘子，得到该问题的拉格朗日函数。<br>$ L(w,b,a)=\frac{1}{2}||w||^2+ \sum_{i=1}^ma_i(1-y_i(w^Tx_i+b)) $<ul>
+<li>令L(w,b,a)对w和b求偏导为零。<br>$ w = \sum<em>{i=1}^{m}a_iy_ix_i$<br>$ 0=\sum</em>{i=1}^{m}a_iy_i$</li>
+<li>将L(w,b,a)中的w和b消去，得到svm基本式子的对偶问题<br>${max}<em>{a}a_i-\frac{1}{2}\sum</em>{i=1}^m\sum<em>{j=1}^ma_ia_jy_iy_jx_i^Tx_j$<br>$s.t. \sum</em>{i=1}{m}a_iy_i=0,a_i\geq0,i=1,2,…,m$</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>KKT条件<script type="math/tex; mode=display">f= \begin{cases} a_i\geq0;\\ y_if(x_i)-1\geq0\\ a_i(y_if(x_i)-1)=0 \end{cases}</script></li>
+<li>如何求解对偶问题中的a？<ul>
+<li>当二次规划问题求解<br>算法：二次规划算法<br>缺点：问题规模正比例于训练样本数，这样会在实际任务中造成很大开销。<br>算法：SMO算法<br>选取一对所需更新的变量$a_i和a_j$<br>固定$a_j和a_i$ 以外的参数，求解对偶问题获取新的$a_i和a_j$<br>不断执行上述两个步骤直到收敛</li>
+</ul>
+<ol>
+<li>如何确定偏移项b？</li>
+</ol>
+<ul>
+<li>使用支持向量机求解平均值<br>$b=\frac{1}{|s|}\sum<em>{s\in S}(y_s-a_iy_ix_i^Tx_s)$<br>$y_s(\sum</em>{i\in S}a_iy_ix_i^Tx_s+b)=1$<br>$\lbrace S={i=a_i&gt;0,i=1,2…,m}\rbrace$为所有向量机下标集<h4 id="6-2-2-支持向量机的一个重要性质"><a href="#6-2-2-支持向量机的一个重要性质" class="headerlink" title="6.2.2 支持向量机的一个重要性质"></a>6.2.2 支持向量机的一个重要性质</h4>训练结束后，大部分训练样本都不需要保留，最终模型与支持向量有关。<h3 id="6-3-核函数"><a href="#6-3-核函数" class="headerlink" title="6.3 核函数"></a>6.3 核函数</h3>对线性可分问题，可以将原始空间映射到一个更高维的特征空间，使得样本在这个特征空间内线性可分。<h4 id="6-3-1-令y表示x映射后的特征向量"><a href="#6-3-1-令y表示x映射后的特征向量" class="headerlink" title="6.3.1 令y表示x映射后的特征向量"></a>6.3.1 令y表示x映射后的特征向量</h4>对偶问题<h4 id="6-3-2-支持向量展示"><a href="#6-3-2-支持向量展示" class="headerlink" title="6.3.2 支持向量展示"></a>6.3.2 支持向量展示</h4>模型训练最优解可通过训练样本核函数展开。<h4 id="6-3-3-常用核函数"><a href="#6-3-3-常用核函数" class="headerlink" title="6.3.3 常用核函数"></a>6.3.3 常用核函数</h4></li>
+<li>线性核函数</li>
+<li>多项式核函数</li>
+<li>高斯核函数</li>
+<li>拉普拉斯核函数</li>
+<li>sigmoid核函数<h4 id="6-3-4-核函数定理"><a href="#6-3-4-核函数定理" class="headerlink" title="6.3.4 核函数定理"></a>6.3.4 核函数定理</h4></li>
+<li>核矩阵总是半正定的</li>
+<li>只要一个堆成函数的核函数半正定，就可以被用于核函数</li>
+<li>半正定矩阵必然有对应的映射</li>
+<li>任何一个核函数都定义了一个希尔伯特空间<blockquote>
+<p>注意：特征空间的好坏对支持向量机至关重要<br>“核函数选择”成为支持向量机最大变数</p>
+<h3 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h3><h4 id="6-4-1-硬间隔"><a href="#6-4-1-硬间隔" class="headerlink" title="6.4.1 硬间隔"></a>6.4.1 硬间隔</h4><p>要求所有样本均满足约束，所有样本必须划分正确。</p>
+<h4 id="6-4-2-软间隔"><a href="#6-4-2-软间隔" class="headerlink" title="6.4.2 软间隔"></a>6.4.2 软间隔</h4></blockquote>
+</li>
+</ul>
+<ol>
+<li>解决现实任务：很难确定合适的核函数使得训练到的样本在特征空间中线性可分，或者是否过拟合。</li>
+<li>解决方法：允许部分样本可以出错。允许某些样本不满足约束<br>$y_i(w^Tx_i+b)\geq1$<br>不满足样本尽可能少。</li>
+<li>新的目标函数<h4 id="6-4-3-正则化"><a href="#6-4-3-正则化" class="headerlink" title="6.4.3 正则化"></a>6.4.3 正则化</h4></li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>信息论</tag>
+        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -549,79 +666,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>机器学习</title>
-    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
-<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
-<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
-</ol>
-<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
-<center>
-图6.1存在划分超平面将两个训练样本分开
-</center>
-
-
-<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
-<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
-<script type="math/tex; mode=display">
-r = \frac{|w^Tx+b|}{||w||}</script><ol>
-<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<br>$ w^Tx_i+b\geq+1,  y_i=+1 $<br>$w^Tx_i+b\leq-1,  y_i=+1$</li>
-<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
-<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-</ol>
-<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
-<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
-<li>更有效求解参数w和b的方法:拉格朗日乘子法</li>
-</ol>
-<ul>
-<li>对svm基本型式子的每个约束添加大于等于零的拉格朗日乘子，得到该问题的拉格朗日函数。<br>$ L(w,b,a)=\frac{1}{2}||w||^2+ \sum_{i=1}^ma_i(1-y_i(w^Tx_i+b)) $<ul>
-<li>令L(w,b,a)对w和b求偏导为零。<br>$ w = \sum<em>{i=1}^{m}a_iy_ix_i$<br>$ 0=\sum</em>{i=1}^{m}a_iy_i$</li>
-<li>将L(w,b,a)中的w和b消去，得到svm基本式子的对偶问题<br>${max}<em>{a}a_i-\frac{1}{2}\sum</em>{i=1}^m\sum<em>{j=1}^ma_ia_jy_iy_jx_i^Tx_j$<br>$s.t. \sum</em>{i=1}{m}a_iy_i=0,a_i\geq0,i=1,2,…,m$</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>KKT条件<script type="math/tex; mode=display">f= \begin{cases} a_i\geq0;\\ y_if(x_i)-1\geq0\\ a_i(y_if(x_i)-1)=0 \end{cases}</script></li>
-<li>如何求解对偶问题中的a？<ul>
-<li>当二次规划问题求解<br>算法：二次规划算法<br>缺点：问题规模正比例于训练样本数，这样会在实际任务中造成很大开销。<br>算法：SMO算法<br>选取一对所需更新的变量$a_i和a_j$<br>固定$a_j和a_i$ 以外的参数，求解对偶问题获取新的$a_i和a_j$<br>不断执行上述两个步骤直到收敛</li>
-</ul>
-<ol>
-<li>如何确定偏移项b？</li>
-</ol>
-<ul>
-<li>使用支持向量机求解平均值<br>$b=\frac{1}{|s|}\sum<em>{s\in S}(y_s-a_iy_ix_i^Tx_s)$<br>$y_s(\sum</em>{i\in S}a_iy_ix_i^Tx_s+b)=1$<br>$\lbrace S={i=a_i&gt;0,i=1,2…,m}\rbrace$为所有向量机下标集<h4 id="6-2-2-支持向量机的一个重要性质"><a href="#6-2-2-支持向量机的一个重要性质" class="headerlink" title="6.2.2 支持向量机的一个重要性质"></a>6.2.2 支持向量机的一个重要性质</h4>训练结束后，大部分训练样本都不需要保留，最终模型与支持向量有关。<h3 id="6-3-核函数"><a href="#6-3-核函数" class="headerlink" title="6.3 核函数"></a>6.3 核函数</h3>对线性可分问题，可以将原始空间映射到一个更高维的特征空间，使得样本在这个特征空间内线性可分。<h4 id="6-3-1-令y表示x映射后的特征向量"><a href="#6-3-1-令y表示x映射后的特征向量" class="headerlink" title="6.3.1 令y表示x映射后的特征向量"></a>6.3.1 令y表示x映射后的特征向量</h4>对偶问题<h4 id="6-3-2-支持向量展示"><a href="#6-3-2-支持向量展示" class="headerlink" title="6.3.2 支持向量展示"></a>6.3.2 支持向量展示</h4>模型训练最优解可通过训练样本核函数展开。<h4 id="6-3-3-常用核函数"><a href="#6-3-3-常用核函数" class="headerlink" title="6.3.3 常用核函数"></a>6.3.3 常用核函数</h4></li>
-<li>线性核函数</li>
-<li>多项式核函数</li>
-<li>高斯核函数</li>
-<li>拉普拉斯核函数</li>
-<li>sigmoid核函数<h4 id="6-3-4-核函数定理"><a href="#6-3-4-核函数定理" class="headerlink" title="6.3.4 核函数定理"></a>6.3.4 核函数定理</h4></li>
-<li>核矩阵总是半正定的</li>
-<li>只要一个堆成函数的核函数半正定，就可以被用于核函数</li>
-<li>半正定矩阵必然有对应的映射</li>
-<li>任何一个核函数都定义了一个希尔伯特空间<blockquote>
-<p>注意：特征空间的好坏对支持向量机至关重要<br>“核函数选择”成为支持向量机最大变数</p>
-<h3 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h3><h4 id="6-4-1-硬间隔"><a href="#6-4-1-硬间隔" class="headerlink" title="6.4.1 硬间隔"></a>6.4.1 硬间隔</h4><p>要求所有样本均满足约束，所有样本必须划分正确。</p>
-<h4 id="6-4-2-软间隔"><a href="#6-4-2-软间隔" class="headerlink" title="6.4.2 软间隔"></a>6.4.2 软间隔</h4></blockquote>
-</li>
-</ul>
-<ol>
-<li>解决现实任务：很难确定合适的核函数使得训练到的样本在特征空间中线性可分，或者是否过拟合。</li>
-<li>解决方法：允许部分样本可以出错。允许某些样本不满足约束<br>$y_i(w^Tx_i+b)\geq1$<br>不满足样本尽可能少。</li>
-<li>新的目标函数<h4 id="6-4-3-正则化"><a href="#6-4-3-正则化" class="headerlink" title="6.4.3 正则化"></a>6.4.3 正则化</h4></li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>信息论</tag>
-        <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>水声通信实验课程作业</title>
     <url>/2020/11/17/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -643,21 +687,6 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
       </tags>
   </entry>
   <entry>
-    <title>b站视频分享</title>
-    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div><br><a id="more"></a></p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>b站视频</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>水声通信课程作业业_二</title>
     <url>/2020/12/04/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A%E4%B8%9A-%E4%BA%8C/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -676,6 +705,94 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
         <tag>matlab</tag>
         <tag>水声通信</tag>
         <tag>研究生课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习_花书</title>
+    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
+<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>分类器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵分析引论</title>
+    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
+
+<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<a id="more"></a>
+<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
+<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。<br>$Q\subset R\subset C$<br>如果一个非空集合在某数域上，以下八条<center>
+<img src="https://www.codekp.cn/download/img/矩阵论/1.PNG" width = "1147" height = "950" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
+</li>
+</ol>
+<p>参考视频教程：</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>研究生课程</tag>
+        <tag>矩阵论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>百度谷歌搜索引擎索引</title>
+    <url>/2020/12/04/%E7%99%BE%E5%BA%A6%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%8B%97%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="百度谷歌搜索引擎索引"><a href="#百度谷歌搜索引擎索引" class="headerlink" title="百度谷歌搜索引擎索引"></a><center>百度谷歌搜索引擎索引</center></h2><a id="more"></a>
+<h3 id="简单检索"><a href="#简单检索" class="headerlink" title="简单检索"></a>简单检索</h3><p>参考<a href="https://jingyan.baidu.com/article/6b97984dee19b81ca3b0bf4c.html" target="_blank" rel="noopener">如何让自己的网站快速被百度收录</a></p>
+<ol>
+<li>提交链接。</li>
+</ol>
+<ul>
+<li>Google: <a href="http://www.google.com/addurl/?hl=zh-CN" target="_blank" rel="noopener">Google 网站站长工具</a></li>
+<li>Baidu: <a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">url提交_站长工具</a></li>
+</ul>
+<ol>
+<li>最有用的方法</li>
+</ol>
+<ul>
+<li>知乎</li>
+<li>CSDN</li>
+<li>豆瓣</li>
+<li>贴吧等平台<br>发帖，贴出自己的网址，搜索引擎就会进行索引。</li>
+</ul>
+<ol>
+<li>2020/12/4<br>目前本网站未被任何引擎索引。<center>
+<img src="https://www.codekp.cn/download/img/csdn/百度为索引.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
+</li>
+</ol>
+<h2 id="比较麻烦的检索方式"><a href="#比较麻烦的检索方式" class="headerlink" title="比较麻烦的检索方式"></a>比较麻烦的检索方式</h2><p>  将检索文件放在网站根目录下。<br>  <a href="https://www.codekp.cn/baidu_verify_code-De28227qRL.html">测试连接</a></p>
+<p><center>
+<img src="https://www.codekp.cn/download/img/csdn/检索.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><br>将备案号填入即可很快被检索。</p>
+<h2 id="提高搜索引擎权重"><a href="#提高搜索引擎权重" class="headerlink" title="提高搜索引擎权重"></a>提高搜索引擎权重</h2><ul>
+<li>最简单的方法就是在各种平台多放点网址进去。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>谷歌</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>搜索引擎</tag>
       </tags>
   </entry>
   <entry>
@@ -823,54 +940,11 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
         <category>程序设计</category>
       </categories>
       <tags>
-        <tag>程序设计</tag>
         <tag>matlab</tag>
+        <tag>程序设计</tag>
         <tag>python</tag>
         <tag>c</tag>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习_花书</title>
-    <url>/2020/07/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E8%8A%B1%E4%B9%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><a id="more"></a>
-<p>&nbsp;&nbsp; 深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。<br>&nbsp;&nbsp; 深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。<br>&nbsp;&nbsp; 深度学习在搜索技术，数据挖掘，机器学习，机器翻译，自然语言处理，多媒体学习，语音，推荐和个性化技术，以及其他相关领域都取得了很多成果。深度学习使机器模仿视听和思考等人类的活动，解决了很多复杂的模式识别难题，使得人工智能相关技术取得了很大进步。  </p>
-]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>分类器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>矩阵分析引论</title>
-    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
-
-<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<a id="more"></a>
-<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
-<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。<br>$Q\subset R\subset C$<br>如果一个非空集合在某数域上，以下八条<center>
-<img src="https://www.codekp.cn/download/img/矩阵论/1.PNG" width = "1147" height = "950" alt="图片名称" align=center / loading="lazy">
-</center>
-
-
-</li>
-</ol>
-<p>参考视频教程：</p>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>研究生课程</tag>
-        <tag>矩阵论</tag>
       </tags>
   </entry>
   <entry>
@@ -922,51 +996,6 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
       <tags>
         <tag>matlab</tag>
         <tag>视频</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>百度谷歌搜索引擎索引</title>
-    <url>/2020/12/04/%E7%99%BE%E5%BA%A6%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%8B%97%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="百度谷歌搜索引擎索引"><a href="#百度谷歌搜索引擎索引" class="headerlink" title="百度谷歌搜索引擎索引"></a><center>百度谷歌搜索引擎索引</center></h2><a id="more"></a>
-<h3 id="简单检索"><a href="#简单检索" class="headerlink" title="简单检索"></a>简单检索</h3><p>参考<a href="https://jingyan.baidu.com/article/6b97984dee19b81ca3b0bf4c.html" target="_blank" rel="noopener">如何让自己的网站快速被百度收录</a></p>
-<ol>
-<li>提交链接。</li>
-</ol>
-<ul>
-<li>Google: <a href="http://www.google.com/addurl/?hl=zh-CN" target="_blank" rel="noopener">Google 网站站长工具</a></li>
-<li>Baidu: <a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">url提交_站长工具</a></li>
-</ul>
-<ol>
-<li>最有用的方法</li>
-</ol>
-<ul>
-<li>知乎</li>
-<li>CSDN</li>
-<li>豆瓣</li>
-<li>贴吧等平台<br>发帖，贴出自己的网址，搜索引擎就会进行索引。</li>
-</ul>
-<ol>
-<li>2020/12/4<br>目前本网站未被任何引擎索引。<center>
-<img src="https://www.codekp.cn/download/img/csdn/百度为索引.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-
-</li>
-</ol>
-<h2 id="比较麻烦的检索方式"><a href="#比较麻烦的检索方式" class="headerlink" title="比较麻烦的检索方式"></a>比较麻烦的检索方式</h2><p>  将检索文件放在网站根目录下。<br>  <a href="https://www.codekp.cn/baidu_verify_code-De28227qRL.html">测试连接</a></p>
-<p><center>
-<img src="https://www.codekp.cn/download/img/csdn/检索.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><br>将备案号填入即可很快被检索。</p>
-<h2 id="提高搜索引擎权重"><a href="#提高搜索引擎权重" class="headerlink" title="提高搜索引擎权重"></a>提高搜索引擎权重</h2><ul>
-<li>最简单的方法就是在各种平台多放点网址进去。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>谷歌</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>搜索引擎</tag>
       </tags>
   </entry>
 </search>
