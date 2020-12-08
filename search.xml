@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>b站视频分享</title>
-    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div><br><a id="more"></a></p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>b站视频</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>English_learning</title>
     <url>/2020/07/31/English-learning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -129,6 +114,77 @@ If you are talking to a group of managers, you may refer to the disorganized met
       </tags>
   </entry>
   <entry>
+    <title>c++_常用语法</title>
+    <url>/2020/07/31/c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
+<p>此文主要针对有c语言基础的人。</p>
+</blockquote>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
+<ul>
+<li><font face="黑体" color=black size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
+<li><font face="黑体" color=black size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
+类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
+<li><font face="黑体" color=black size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
+<li><font face="黑体" color=black size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
+
+
+</li>
+</ul>
+<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
+<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
+<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
+<p><code>typedef int feet //feet定义为int的新名子</code></p>
+<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
+<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
+<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
+<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
+<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
+</ul>
+<p>Lvalues &amp; Rvalues</p>
+<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
+<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
+<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>修饰符类型</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><center> 限定符</center></th>
+<th><center>含义  </center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> const</td>
+<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
+</tr>
+<tr>
+<td>restrict</td>
+<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo插入视频代码块及音频</title>
     <url>/2020/11/24/hexo-b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo插件安装插入视频代码块及音频"><a href="#hexo插件安装插入视频代码块及音频" class="headerlink" title="hexo插件安装插入视频代码块及音频"></a><center>hexo插件安装插入视频代码块及音频</center></h1><h2 id="1-hexo插件安装"><a href="#1-hexo插件安装" class="headerlink" title="1.hexo插件安装"></a>1.hexo插件安装</h2><p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
@@ -184,6 +240,21 @@ If you are talking to a group of managers, you may refer to the disorganized met
       <tags>
         <tag>B站</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>b站视频分享</title>
+    <url>/2017/11/17/b%E7%AB%99%E8%A7%86%E9%A2%91%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=414001980&bvid=BV1TV411z7aB&cid=218691406&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div><br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>b站视频</tag>
+        <tag>分享</tag>
       </tags>
   </entry>
   <entry>
@@ -286,77 +357,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>c++_常用语法</title>
-    <url>/2020/07/31/c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-常用语法"><a href="#C-常用语法" class="headerlink" title="C++常用语法"></a><center>C++常用语法</center></h1><h3 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020_08_01"></a><p align="right">2020_08_01</p></h3><blockquote>
-<p>此文主要针对有c语言基础的人。</p>
-</blockquote>
-<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><a id="more"></a>
-<ul>
-<li><font face="黑体" color=black size=4>对象 - 对象具有状态和行为。例如：一个人的状态 --- 样貌、姓名、出生地、所在地、年龄、身高等。 行为--- 吃饭、工作、学习、运动、游泳等。因而对象是类的实例。</font></li>
-<li><font face="黑体" color=black size=4>类 - 类可以定义为描述对象行为/状态的模板/蓝图。
-类---一种描述对象行为的框架、一种状态模板、蓝图。</font></li>
-<li><font face="黑体" color=black size=4>方法 —- 方法其实可以说就是一种行为，一个类可以包含多个方法。并且可以在方法中写入逻辑操作数据以及执行所有的动作。/font&gt; </li>
-<li><font face="黑体" color=black size=4>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</font>
-
-
-</li>
-</ul>
-<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2. 数据类型"></a>2. 数据类型</h2><p>&nbsp;&nbsp;基本类型：bool, char, int, float, double, void, wchar_t</p>
-<p>&nbsp;&nbsp;修饰：signed, unsigned, short, long</p>
-<p>&nbsp;&nbsp;typedef可以位已经有的类型取一个新的名字</p>
-<p><code>typedef int feet //feet定义为int的新名子</code></p>
-<h4 id="enum枚举类型"><a href="#enum枚举类型" class="headerlink" title="enum枚举类型"></a>enum枚举类型</h4><p>&nbsp;&nbsp;定义枚举常量的集合，一个变量只有几种可能的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum 枚举名&#123; 标识符[&#x3D;整型常数], </span><br><span class="line">            标识符[&#x3D;整型常数], </span><br><span class="line">            ...</span><br><span class="line">            标识符[&#x3D;整型常数]</span><br><span class="line">           &#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
-<h3 id="key-point"><a href="#key-point" class="headerlink" title="key point:"></a>key point:</h3><ul>
-<li>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始.</li>
-<li>默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。</li>
-<li>因为默认情况下，每个名称都会比它前面一个名称大 1.<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum color &#123; red,green&#x3D;5,blue &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"><a href="#nbsp-nbsp-以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。" class="headerlink" title="&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。"></a>&nbsp;&nbsp;以下是该用法的实例。此例中，red值为0，green值为5，blue值为6。</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    enum days&#123;one, two, three&#125;day;</span><br><span class="line">    day &#x3D; one;</span><br><span class="line">    switch(day)&#123;</span><br><span class="line">        case one:</span><br><span class="line">            cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        case two:</span><br><span class="line">            cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-变量类型"><a href="#3-变量类型" class="headerlink" title="3. 变量类型"></a>3. 变量类型</h2>&nbsp;&nbsp; 大小写敏感，必须以字母或下划线开头。</li>
-</ul>
-<p>Lvalues &amp; Rvalues</p>
-<p>&nbsp;&nbsp; lvalues: 指向内存位置的表达式，左值可以出现在赋值号的左边或右边</p>
-<p>&nbsp;&nbsp; rvalues: 指存储在内存中某些地址的数值。右值不能对其进行赋值操作，可以出现在赋值号的右边，但是不能出现在左边。</p>
-<h2 id="4-常量"><a href="#4-常量" class="headerlink" title="4. 常量"></a>4. 常量</h2><h3 id="定义方法：-define-和const"><a href="#定义方法：-define-和const" class="headerlink" title="定义方法：#define 和const"></a>定义方法：#define 和const</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define identifier value</span><br><span class="line">const type variable &#x3D; value;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>修饰符类型</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><center> 限定符</center></th>
-<th><center>含义  </center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><center> const</td>
-<td><center> const类型的对象在程序执行期间不能被修改改变。</td>
-</tr>
-<tr>
-<td>volatile</td>
-<td>修饰符 volatile 告诉编译器，变量的值可能以程序未明确指定的方式被改变。</td>
-</tr>
-<tr>
-<td>restrict</td>
-<td>由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<h3 id="更多内容请参考C-参考文档"><a href="#更多内容请参考C-参考文档" class="headerlink" title="更多内容请参考C++参考文档"></a><p align="right">更多内容请参考<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">C++参考文档</a></h3>]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>个人简历</title>
     <url>/2020/07/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -375,55 +375,6 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
         <tag>万鲲鹏</tag>
         <tag>个人简历2019</tag>
         <tag>加密</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>xmu健康打卡ios快捷指令</title>
-    <url>/2020/12/06/%E5%A4%A7%E5%AD%A6ios%E7%B3%BB%E7%BB%9F%E6%89%93%E5%8D%A1%E6%8D%B7%E5%BE%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="XMU健康打卡ios快捷指令"><a href="#XMU健康打卡ios快捷指令" class="headerlink" title="XMU健康打卡ios快捷指令"></a><center>XMU健康打卡ios快捷指令</center></h1><h2 id="XMU-Health-Report-Base-On-Iphone"><a href="#XMU-Health-Report-Base-On-Iphone" class="headerlink" title=" XMU Health Report Base On Iphone "></a><center> XMU Health Report Base On Iphone </center></h2><a id="more"></a>
-<h2 id="1-工具"><a href="#1-工具" class="headerlink" title="1.工具"></a>1.工具</h2><ul>
-<li>浏览器</li>
-<li>由于各个网页不同，可能会有不一样的结果，因此这个过程仅供参考。</li>
-<li>下面说一下大概的思路，先用浏览器打开我们打卡的链接，接着打开浏览器，按F12进入开发者模式。</li>
-<li>接着，选择network<center>
-<img src="https://www.codekp.cn/download/img/xmu_r/F12.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center></li>
-<li><p>找到POST，不要寻找GET</p>
-<center>
-<img src="https://www.codekp.cn/download/img/xmu_r/get.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-</li>
-<li><p>如下：<br><center>
-<img src="https://www.codekp.cn/download/img/xmu_r/post.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center><br>将里面的连接保存下来<br><a href="https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu" target="_blank" rel="noopener">https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu</a></p>
-</li>
-</ul>
-<p>即找到了我们需要的登录网址。</p>
-<p>接下来记录 username和userpassword，依次填入ios。</p>
-<center>
-<img src="https://www.codekp.cn/download/img/xmu_r/report.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-
-
-<ul>
-<li>将得到的数据填入一下列表<center>
-<img src="https://www.codekp.cn/download/img/xmu_r/report_ios.JPG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-
-</li>
-</ul>
-<blockquote>
-<p>仅只写到这里有兴趣的自己继续探索。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>厦门大学</category>
-      </categories>
-      <tags>
-        <tag>厦门大学</tag>
-        <tag>健康打卡</tag>
       </tags>
   </entry>
   <entry>
@@ -503,76 +454,52 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
       </tags>
   </entry>
   <entry>
-    <title>机器学习</title>
-    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
-<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
-<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
-</ol>
-<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
+    <title>xmu健康打卡ios快捷指令</title>
+    <url>/2020/12/06/%E5%A4%A7%E5%AD%A6ios%E7%B3%BB%E7%BB%9F%E6%89%93%E5%8D%A1%E6%8D%B7%E5%BE%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="XMU健康打卡ios快捷指令"><a href="#XMU健康打卡ios快捷指令" class="headerlink" title="XMU健康打卡ios快捷指令"></a><center>XMU健康打卡ios快捷指令</center></h1><h2 id="XMU-Health-Report-Base-On-Iphone"><a href="#XMU-Health-Report-Base-On-Iphone" class="headerlink" title=" XMU Health Report Base On Iphone "></a><center> XMU Health Report Base On Iphone </center></h2><a id="more"></a>
+<h2 id="1-工具"><a href="#1-工具" class="headerlink" title="1.工具"></a>1.工具</h2><ul>
+<li>浏览器</li>
+<li>由于各个网页不同，可能会有不一样的结果，因此这个过程仅供参考。</li>
+<li>下面说一下大概的思路，先用浏览器打开我们打卡的链接，接着打开浏览器，按F12进入开发者模式。</li>
+<li>接着，选择network<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/F12.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center></li>
+<li><p>找到POST，不要寻找GET</p>
 <center>
-图6.1存在划分超平面将两个训练样本分开
+<img src="https://www.codekp.cn/download/img/xmu_r/get.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+</li>
+<li><p>如下：<br><center>
+<img src="https://www.codekp.cn/download/img/xmu_r/post.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center><br>将里面的连接保存下来<br><a href="https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu" target="_blank" rel="noopener">https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu</a></p>
+</li>
+</ul>
+<p>即找到了我们需要的登录网址。</p>
+<p>接下来记录 username和userpassword，依次填入ios。</p>
+<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/report.PNG" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
 </center>
 
 
-<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
-<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
-<script type="math/tex; mode=display">
-r = \frac{|w^Tx+b|}{||w||}</script><ol>
-<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<br>$ w^Tx_i+b\geq+1,  y_i=+1 $<br>$w^Tx_i+b\leq-1,  y_i=+1$</li>
-<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
-<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
-</ol>
-<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
-<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
-<li>更有效求解参数w和b的方法:拉格朗日乘子法</li>
-</ol>
+
 <ul>
-<li>对svm基本型式子的每个约束添加大于等于零的拉格朗日乘子，得到该问题的拉格朗日函数。<br>$ L(w,b,a)=\frac{1}{2}||w||^2+ \sum_{i=1}^ma_i(1-y_i(w^Tx_i+b)) $<ul>
-<li>令L(w,b,a)对w和b求偏导为零。<br>$ w = \sum<em>{i=1}^{m}a_iy_ix_i$<br>$ 0=\sum</em>{i=1}^{m}a_iy_i$</li>
-<li>将L(w,b,a)中的w和b消去，得到svm基本式子的对偶问题<br>${max}<em>{a}a_i-\frac{1}{2}\sum</em>{i=1}^m\sum<em>{j=1}^ma_ia_jy_iy_jx_i^Tx_j$<br>$s.t. \sum</em>{i=1}{m}a_iy_i=0,a_i\geq0,i=1,2,…,m$</li>
-</ul>
+<li>将得到的数据填入一下列表<center>
+<img src="https://www.codekp.cn/download/img/xmu_r/report_ios.jpg" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
 </li>
 </ul>
-<ol>
-<li>KKT条件<script type="math/tex; mode=display">f= \begin{cases} a_i\geq0;\\ y_if(x_i)-1\geq0\\ a_i(y_if(x_i)-1)=0 \end{cases}</script></li>
-<li>如何求解对偶问题中的a？<ul>
-<li>当二次规划问题求解<br>算法：二次规划算法<br>缺点：问题规模正比例于训练样本数，这样会在实际任务中造成很大开销。<br>算法：SMO算法<br>选取一对所需更新的变量$a_i和a_j$<br>固定$a_j和a_i$ 以外的参数，求解对偶问题获取新的$a_i和a_j$<br>不断执行上述两个步骤直到收敛</li>
-</ul>
-<ol>
-<li>如何确定偏移项b？</li>
-</ol>
-<ul>
-<li>使用支持向量机求解平均值<br>$b=\frac{1}{|s|}\sum<em>{s\in S}(y_s-a_iy_ix_i^Tx_s)$<br>$y_s(\sum</em>{i\in S}a_iy_ix_i^Tx_s+b)=1$<br>$\lbrace S={i=a_i&gt;0,i=1,2…,m}\rbrace$为所有向量机下标集<h4 id="6-2-2-支持向量机的一个重要性质"><a href="#6-2-2-支持向量机的一个重要性质" class="headerlink" title="6.2.2 支持向量机的一个重要性质"></a>6.2.2 支持向量机的一个重要性质</h4>训练结束后，大部分训练样本都不需要保留，最终模型与支持向量有关。<h3 id="6-3-核函数"><a href="#6-3-核函数" class="headerlink" title="6.3 核函数"></a>6.3 核函数</h3>对线性可分问题，可以将原始空间映射到一个更高维的特征空间，使得样本在这个特征空间内线性可分。<h4 id="6-3-1-令y表示x映射后的特征向量"><a href="#6-3-1-令y表示x映射后的特征向量" class="headerlink" title="6.3.1 令y表示x映射后的特征向量"></a>6.3.1 令y表示x映射后的特征向量</h4>对偶问题<h4 id="6-3-2-支持向量展示"><a href="#6-3-2-支持向量展示" class="headerlink" title="6.3.2 支持向量展示"></a>6.3.2 支持向量展示</h4>模型训练最优解可通过训练样本核函数展开。<h4 id="6-3-3-常用核函数"><a href="#6-3-3-常用核函数" class="headerlink" title="6.3.3 常用核函数"></a>6.3.3 常用核函数</h4></li>
-<li>线性核函数</li>
-<li>多项式核函数</li>
-<li>高斯核函数</li>
-<li>拉普拉斯核函数</li>
-<li>sigmoid核函数<h4 id="6-3-4-核函数定理"><a href="#6-3-4-核函数定理" class="headerlink" title="6.3.4 核函数定理"></a>6.3.4 核函数定理</h4></li>
-<li>核矩阵总是半正定的</li>
-<li>只要一个堆成函数的核函数半正定，就可以被用于核函数</li>
-<li>半正定矩阵必然有对应的映射</li>
-<li>任何一个核函数都定义了一个希尔伯特空间<blockquote>
-<p>注意：特征空间的好坏对支持向量机至关重要<br>“核函数选择”成为支持向量机最大变数</p>
-<h3 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h3><h4 id="6-4-1-硬间隔"><a href="#6-4-1-硬间隔" class="headerlink" title="6.4.1 硬间隔"></a>6.4.1 硬间隔</h4><p>要求所有样本均满足约束，所有样本必须划分正确。</p>
-<h4 id="6-4-2-软间隔"><a href="#6-4-2-软间隔" class="headerlink" title="6.4.2 软间隔"></a>6.4.2 软间隔</h4></blockquote>
-</li>
-</ul>
-<ol>
-<li>解决现实任务：很难确定合适的核函数使得训练到的样本在特征空间中线性可分，或者是否过拟合。</li>
-<li>解决方法：允许部分样本可以出错。允许某些样本不满足约束<br>$y_i(w^Tx_i+b)\geq1$<br>不满足样本尽可能少。</li>
-<li>新的目标函数<h4 id="6-4-3-正则化"><a href="#6-4-3-正则化" class="headerlink" title="6.4.3 正则化"></a>6.4.3 正则化</h4></li>
-</ol>
-</li>
-</ol>
+<blockquote>
+<p>仅只写到这里有兴趣的自己继续探索。</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>研究生课程</category>
+        <category>厦门大学</category>
       </categories>
       <tags>
-        <tag>信息论</tag>
-        <tag>matlab</tag>
+        <tag>厦门大学</tag>
+        <tag>健康打卡</tag>
       </tags>
   </entry>
   <entry>
@@ -666,6 +593,79 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
       </tags>
   </entry>
   <entry>
+    <title>机器学习</title>
+    <url>/2020/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a><center>机器学习</center></h1><a id="more"></a>
+<h2 id="6-支持向量机"><a href="#6-支持向量机" class="headerlink" title="6 支持向量机"></a>6 支持向量机</h2><h3 id="6-1-间隔与支持向量"><a href="#6-1-间隔与支持向量" class="headerlink" title="6.1 间隔与支持向量"></a>6.1 间隔与支持向量</h3><ol>
+<li>问题<br>给定训练样本 <script type="math/tex">D=\lbrace(x_1,y_1),(x_1,y_1),...,(x_m,y_m)\rbrace,y_i\in \lbrace{-1,+1}\rbrace</script>分类学习的关键就是基于训练集找出一个划分超平面，将不同类别的样本分开，而这种平面很多，如何选择最好的划分超平面？</li>
+</ol>
+<p><img src="https://www.codekp.cn/download/img/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%88%92%E5%88%86%E8%AE%AD%E7%BB%83%E9%9B%86.PNG" width = "681" height = "302" alt="图片名称" align=center / loading="lazy"></p>
+<center>
+图6.1存在划分超平面将两个训练样本分开
+</center>
+
+
+<p>正中间那根具有更强的鲁棒性，对未示例的泛化能力更强，因此会获得更好的性能。<br>划分超平面可以通过如下线性方程来描述：</p>
+<script type="math/tex; mode=display">w^Tx+b=0</script><p>其中<script type="math/tex">w=(w_1;w_2;...;w_d)</script>为法向量决定平面的方向，b为位移向项决定平面距离原点的距离。<br>其中任意一点到超平面的距离可写为</p>
+<script type="math/tex; mode=display">
+r = \frac{|w^Tx+b|}{||w||}</script><ol>
+<li>支持向量<br>距离划分超平面最近的几个训练样本点。且这些点满足以下不等式。<br>$ w^Tx_i+b\geq+1,  y_i=+1 $<br>$w^Tx_i+b\leq-1,  y_i=+1$</li>
+<li>间隔<br>两个异类支持向量到超平面的距离之和：<script type="math/tex; mode=display">r=\frac{2}{||w||}</script></li>
+<li>最大间隔<br>对应的划分超平面 <script type="math/tex; mode=display">max(r=\frac{2}{||w||})  \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+<li>最小间隔<br>支持向量机基本型<script type="math/tex; mode=display">min(r=\frac{2}{||w||}) \\s.t. y_i(w^Tx_i+b)\geq1,i=1,2,...,m</script></li>
+</ol>
+<h3 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h3><h4 id="6-2-1-对偶问题"><a href="#6-2-1-对偶问题" class="headerlink" title="6.2.1 对偶问题"></a>6.2.1 对偶问题</h4><p>  突二次规划问题</p>
+<h4 id="6-2-2-对偶问题"><a href="#6-2-2-对偶问题" class="headerlink" title="6.2.2 对偶问题"></a>6.2.2 对偶问题</h4><ol>
+<li>更有效求解参数w和b的方法:拉格朗日乘子法</li>
+</ol>
+<ul>
+<li>对svm基本型式子的每个约束添加大于等于零的拉格朗日乘子，得到该问题的拉格朗日函数。<br>$ L(w,b,a)=\frac{1}{2}||w||^2+ \sum_{i=1}^ma_i(1-y_i(w^Tx_i+b)) $<ul>
+<li>令L(w,b,a)对w和b求偏导为零。<br>$ w = \sum<em>{i=1}^{m}a_iy_ix_i$<br>$ 0=\sum</em>{i=1}^{m}a_iy_i$</li>
+<li>将L(w,b,a)中的w和b消去，得到svm基本式子的对偶问题<br>${max}<em>{a}a_i-\frac{1}{2}\sum</em>{i=1}^m\sum<em>{j=1}^ma_ia_jy_iy_jx_i^Tx_j$<br>$s.t. \sum</em>{i=1}{m}a_iy_i=0,a_i\geq0,i=1,2,…,m$</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>KKT条件<script type="math/tex; mode=display">f= \begin{cases} a_i\geq0;\\ y_if(x_i)-1\geq0\\ a_i(y_if(x_i)-1)=0 \end{cases}</script></li>
+<li>如何求解对偶问题中的a？<ul>
+<li>当二次规划问题求解<br>算法：二次规划算法<br>缺点：问题规模正比例于训练样本数，这样会在实际任务中造成很大开销。<br>算法：SMO算法<br>选取一对所需更新的变量$a_i和a_j$<br>固定$a_j和a_i$ 以外的参数，求解对偶问题获取新的$a_i和a_j$<br>不断执行上述两个步骤直到收敛</li>
+</ul>
+<ol>
+<li>如何确定偏移项b？</li>
+</ol>
+<ul>
+<li>使用支持向量机求解平均值<br>$b=\frac{1}{|s|}\sum<em>{s\in S}(y_s-a_iy_ix_i^Tx_s)$<br>$y_s(\sum</em>{i\in S}a_iy_ix_i^Tx_s+b)=1$<br>$\lbrace S={i=a_i&gt;0,i=1,2…,m}\rbrace$为所有向量机下标集<h4 id="6-2-2-支持向量机的一个重要性质"><a href="#6-2-2-支持向量机的一个重要性质" class="headerlink" title="6.2.2 支持向量机的一个重要性质"></a>6.2.2 支持向量机的一个重要性质</h4>训练结束后，大部分训练样本都不需要保留，最终模型与支持向量有关。<h3 id="6-3-核函数"><a href="#6-3-核函数" class="headerlink" title="6.3 核函数"></a>6.3 核函数</h3>对线性可分问题，可以将原始空间映射到一个更高维的特征空间，使得样本在这个特征空间内线性可分。<h4 id="6-3-1-令y表示x映射后的特征向量"><a href="#6-3-1-令y表示x映射后的特征向量" class="headerlink" title="6.3.1 令y表示x映射后的特征向量"></a>6.3.1 令y表示x映射后的特征向量</h4>对偶问题<h4 id="6-3-2-支持向量展示"><a href="#6-3-2-支持向量展示" class="headerlink" title="6.3.2 支持向量展示"></a>6.3.2 支持向量展示</h4>模型训练最优解可通过训练样本核函数展开。<h4 id="6-3-3-常用核函数"><a href="#6-3-3-常用核函数" class="headerlink" title="6.3.3 常用核函数"></a>6.3.3 常用核函数</h4></li>
+<li>线性核函数</li>
+<li>多项式核函数</li>
+<li>高斯核函数</li>
+<li>拉普拉斯核函数</li>
+<li>sigmoid核函数<h4 id="6-3-4-核函数定理"><a href="#6-3-4-核函数定理" class="headerlink" title="6.3.4 核函数定理"></a>6.3.4 核函数定理</h4></li>
+<li>核矩阵总是半正定的</li>
+<li>只要一个堆成函数的核函数半正定，就可以被用于核函数</li>
+<li>半正定矩阵必然有对应的映射</li>
+<li>任何一个核函数都定义了一个希尔伯特空间<blockquote>
+<p>注意：特征空间的好坏对支持向量机至关重要<br>“核函数选择”成为支持向量机最大变数</p>
+<h3 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h3><h4 id="6-4-1-硬间隔"><a href="#6-4-1-硬间隔" class="headerlink" title="6.4.1 硬间隔"></a>6.4.1 硬间隔</h4><p>要求所有样本均满足约束，所有样本必须划分正确。</p>
+<h4 id="6-4-2-软间隔"><a href="#6-4-2-软间隔" class="headerlink" title="6.4.2 软间隔"></a>6.4.2 软间隔</h4></blockquote>
+</li>
+</ul>
+<ol>
+<li>解决现实任务：很难确定合适的核函数使得训练到的样本在特征空间中线性可分，或者是否过拟合。</li>
+<li>解决方法：允许部分样本可以出错。允许某些样本不满足约束<br>$y_i(w^Tx_i+b)\geq1$<br>不满足样本尽可能少。</li>
+<li>新的目标函数<h4 id="6-4-3-正则化"><a href="#6-4-3-正则化" class="headerlink" title="6.4.3 正则化"></a>6.4.3 正则化</h4></li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>信息论</tag>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>水声通信实验课程作业</title>
     <url>/2020/11/17/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -719,35 +719,6 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
       <tags>
         <tag>深度学习</tag>
         <tag>分类器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>矩阵分析引论</title>
-    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
-
-<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
-</center>
-
-<a id="more"></a>
-<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
-<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。<br>$Q\subset R\subset C$<br>如果一个非空集合在某数域上，以下八条<center>
-<img src="https://www.codekp.cn/download/img/矩阵论/1.PNG" width = "1147" height = "950" alt="图片名称" align=center / loading="lazy">
-</center>
-
-
-</li>
-</ol>
-<p>参考视频教程：</p>
-<div style="position:relative; padding-bottom:75%; width:100%; height:0">
-    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
-</div>]]></content>
-      <categories>
-        <category>研究生课程</category>
-      </categories>
-      <tags>
-        <tag>研究生课程</tag>
-        <tag>矩阵论</tag>
       </tags>
   </entry>
   <entry>
@@ -940,11 +911,40 @@ r = \frac{|w^Tx+b|}{||w||}</script><ol>
         <category>程序设计</category>
       </categories>
       <tags>
-        <tag>matlab</tag>
         <tag>程序设计</tag>
+        <tag>matlab</tag>
         <tag>python</tag>
         <tag>c</tag>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵分析引论</title>
+    <url>/2020/11/17/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="矩阵分析引论"><a href="#矩阵分析引论" class="headerlink" title="矩阵分析引论"></a><center>矩阵分析引论</center></h1><h2 id="Introduction-to-matrix-analysis"><a href="#Introduction-to-matrix-analysis" class="headerlink" title=" Introduction to matrix analysis "></a><center> Introduction to matrix analysis </center></h2><center>
+
+<img src="https://www.codekp.cn/download/img/矩阵论/目录.png" width = "400" height = "302" alt="图片名称" align=center / loading="lazy">
+</center>
+
+<a id="more"></a>
+<h2 id="1-线性空间与线性变换"><a href="#1-线性空间与线性变换" class="headerlink" title="1.线性空间与线性变换"></a>1.线性空间与线性变换</h2><ol>
+<li>对加减乘除封闭的集合被称之为数域。矩阵论中较常用的数域是QRC。其中Q:有理数域、R:实数数域、C复数数域。<br>$Q\subset R\subset C$<br>如果一个非空集合在某数域上，以下八条<center>
+<img src="https://www.codekp.cn/download/img/矩阵论/1.PNG" width = "1147" height = "950" alt="图片名称" align=center / loading="lazy">
+</center>
+
+
+</li>
+</ol>
+<p>参考视频教程：</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+    <iframe src="//player.bilibili.com/player.html?aid=11355346&bvid=BV19x411878L&cid=18777309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe>
+</div>]]></content>
+      <categories>
+        <category>研究生课程</category>
+      </categories>
+      <tags>
+        <tag>研究生课程</tag>
+        <tag>矩阵论</tag>
       </tags>
   </entry>
   <entry>
