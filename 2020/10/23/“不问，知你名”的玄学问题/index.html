@@ -1,37 +1,15 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="万鲲鹏"><meta name="copyright" content="万鲲鹏"><meta name="generator" content="Hexo 4.2.1"><meta name="theme" content="hexo-theme-yun"><title>信息论一个小实例 | 漫漫人生路</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.22/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_ed8vp4atwoj.js" async></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>document.addEventListener("DOMContentLoaded", () => {
-  [".post-card",".post-content img"].forEach((target)=> {
-    ScrollReveal().reveal(target);
-  })
-});
-</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.css"><script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
-  renderMathInElement(document.body, {
-    delimiters: [
-      {left: "$$", right: "$$", display: true},
-      {left: "$", right: "$", display: false},
-      {left: "\\(", right: "\\)", display: false},
-      {left: "\\[", right: "\\]", display: true}
-    ]
-  });
-});</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" defer></script><script class="meting-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js" defer></script><link rel="shortcut icon" type="image/svg+xml" href="https://www.codekp.cn/download/img/头像/站点.svg"><link rel="mask-icon" href="https://www.codekp.cn/download/img/头像/站点.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script id="yun-config">
-    const Yun = window.Yun || {};
-    window.CONFIG = {"hostname":"www.codekp.cn","root":"/","title":"漫漫人生路","version":"1.3.0","mode":"auto","copycode":true,"anonymous_image":"https://www.codekp.cn/download/img/头像/图南.jpg","say":{"api":"https://www.codekp.cn/data/sentences.json"},"local_search":{"path":"/search.xml"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
-  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js" defer></script><script src="/js/load-aplayer.js" defer></script><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-QX94TSFFPQ"></script><script>if (CONFIG.hostname === location.hostname) {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QX94TSFFPQ');
-}</script><script data-ad-client="ca-pub-2245427233262012" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
-  var bp = document.createElement('script');
-  var curProtocol = window.location.protocol.split(':')[0];
-  if (curProtocol === 'https') {
-    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-  }
-  else {
-    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-  }
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(bp, s);
-})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="不用问知道你名字的玄学问题">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>信息论一个小实例 | 漫漫人生路</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="不用问知道你名字的玄学问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息论一个小实例">
 <meta property="og:url" content="http://www.codekp.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/index.html">
@@ -48,7 +26,270 @@
 <meta property="article:tag" content="信息论">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="万鲲鹏"><img width="96" loading="lazy" src="https://www.codekp.cn/download/img/头像/图南.jpg" alt="万鲲鹏"><span class="site-author-status" title="山水万程皆要好运">😊</span></a><div class="site-author-name"><a href="/about/">万鲲鹏</a></div><a class="site-name" href="/about/site.html">漫漫人生路</a><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">21</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">14</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">35</span></a></div><a class="site-state-item hty-icon-button" href="/albums/" title="相册"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.codekp.cn/rss" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&amp;uin=243349315&amp;site=qq&amp;menu=yes" title="图南" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/mmrslwan1110" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://weibo.com/u/6344285289" title="微博" target="_blank" style="color:#E6162D"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibo-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=567880032" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/mao-qia-liao-yu" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:kp@mmrsl.cn" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/girls/" title="好用的站点" style="color:hotpink"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-women-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#不用问知道你名字的玄学问题"><span class="toc-number">1.</span> <span class="toc-text">不用问知道你名字的玄学问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-number">2.</span> <span class="toc-text">1.前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-理论分析"><span class="toc-number">2.1.</span> <span class="toc-text">2.理论分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-信息论"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1 信息论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-信息熵"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.2 信息熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-百家姓的编码"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.3 百家姓的编码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1方式的选择"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">2.3.1方式的选择</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-程序设计"><span class="toc-number">2.2.</span> <span class="toc-text">3. 程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-图形用户界面设计"><span class="toc-number">2.3.</span> <span class="toc-text">4.图形用户界面设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-结论"><span class="toc-number">2.4.</span> <span class="toc-text">5.结论</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://www.codekp.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="万鲲鹏"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="漫漫人生路"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">信息论一个小实例<a class="post-edit-link" href="https://github.com/YunYouJun/yunyoujun.github.io/tree/hexo/source/_posts/“不问，知你名”的玄学问题.md" target="_blank" title="编辑" rel="noopener"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-edit-line"></use></svg></a></h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2020-10-23 22:19:29" itemprop="dateCreated datePublished" datetime="2020-10-23T22:19:29+08:00">2020-10-23</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <time title="修改时间：2020-11-24 15:25:27" itemprop="dateModified" datetime="2020-11-24T15:25:27+08:00">2020-11-24</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="本文字数">3.1k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="阅读时长">11m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category" href="/categories/%E6%99%AE%E9%80%9A%E8%AE%BE%E8%AE%A1/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">普通设计</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag" href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">信息论</span></a><a class="tag" href="/tags/matlab/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">matlab</span></a></span></div><div class="post-author"><div class="author-avatar"><img src="https://www.gravatar.com/avatar/8aee92b9c989d358e9df41b9aebe12f9?s=20&amp;d=https%3A%2F%2Fwww.codekp.cn%2Fdownload%2Fimg%2F%E5%A4%B4%E5%83%8F%2F%E5%9B%BE%E5%8D%97.jpg"></div><span class="author-name">万鲲鹏</span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><h1 id="不用问知道你名字的玄学问题"><a href="#不用问知道你名字的玄学问题" class="headerlink" title="不用问知道你名字的玄学问题"></a><center>不用问知道你名字的玄学问题</center></h1><a id="more"></a>
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center">
+  
+  
+    <link rel="icon" href="https://www.codekp.cn/download/img/头像/图南.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://www.codekp.cn/download/img/头像/图南.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">万鲲鹏</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="http://www.mmrsl.cn" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/mao-qia-liao-yu" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:kp@mmrsl.cn" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=243349315&site=qq&menu=yes" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/B%E7%AB%99/" style="font-size: 10px;">B站</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/b%E7%AB%99%E8%A7%86%E9%A2%91/" style="font-size: 10px;">b站视频</a> <a href="/tags/c/" style="font-size: 10px;">c</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/hexo%E7%BD%91%E7%AB%99/" style="font-size: 10px;">hexo网站</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 13.33px;">markdown</a> <a href="/tags/matlab/" style="font-size: 20px;">matlab</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/%E4%B8%87%E9%B2%B2%E9%B9%8F/" style="font-size: 10px;">万鲲鹏</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862019/" style="font-size: 10px;">个人简历2019</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" style="font-size: 13.33px;">信息论</a> <a href="/tags/%E5%81%A5%E5%BA%B7%E6%89%93%E5%8D%A1/" style="font-size: 10px;">健康打卡</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 10px;">分享</a> <a href="/tags/%E5%88%86%E7%B1%BB%E5%99%A8/" style="font-size: 10px;">分类器</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 13.33px;">加密</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80%E5%9B%BD%E5%AE%B6%E5%85%AC%E7%A5%AD%E6%97%A5/" style="font-size: 10px;">南京大屠杀国家公祭日</a> <a href="/tags/%E5%8E%A6%E9%97%A8%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">厦门大学</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" style="font-size: 10px;">嵌入式开发</a> <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">强化学习</a> <a href="/tags/%E6%8E%A8%E5%85%8D/" style="font-size: 10px;">推免</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" style="font-size: 10px;">搜索引擎</a> <a href="/tags/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1/" style="font-size: 13.33px;">水声通信</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">深度学习</a> <a href="/tags/%E7%9F%A9%E9%98%B5%E8%AE%BA/" style="font-size: 10px;">矩阵论</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AF%BE%E7%A8%8B/" style="font-size: 16.67px;">研究生课程</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 13.33px;">程序设计</a> <a href="/tags/%E7%BD%97%E7%9B%98%E6%97%B6%E9%92%9F/" style="font-size: 10px;">罗盘时钟</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/" style="font-size: 10px;">英语阅读</a> <a href="/tags/%E8%A1%A8%E7%99%BD%E7%BD%91%E7%AB%99/" style="font-size: 10px;">表白网站</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 10px;">视频</a> <a href="/tags/%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">鸟哥的私房菜学习</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.mmrsl.cn">漫漫人生路</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.coderxz.com">荣先森</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1455671370&auto=1&height=66"></iframe>			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">万鲲鹏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://www.codekp.cn/download/img/头像/图南.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">万鲲鹏</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="http://www.mmrsl.cn" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/mao-qia-liao-yu" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:kp@mmrsl.cn" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=243349315&site=qq&menu=yes" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-“不问，知你名”的玄学问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/" class="article-date">
+  	<time datetime="2020-10-23T14:19:29.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      信息论一个小实例
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab/" rel="tag">matlab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" rel="tag">信息论</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%99%AE%E9%80%9A%E8%AE%BE%E8%AE%A1/">普通设计</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="信息论一个小实例">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="不用问知道你名字的玄学问题"><a href="#不用问知道你名字的玄学问题" class="headerlink" title="不用问知道你名字的玄学问题"></a><center>不用问知道你名字的玄学问题</center></h1><a id="more"></a>
 <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>  不知道大家有没有遇到路边有人问你，不用问你的姓就能知道你姓什么，当然我也遇到了。我怕被要钱就没有问，但后来仔细寻思挺有趣的，到底是什么原理呢，很多人都在网上给出了自己的解释，但在我看来却没有完全解决我的疑惑。近期看信息论有感，感觉是很有智慧的信息编码技术。</p>
 <h2 id="2-理论分析"><a href="#2-理论分析" class="headerlink" title="2.理论分析"></a>2.理论分析</h2><h3 id="2-1-信息论"><a href="#2-1-信息论" class="headerlink" title="2.1 信息论"></a>2.1 信息论</h3><p>  这个问题，看起来是一道玄学题，本质上其实是信息论问题。解决这个问题并不是我们的最终目的，我们应该通过这个简单的问题了解信息论的本质，以小见大，一通百通。<br>  信息论可以很好的给一个问题快速找到他的一个边界，每个信息所包含的信息量。最让人吃惊的是信息论的作者在上世纪中叶就给所有人类可以接触的所有信息问题设置了边界。人类遇到的全部都是经典问题，为这种问题设置了一个绝对的边界，无论你怎么设置也不能逾越的一个最大边界。任何人想要压缩数据、用一个事件发生去必然寻找另一个小概率事件所需要的数量等都已经被信息论所决定。<br>  当别人还在寻找问题的解决方案的时候，信息论可以让你迅速从理论角度找到答案，降维打击。让我们知道这个问题的极限在哪里，不需要做很多没意义的工作。<br>  所以我首先给大家介绍一下信息熵。</p>
 <h3 id="2-2-信息熵"><a href="#2-2-信息熵" class="headerlink" title="2.2 信息熵"></a>2.2 信息熵</h3><blockquote>
@@ -88,16 +329,16 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
 <p>因此接下来我选择3次8选1，从中选择你的姓，你们可以选择其他方法进行实现。</p>
 <h2 id="3-程序设计"><a href="#3-程序设计" class="headerlink" title="3. 程序设计"></a>3. 程序设计</h2><p>读者可以参考本文代码，将百家姓进行编码，通过程序咱们可以找到你的姓名。(3x8)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">clear;</span><br><span class="line">Book_of_Family_Names = [<span class="string">"赵"</span>,<span class="string">"钱"</span>,<span class="string">"孙"</span>,<span class="string">"李"</span>,<span class="string">"周"</span>,<span class="string">"吴"</span>,<span class="string">"郑"</span>,<span class="string">"王"</span>,<span class="string">"冯"</span>,<span class="string">"陈"</span>,<span class="string">"褚"</span>,<span class="string">"卫"</span>,<span class="string">"蒋"</span>,<span class="string">"沈"</span>,<span class="string">"韩"</span>,<span class="string">"杨"</span>,<span class="string">"朱"</span>,<span class="string">"秦"</span>,<span class="string">"尤"</span>,<span class="string">"许"</span>,<span class="string">"何"</span>,<span class="string">"吕"</span>,<span class="string">"施"</span>,<span class="string">"张"</span>,<span class="string">"孔"</span>,<span class="string">"曹"</span>,<span class="string">"严"</span>,<span class="string">"华"</span>,<span class="string">"金"</span>,<span class="string">"魏"</span>,<span class="string">"陶"</span>,<span class="string">"姜"</span>,<span class="string">"戚"</span>,<span class="string">"谢"</span>,<span class="string">"邹"</span>,<span class="string">"喻"</span>,<span class="string">"柏"</span>,<span class="string">"水"</span>,<span class="string">"窦"</span>,<span class="string">"章"</span>,<span class="string">"云"</span>,<span class="string">"苏"</span>,<span class="string">"潘"</span>,<span class="string">"葛"</span>,<span class="string">"奚"</span>,<span class="string">"范"</span>,<span class="string">"彭"</span>,<span class="string">"郎"</span>,<span class="string">"鲁"</span>,<span class="string">"韦"</span>,<span class="string">"昌"</span>,<span class="string">"马"</span>,<span class="string">"苗"</span>,<span class="string">"凤"</span>,<span class="string">"花"</span>,<span class="string">"方"</span>,<span class="string">"俞"</span>,<span class="string">"任"</span>,<span class="string">"袁"</span>,<span class="string">"柳"</span>,<span class="string">"酆"</span>,<span class="string">"鲍"</span>,<span class="string">"史"</span>,<span class="string">"唐"</span>,<span class="string">"费"</span>,<span class="string">"廉"</span>,<span class="string">"岑"</span>,<span class="string">"薛"</span>,<span class="string">"雷"</span>,<span class="string">"贺"</span>,<span class="string">"倪"</span>,<span class="string">"汤"</span>,<span class="string">"滕"</span>,<span class="string">"殷"</span>,<span class="string">"罗"</span>,<span class="string">"毕"</span>,<span class="string">"郝"</span>,<span class="string">"邬"</span>,<span class="string">"安"</span>,<span class="string">"常"</span>,<span class="string">"乐"</span>,<span class="string">"于"</span>,<span class="string">"时"</span>,<span class="string">"傅"</span>,<span class="string">"皮"</span>,<span class="string">"卞"</span>,<span class="string">"齐"</span>,<span class="string">"康"</span>,<span class="string">"伍"</span>,<span class="string">"余"</span>,<span class="string">"元"</span>,<span class="string">"卜"</span>,<span class="string">"顾"</span>,<span class="string">"孟"</span>,<span class="string">"平"</span>,<span class="string">"黄"</span>,<span class="string">"和"</span>,<span class="string">"穆"</span>,<span class="string">"萧"</span>,<span class="string">"尹"</span>,<span class="string">"姚"</span>,<span class="string">"邵"</span>,<span class="string">"湛"</span>,<span class="string">"汪"</span>,<span class="string">"祁"</span>,<span class="string">"毛"</span>,<span class="string">"禹"</span>,<span class="string">"狄"</span>,<span class="string">"米"</span>,<span class="string">"贝"</span>,<span class="string">"明"</span>,<span class="string">"臧"</span>,<span class="string">"计"</span>,<span class="string">"伏"</span>,<span class="string">"成"</span>,<span class="string">"戴"</span>,<span class="string">"谈"</span>,<span class="string">"宋"</span>,<span class="string">"茅"</span>,<span class="string">"庞"</span>,<span class="string">"熊"</span>,<span class="string">"纪"</span>,<span class="string">"舒"</span>,<span class="string">"屈"</span>,<span class="string">"项"</span>,<span class="string">"祝"</span>,<span class="string">"董"</span>,<span class="string">"梁"</span>,<span class="string">"杜"</span>,<span class="string">"阮"</span>,<span class="string">"蓝"</span>,<span class="string">"闵"</span>,<span class="string">"席"</span>,<span class="string">"季"</span>,<span class="string">"麻"</span>,<span class="string">"强"</span>,<span class="string">"贾"</span>,<span class="string">"路"</span>,<span class="string">"娄"</span>,<span class="string">"危"</span>,<span class="string">"江"</span>,<span class="string">"童"</span>,<span class="string">"颜"</span>,<span class="string">"郭"</span>,<span class="string">"梅"</span>,<span class="string">"盛"</span>,<span class="string">"林"</span>,<span class="string">"刁"</span>,<span class="string">"钟"</span>,<span class="string">"徐"</span>,<span class="string">"邱"</span>,<span class="string">"骆"</span>,<span class="string">"高"</span>,<span class="string">"夏"</span>,<span class="string">"蔡"</span>,<span class="string">"田"</span>,<span class="string">"樊"</span>,<span class="string">"胡"</span>,<span class="string">"凌"</span>,<span class="string">"霍"</span>,<span class="string">"虞"</span>,<span class="string">"万"</span>,<span class="string">"支"</span>,<span class="string">"柯"</span>,<span class="string">"昝"</span>,<span class="string">"管"</span>,<span class="string">"卢"</span>,<span class="string">"莫"</span>,<span class="string">"经"</span>,<span class="string">"房"</span>,<span class="string">"裘"</span>,<span class="string">"缪"</span>,<span class="string">"干"</span>,<span class="string">"解"</span>,<span class="string">"应"</span>,<span class="string">"宗"</span>,<span class="string">"丁"</span>,<span class="string">"宣"</span>,<span class="string">"贲"</span>,<span class="string">"邓"</span>,<span class="string">"郁"</span>,<span class="string">"单"</span>,<span class="string">"杭"</span>,<span class="string">"洪"</span>,<span class="string">"包"</span>,<span class="string">"诸"</span>,<span class="string">"左"</span>,<span class="string">"石"</span>,<span class="string">"崔"</span>,<span class="string">"吉"</span>,<span class="string">"钮"</span>,<span class="string">"龚"</span>,<span class="string">"程"</span>,<span class="string">"嵇"</span>,<span class="string">"邢"</span>,<span class="string">"滑"</span>,<span class="string">"裴"</span>,<span class="string">"陆"</span>,<span class="string">"荣"</span>,<span class="string">"翁"</span>,<span class="string">"荀"</span>,<span class="string">"羊"</span>,<span class="string">"於"</span>,<span class="string">"惠"</span>,<span class="string">"甄"</span>,<span class="string">"麴"</span>,<span class="string">"家"</span>,<span class="string">"封"</span>,<span class="string">"芮"</span>,<span class="string">"羿"</span>,<span class="string">"储"</span>,<span class="string">"靳"</span>,<span class="string">"汲"</span>,<span class="string">"邴"</span>,<span class="string">"糜"</span>,<span class="string">"松"</span>,<span class="string">"井"</span>,<span class="string">"段"</span>,<span class="string">"富"</span>,<span class="string">"巫"</span>,<span class="string">"乌"</span>,<span class="string">"焦"</span>,<span class="string">"巴"</span>,<span class="string">"弓"</span>,<span class="string">"牧"</span>,<span class="string">"隗"</span>,<span class="string">"山"</span>,<span class="string">"谷"</span>,<span class="string">"车"</span>,<span class="string">"侯"</span>,<span class="string">"宓"</span>,<span class="string">"蓬"</span>,<span class="string">"全"</span>,<span class="string">"郗"</span>,<span class="string">"班"</span>,<span class="string">"仰"</span>,<span class="string">"秋"</span>,<span class="string">"仲"</span>,<span class="string">"伊"</span>,<span class="string">"宫"</span>,<span class="string">"宁"</span>,<span class="string">"仇"</span>,<span class="string">"栾"</span>,<span class="string">"暴"</span>,<span class="string">"甘"</span>,<span class="string">"钭"</span>,<span class="string">"厉"</span>,<span class="string">"戎"</span>,<span class="string">"祖"</span>,<span class="string">"武"</span>,<span class="string">"符"</span>,<span class="string">"刘"</span>,<span class="string">"景"</span>,<span class="string">"詹"</span>,<span class="string">"束"</span>,<span class="string">"龙"</span>,<span class="string">"叶"</span>,<span class="string">"幸"</span>,<span class="string">"司"</span>,<span class="string">"韶"</span>,<span class="string">"郜"</span>,<span class="string">"黎"</span>,<span class="string">"蓟"</span>,<span class="string">"薄"</span>,<span class="string">"印"</span>,<span class="string">"宿"</span>,<span class="string">"白"</span>,<span class="string">"怀"</span>,<span class="string">"蒲"</span>,<span class="string">"邰"</span>,<span class="string">"从"</span>,<span class="string">"鄂"</span>,<span class="string">"索"</span>,<span class="string">"咸"</span>,<span class="string">"籍"</span>,<span class="string">"赖"</span>,<span class="string">"卓"</span>,<span class="string">"蔺"</span>,<span class="string">"屠"</span>,<span class="string">"蒙"</span>,<span class="string">"池"</span>,<span class="string">"乔"</span>,<span class="string">"阴"</span>,<span class="string">"欎"</span>,<span class="string">"胥"</span>,<span class="string">"能"</span>,<span class="string">"苍"</span>,<span class="string">"双"</span>,<span class="string">"闻"</span>,<span class="string">"莘"</span>,<span class="string">"党"</span>,<span class="string">"翟"</span>,<span class="string">"谭"</span>,<span class="string">"贡"</span>,<span class="string">"劳"</span>,<span class="string">"逄"</span>,<span class="string">"姬"</span>,<span class="string">"申"</span>,<span class="string">"扶"</span>,<span class="string">"堵"</span>,<span class="string">"冉"</span>,<span class="string">"宰"</span>,<span class="string">"郦"</span>,<span class="string">"雍"</span>,<span class="string">"舄"</span>,<span class="string">"璩"</span>,<span class="string">"桑"</span>,<span class="string">"桂"</span>,<span class="string">"濮"</span>,<span class="string">"牛"</span>,<span class="string">"寿"</span>,<span class="string">"通"</span>,<span class="string">"边"</span>,<span class="string">"扈"</span>,<span class="string">"燕"</span>,<span class="string">"冀"</span>,<span class="string">"郏"</span>,<span class="string">"浦"</span>,<span class="string">"尚"</span>,<span class="string">"农"</span>,<span class="string">"温"</span>,<span class="string">"别"</span>,<span class="string">"庄"</span>,<span class="string">"晏"</span>,<span class="string">"柴"</span>,<span class="string">"瞿"</span>,<span class="string">"阎"</span>,<span class="string">"充"</span>,<span class="string">"慕"</span>,<span class="string">"连"</span>,<span class="string">"茹"</span>,<span class="string">"习"</span>,<span class="string">"宦"</span>,<span class="string">"艾"</span>,<span class="string">"鱼"</span>,<span class="string">"容"</span>,<span class="string">"向"</span>,<span class="string">"古"</span>,<span class="string">"易"</span>,<span class="string">"慎"</span>,<span class="string">"戈"</span>,<span class="string">"廖"</span>,<span class="string">"庾"</span>,<span class="string">"终"</span>,<span class="string">"暨"</span>,<span class="string">"居"</span>,<span class="string">"衡"</span>,<span class="string">"步"</span>,<span class="string">"都"</span>,<span class="string">"耿"</span>,<span class="string">"满"</span>,<span class="string">"弘"</span>,<span class="string">"匡"</span>,<span class="string">"国"</span>,<span class="string">"文"</span>,<span class="string">"寇"</span>,<span class="string">"广"</span>,<span class="string">"禄"</span>,<span class="string">"阙"</span>,<span class="string">"东"</span>,<span class="string">"殴"</span>,<span class="string">"殳"</span>,<span class="string">"沃"</span>,<span class="string">"利"</span>,<span class="string">"蔚"</span>,<span class="string">"越"</span>,<span class="string">"夔"</span>,<span class="string">"隆"</span>,<span class="string">"师"</span>,<span class="string">"巩"</span>,<span class="string">"厍"</span>,<span class="string">"聂"</span>,<span class="string">"晁"</span>,<span class="string">"勾"</span>,<span class="string">"敖"</span>,<span class="string">"融"</span>,<span class="string">"冷"</span>,<span class="string">"訾"</span>,<span class="string">"辛"</span>,<span class="string">"阚"</span>,<span class="string">"那"</span>,<span class="string">"简"</span>,<span class="string">"饶"</span>,<span class="string">"空"</span>,<span class="string">"曾"</span>,<span class="string">"毋"</span>,<span class="string">"沙"</span>,<span class="string">"乜"</span>,<span class="string">"养"</span>,<span class="string">"鞠"</span>,<span class="string">"须"</span>,<span class="string">"丰"</span>,<span class="string">"巢"</span>,<span class="string">"关"</span>,<span class="string">"蒯"</span>,<span class="string">"相"</span>,<span class="string">"查"</span>,<span class="string">"後"</span>,<span class="string">"荆"</span>,<span class="string">"红"</span>,<span class="string">"游"</span>,<span class="string">"竺"</span>,<span class="string">"权"</span>,<span class="string">"逯"</span>,<span class="string">"盖"</span>,<span class="string">"益"</span>,<span class="string">"桓"</span>,<span class="string">"公"</span>,<span class="string">"万俟"</span>,<span class="string">"司马"</span>,<span class="string">"上官"</span>,<span class="string">"欧阳"</span>,<span class="string">"夏侯"</span>,<span class="string">"诸葛"</span>,<span class="string">"闻人"</span>,<span class="string">"东方"</span>,<span class="string">"赫连"</span>,<span class="string">"皇甫"</span>,<span class="string">"尉迟"</span>,<span class="string">"公羊"</span>,<span class="string">"澹台"</span>,<span class="string">"公冶"</span>,<span class="string">"宗政"</span>,<span class="string">"濮阳"</span>,<span class="string">"淳于"</span>,<span class="string">"单于"</span>,<span class="string">"太叔"</span>,<span class="string">"申屠"</span>,<span class="string">"公孙"</span>,<span class="string">"仲孙"</span>,<span class="string">"轩辕"</span>,<span class="string">"令狐"</span>,<span class="string">"钟离"</span>,<span class="string">"宇文"</span>,<span class="string">"长孙"</span>,<span class="string">"慕容"</span>,<span class="string">"鲜于"</span>,<span class="string">"闾丘"</span>,<span class="string">"司徒"</span>,<span class="string">"司空"</span>,<span class="string">"亓官"</span>,<span class="string">"司寇"</span>,<span class="string">"仉"</span>,<span class="string">"督"</span>,<span class="string">"子车"</span>,<span class="string">"颛孙"</span>,<span class="string">"端木"</span>,<span class="string">"巫马"</span>,<span class="string">"公西"</span>,<span class="string">"漆雕"</span>,<span class="string">"乐正"</span>,<span class="string">"壤驷"</span>,<span class="string">"公良"</span>,<span class="string">"拓跋"</span>,<span class="string">"夹谷"</span>,<span class="string">"宰父"</span>,<span class="string">"谷梁"</span>,<span class="string">"晋"</span>,<span class="string">"楚"</span>,<span class="string">"闫"</span>,<span class="string">"法"</span>,<span class="string">"汝"</span>,<span class="string">"鄢"</span>,<span class="string">"涂"</span>,<span class="string">"钦"</span>,<span class="string">"段干"</span>,<span class="string">"百里"</span>,<span class="string">"东郭"</span>,<span class="string">"南门"</span>,<span class="string">"呼延"</span>,<span class="string">"归"</span>,<span class="string">"海"</span>,<span class="string">"羊舌"</span>,<span class="string">"微生"</span>,<span class="string">"岳"</span>,<span class="string">"帅"</span>,<span class="string">"缑"</span>,<span class="string">"亢"</span>,<span class="string">"况"</span>,<span class="string">"后"</span>,<span class="string">"有"</span>,<span class="string">"琴"</span>,<span class="string">"梁丘"</span>,<span class="string">"左丘"</span>,<span class="string">"东门"</span>,<span class="string">"西门"</span>,<span class="string">"商"</span>,<span class="string">"牟"</span>,<span class="string">"佘"</span>,<span class="string">"佴"</span>,<span class="string">"伯"</span>,<span class="string">"赏"</span>,<span class="string">"南宫"</span>,<span class="string">"墨"</span>,<span class="string">"哈"</span>,<span class="string">"谯"</span>,<span class="string">"笪"</span>,<span class="string">"年"</span>,<span class="string">"爱"</span>,<span class="string">"阳"</span>,<span class="string">"佟"</span>,<span class="string">"第五"</span>,<span class="string">"言"</span>,<span class="string">"福"</span>];</span><br><span class="line">save Book_of_Family_Names.mat  Book_of_Family_Names;</span><br><span class="line">%信息量 log <span class="number">500</span> <span class="number">9</span>   [<span class="number">1</span><span class="number">-8</span>][<span class="number">1</span><span class="number">-8</span>][<span class="number">1</span><span class="number">-8</span>]</span><br><span class="line">Names_code= [<span class="string">"赵"</span>,<span class="string">"钱"</span>,<span class="string">"孙"</span>,<span class="string">"李"</span>,<span class="string">"周"</span>,<span class="string">"吴"</span>,<span class="string">"郑"</span>,<span class="string">"王"</span>];</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">Names_code_N2(i,:)=Names_code;</span><br><span class="line">end</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">Names_code_N3(i,:,:)=Names_code_N2;</span><br><span class="line">end</span><br><span class="line"><span class="keyword">for</span> a = <span class="number">1</span>:<span class="number">8</span></span><br><span class="line">    <span class="keyword">for</span> b=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">        <span class="keyword">for</span> c=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">            <span class="keyword">if</span> (a<span class="number">-1</span>)*<span class="number">8</span>^<span class="number">2</span>+(b<span class="number">-1</span>)*<span class="number">8</span>+c<span class="number">-1</span>&lt;length(Book_of_Family_Names)</span><br><span class="line">                Names_code_N(a,b,c)=Book_of_Family_Names((a<span class="number">-1</span>)*<span class="number">8</span>^<span class="number">2</span>+(b<span class="number">-1</span>)*<span class="number">8</span>+c);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                Names_code_N(a,b,c)= <span class="string">"猫"</span>;</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> a=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">  <span class="keyword">for</span> b=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">        <span class="keyword">for</span> c=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">            figure(c)</span><br><span class="line">                    text(a*<span class="number">0.1</span>,b*<span class="number">0.1</span>,Names_code_N(a,b,c));  </span><br><span class="line">           hold on</span><br><span class="line">        end</span><br><span class="line">  end</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line">a1=input(<span class="string">'choice the your Chinese name'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> a=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">  <span class="keyword">for</span> b=<span class="number">1</span>:<span class="number">8</span>                 </span><br><span class="line">        <span class="keyword">for</span> c=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">            figure(<span class="number">2</span>*b)</span><br><span class="line">                    text(a*<span class="number">0.1</span>,c*<span class="number">0.1</span>,Names_code_N(a,b,c));  </span><br><span class="line">            hold on</span><br><span class="line">        end</span><br><span class="line">  end</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line">b1=input(<span class="string">'choice the your Chinese name'</span>);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> a=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">  <span class="keyword">for</span> b=<span class="number">1</span>:<span class="number">8</span>                 </span><br><span class="line">        <span class="keyword">for</span> c=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">            figure(<span class="number">3</span>*a)</span><br><span class="line">                    text(b*<span class="number">0.1</span>,c*<span class="number">0.1</span>,Names_code_N(a,b,c));  </span><br><span class="line">            hold on</span><br><span class="line">        end</span><br><span class="line">  end</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line">c1=input(<span class="string">'choice the your Chinese name'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">disp(Names_code_N(a1,b2,c1));</span><br></pre></td></tr></table></figure></p>
 <h2 id="4-图形用户界面设计"><a href="#4-图形用户界面设计" class="headerlink" title="4.图形用户界面设计"></a>4.图形用户界面设计</h2><ul>
-<li><p>1.第一次选择<br><img src="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<li><p>1.第一次选择<br><img src="https://img-blog.csdnimg.cn/20201023212813254.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 </li>
-<li><p>2.第二次选择<br><img src="https://img-blog.csdnimg.cn/20201023215340588.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<li><p>2.第二次选择<br><img src="https://img-blog.csdnimg.cn/20201023215340588.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 </li>
 <li><p>3.第三次选择</p>
 </li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/20201023215522191.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201023215522191.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <ul>
-<li><p>结果：<br><img src="https://img-blog.csdnimg.cn/20201023215814953.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+<li><p>结果：<br><img src="https://img-blog.csdnimg.cn/20201023215814953.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTA4Njcz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 </li>
 <li><p>[x] 你的姓是万对吗？</p>
 </li>
@@ -105,75 +346,132 @@ H(x) =\sum_{i=1}^np_i(x)log_2(\frac 1 {p_i(x)})</script><p>b=2的时候单位是
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">        dateFormat  2020-10-23</span><br><span class="line">        title  不用告诉我就能知道你的姓</span><br><span class="line">        section 已经完成</span><br><span class="line">        已完成               :done,    des1, 2020-10-06,2020-10-16</span><br><span class="line">        进行中               :active,  des2, 2020-10-023, 3d</span><br><span class="line">        选择2               :         des3, after des2, 4d</span><br><span class="line">        选择3               :         des4, after des3, 2d</span><br></pre></td></tr></table></figure>
 <h2 id="5-结论"><a href="#5-结论" class="headerlink" title="5.结论"></a>5.结论</h2><p>可以修改尝试进行4x4进行选择[4,4,4,4]</p>
 <p> 源代码:<a href="https://zhidao.baidu.com/question/213833749.html" target="_blank" rel="noopener">不问知其名-赚点小积分</a>.</p>
-</div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="https://www.codekp.cn/download/img/打赏/alipay.JPG"><img loading="lazy" src="https://www.codekp.cn/download/img/打赏/alipay.JPG" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="https://www.codekp.cn/download/img/打赏/QQ.JPG"><img loading="lazy" src="https://www.codekp.cn/download/img/打赏/QQ.JPG" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a href="https://www.codekp.cn/download/img/打赏/wechat.JPG"><img loading="lazy" src="https://www.codekp.cn/download/img/打赏/wechat.JPG" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>万鲲鹏</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://www.codekp.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/" title="信息论一个小实例">http://www.codekp.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2020/11/17/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B/" rel="prev" title="水声通信实验课程作业"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">水声通信实验课程作业</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2020/10/15/%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8F%8A%E6%8C%89%E5%B8%A7%E8%BD%AC%E4%B8%BAjpg/" rel="next" title="网站视频下载及按帧将视频转为jpg"><span class="post-nav-text">网站视频下载及按帧将视频转为jpg</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div id="comment"><div class="comment-tooltip text-center"><span>尝试使用 Disqus 评论系统。</span><br><span>您可以点击下方按钮切换对应评论系统。</span><br><a class="hty-button hty-button--raised" id="github-issues" href="https://github.com/mmrslwan1110/mmrslwan1110.github.io/issues?q=is:issue+信息论一个小实例" target="_blank" rel="noopener">GitHub Issues</a><div class="toggle-comment-system" style="margin: 1rem auto"><a class="toggle-comment-btn hty-button hty-button--raised text-uppercase" data-target="#valine-container" onclick="showComment(this.dataset.target)">valine</a><style>#disqus_thread {
-  display: none;
-}</style><a class="toggle-comment-btn hty-button hty-button--raised text-uppercase" data-target="#disqus_thread" onclick="showComment(this.dataset.target)">disqusjs</a><script>function hideAllComment() {
-  //- hide all
-  document.querySelectorAll('.toggle-comment-btn').forEach((btn) => {
-    const container = document.querySelector(btn.dataset.target);
-    if (container) {
-      container.style.display = "none";
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/17/%E6%B0%B4%E5%A3%B0%E9%80%9A%E4%BF%A1%E8%AF%BE%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          水声通信实验课程作业
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/15/%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8F%8A%E6%8C%89%E5%B8%A7%E8%BD%AC%E4%B8%BAjpg/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网站视频下载及按帧将视频转为jpg</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="“不问，知你名”的玄学问题" data-title="信息论一个小实例" data-url="http://www.codekp.cn/2020/10/23/%E2%80%9C%E4%B8%8D%E9%97%AE%EF%BC%8C%E7%9F%A5%E4%BD%A0%E5%90%8D%E2%80%9D%E7%9A%84%E7%8E%84%E5%AD%A6%E9%97%AE%E9%A2%98/"  data-images="https://www.codekp.cn/download/img/头像/图南.jpg" data-content="信息论一个小实例">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2021 万鲲鹏
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     }
-  });
-}
-function showComment(target) {
-  hideAllComment();
-  //- show target
-  const targetContainer = document.querySelector(target);
-  if (targetContainer) {
-    targetContainer.style.display = "block";
-  }
-}
-</script></div></div><div id="disqus_thread"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@latest/dist/disqusjs.css"><script src="https://cdn.jsdelivr.net/npm/disqusjs@latest/dist/disqus.js"></script><script>const disqusjsConfig = {"enable":true,"shortname":"mmrslwan1110","apikey":"ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN"}
-function loadDisqus() {
-  const dsqjs = new DisqusJS(disqusjsConfig)
-}</script><script src="/js/comments/disqus.js"></script><div id="valine-container"></div><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function initValine() {
-  const valineConfig = {"enable":true,"appId":"I24qu9XGMYfJ5PvD20thmb5b-gzGzoHsz","appKey":"zWpfmSoraWGTSIp0O42aEPQg","placeholder":"大佬求指教&nbsp_(:з」∠)_ （填写邮箱可以收到回复通知～）","serverURLs":"https://www.mmrsl.cn","visitor":false,"recordIP":true,"enableQQ":true,"requiredFields":["nick","mail"],"emojiCDN":"//i0.hdslb.com/bfs/emote/","emojiMaps":{"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png","tv_打脸":"56ab10b624063e966bfcb76ea5dc4794d87dfd47.png","tv_抓狂":"fe31c08edad661d63762b04e17b8d5ae3c71a757.png","tv_抠鼻":"c666f55e88d471e51bbd9fab9bb308110824a6eb.png","tv_斜眼笑":"911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png","tv_无奈":"ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png","tv_晕":"5443c22b4d07fb1907ccc610c8e6db254f2461b7.png","tv_流汗":"cead1c351ab8d79e9f369605beb90148db0fbed3.png","tv_流泪":"7e71cde7858f0cd50d74b0264aa26db612a8a167.png","tv_流鼻血":"c32d39db2737f89b904ca32700d140a9241b0767.png","tv_点赞":"f85c354995bd99e28fc76c869bfe42ba6438eff4.png","tv_生气":"26702dcafdab5e8225b43ffd23c94ac1ff932654.png","tv_生病":"8b0ec90e6b86771092a498c54f09fc94621c1900.png","tv_疑问":"0793d949b18d7be716078349c202c15ff166f314.png","tv_白眼":"c1d59f439e379ee50eef488bcb5e5378e5044ea4.png","tv_皱眉":"72ccad6679fea0d14cce648b4d818e09b8ffea2d.png","tv_目瞪口呆":"0b8cb81a68de5d5365212c99375e7ace3e7891b7.png","tv_睡着":"8b196675b53af58264f383c50ad0945048290b33.png","tv_笑哭":"1abc628f6d4f4caf9d0e7800878f4697abbc8273.png","tv_腼腆":"89712c0d4af73e67f89e35cbc518420380a7f6f4.png","tv_色":"61822c7e9aae5da76475e7892534545336b23a6f.png","tv_调侃":"4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png","tv_调皮":"b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png","tv_鄙视":"6e72339f346a692a495b123174b49e4e8e781303.png","tv_闭嘴":"c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png","tv_难过":"87f46748d3f142ebc6586ff58860d0e2fc8263ba.png","tv_馋":"fc7e829b845c43c623c8b490ee3602b7f0e76a31.png","tv_鬼脸":"0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png","tv_黑人问号":"45821a01f51bc867da9edbaa2e070410819a95b2.png","tv_鼓掌":"1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"},"avatar":null,"pageSize":10,"highlight":true,"el":"#valine-container","lang":"zh-cn"}
-  valineConfig.path = window.location.pathname
-  new Valine(valineConfig)
-}
-setTimeout(initValine, 800)</script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备20011001号</a></div><div class="copyright"><span>&copy; 2016 – 2020 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 万鲲鹏</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v4.2.1</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.3.0</span></div><div class="live_time"><span>本博客已萌萌哒运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
-  window.setTimeout(blog_live_time, 1000);
-  const start = new Date('2017-04-12T00:00:00');
-  const now = new Date();
-  const timeDiff = (now.getTime() - start.getTime());
-  const msPerMinute = 60 * 1000;
-  const msPerHour = 60 * msPerMinute;
-  const msPerDay = 24 * msPerHour;
-  const passDay = Math.floor(timeDiff / msPerDay);
-  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
-  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
-  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
-  display_live_time.innerHTML = " " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
-}
-blog_live_time();
-</script></div><div id="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv" title="总访客量"><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-user-line"></use></svg></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg></span><span id="busuanzi_value_site_pv"></span></span></div><div class="footer-custom-text"><a style="display:inline-block" href="https://www.codekp.cn" target="blank" title="漫漫人生路"><img height="30" src="https://www.codekp.cn/download/img/头像/站点.svg" alt="upyun"/></a></div></footer><a class="hty-icon-button" id="goUp" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-search-line"></use></svg></span></a><script>window.addEventListener("DOMContentLoaded", () => {
-  // Handle and trigger popup window
-  document.querySelector(".popup-trigger").addEventListener("click", () => {
-    document.querySelector(".popup").classList.add("show");
-    setTimeout(() => {
-      document.querySelector(".search-input").focus();
-    }, 100);
-  });
-
-  // Monitor main search box
-  const onPopupClose = () => {
-    document.querySelector(".popup").classList.remove("show");
-  };
-
-  document.querySelector(".popup-btn-close").addEventListener("click", () => {
-    onPopupClose();
-  });
-
-  window.addEventListener("keyup", event => {
-    if (event.key === "Escape") {
-      onPopupClose();
-    }
-  });
 });
-</script><script src="/js/search/local-search.js" defer></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-close-line"></use></svg></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="想要搜些什么？" value=""></div><div id="local-search-result"></div></div><script>const date = new Date();
-const today = (date.getMonth() + 1) + "-" + date.getDate()
-const mourn_days = ["4-4","9-18","12-13"]
-if (mourn_days.includes(today)) {
-  document.documentElement.style.filter = "grayscale(1)";
-}</script><div class="aplayer no-destroy" id="aplayer" data-id="5341377946" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay data-theme="#0078E7" data-loop="all" data-order="list" data-preload="auto" data-volume="0.7" data-mutex data-lrctype="0" data-listfolded data-listmaxheight="340px" data-storagename="metingjs"></div></div><script defer src="/js/utils.js"></script><script defer src="/js/hexo-theme-yun.js"></script></body></html>
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+    <!-- <a href="https://github.com/mmrslwan1110" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style> -->
+    <!-- <a href="https://github.com/mmrslwan1110" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a> -->
+    <a href="https://github.com/mmrslwan1110" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+      </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
